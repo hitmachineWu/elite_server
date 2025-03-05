@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}卓工院大模型平台 - 模型展示{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">卓工院大模型展示</h1>
+<p class="lead">欢迎，{{ session.username }}！请浏览我们提供的各种卓工院大模型。</p>
+
+<div class="row">
+    {% for model in models %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 model-card">
+            <div class="position-relative">
+                <img src="{{ url_for('static', filename=model.image_path) }}" class="card-img-top model-img" alt="{{ model.name }}">
+                <div class="model-overlay">
+                    <h5 class="model-name">{{ model.name }}</h5>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ model.description }}</p>
+            </div>
+            <div class="card-footer bg-white border-top-0">
+                <div class="d-flex gap-2">
+                    <a href="{{ url_for('model_detail', model_url=model.detail_url) }}" class="btn btn-primary flex-grow-1">查看详情</a>
+                    <a href="{{ model.external_url }}" class="btn btn-outline-primary" target="_blank" title="访问官方网站">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

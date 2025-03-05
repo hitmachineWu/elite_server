@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}卓工院大模型平台 - {{ model.name }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('dashboard') }}">模型展示</a></li>
+                <li class="breadcrumb-item active">{{ model.name }}</li>
+            </ol>
+        </nav>
+        
+        <div class="card mb-4">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename=model.image_path) }}" class="img-fluid rounded-start" alt="{{ model.name }}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title">{{ model.name }}</h1>
+                        <p class="card-text">{{ model.full_description }}</p>
+                        <a href="{{ model.external_url }}" class="btn btn-primary mt-3" target="_blank">
+                            访问官方网站 <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h4 mb-0">模型特点</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    {% for feature in model.features %}
+                    <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="h4 mb-0">应用场景</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    {% for use_case in model.use_cases %}
+                    <li>{{ use_case }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2 class="h4 mb-0">技术规格</h2>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">参数量</th>
+                            <td>{{ model.specs.params }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">训练数据</th>
+                            <td>{{ model.specs.training_data }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">支持语言</th>
+                            <td>{{ model.specs.languages }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">发布日期</th>
+                            <td>{{ model.specs.release_date }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
