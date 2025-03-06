@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}{% if agent %}{{ agent.name }}{% else %}开启新对话{% endif %} - 卓工院教育大模型{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- 侧边导航栏 -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>卓工院教育大模型</h2>
+        </div>
+        
+        <div class="user-info">
+            <div class="user-avatar">
+                <span>{{ username[0].upper() }}</span>
+            </div>
+            <div class="user-name">{{ username }}</div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="{% if request.path == url_for('new_chat') %}active{% endif %}">
+                    <a href="{{ url_for('new_chat') }}">
+                        <span class="icon">💬</span>
+                        <span class="label">开启新对话</span>
+                    </a>
+                </li>
+                <li class="{% if request.path == url_for('course_agents') %}active{% endif %}">
+                    <a href="{{ url_for('course_agents') }}">
+                        <span class="icon">🤖</span>
+                        <span class="label">课程智能体</span>
+                    </a>
+                </li>
+                <li class="{% if request.path == url_for('favorites') %}active{% endif %}">
+                    <a href="{{ url_for('favorites') }}">
+                        <span class="icon">⭐</span>
+                        <span class="label">个人收藏</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="{{ url_for('logout') }}" class="logout-btn">
+                <span class="icon">🚪</span>
+                <span class="label">退出登录</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- 主内容区域 -->
+    <div class="main-content">
+        <div class="page-header">
+            {% if agent %}
+                <h1>{{ agent.name }}</h1>
+                <p>{{ agent.description }}</p>
+            {% else %}
+                <h1>开启新对话</h1>
+                <p>与卓工院教育大模型进行对话，探索AI的无限可能</p>
+            {% endif %}
+        </div>
+        
+        <div class="embed-container">
+            <iframe src="{{ embed_url }}" frameborder="0" allow="microphone; camera" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
