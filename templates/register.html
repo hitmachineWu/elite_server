@@ -1,36 +1,48 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}卓工院大模型平台 - 注册{% endblock %}
+{% block title %}注册 - 卓越工程师学院{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
     <div class="col-md-6">
         <div class="card shadow">
             <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">创建账号</h2>
+                <h4 class="mb-0">用户注册</h4>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ url_for('register') }}">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">用户名</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                        <div class="form-text">用户名只能包含字母、数字和下划线，长度为3-20个字符</div>
+                <form method="POST" action="{{ url_for('auth.register') }}">
+                    <div class="form-group mb-3">
+                        <label for="uid" class="form-label">学号</label>
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-user mr-2"></span>
+                            <input type="text" class="form-control" id="uid" name="uid" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group mb-3">
                         <label for="password" class="form-label">密码</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-lock mr-2"></span>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group mb-3">
                         <label for="confirm_password" class="form-label">确认密码</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-lock mr-2"></span>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                        </div>
                     </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">注册</button>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="icon icon-person-plus"></span> 注册
+                        </button>
                     </div>
                 </form>
-            </div>
-            <div class="card-footer text-center">
-                <p class="mb-0">已有账号？<a href="{{ url_for('login') }}">立即登录</a></p>
+                <hr>
+                <div class="text-center">
+                    <p>已有账号? <a href="{{ url_for('auth.login') }}">返回登录</a></p>
+                    <p><a href="{{ url_for('content.index') }}">返回首页</a></p>
+                </div>
             </div>
         </div>
     </div>

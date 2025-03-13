@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}对话框 - 卓越工程师学院{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>智能对话助手</h2>
+            <span class="badge bg-primary p-2">通用对话模型</span>
+        </div>
+        <div class="card shadow">
+            <div class="card-body p-0">
+                <iframe src="{{ chat_url }}" class="iframe-container" title="AI对话框"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

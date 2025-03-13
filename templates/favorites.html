@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}个人收藏 - 卓越工程师学院{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">我的收藏</h2>
+
+{% if favorite_courses %}
+<div class="row">
+    {% for course in favorite_courses %}
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card shadow h-100">
+            {% if course.image_url %}
+            <img src="{{ course.image_url }}" class="card-img-top" alt="{{ course.title }}">
+            {% else %}
+            <div class="bg-primary text-center py-5">
+                <span class="icon icon-grid icon-xl text-white"></span>
+                <h3 class="text-white">{{ course.title }}</h3>
+            </div>
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ course.title }}</h5>
+                <p class="card-text">{{ course.description }}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <a href="{{ url_for('content.view_course', course_id=course.id) }}" class="btn btn-primary">
+                    <span class="icon icon-link"></span> 使用
+                </a>
+                <form method="POST" action="{{ url_for('content.remove_favorite', course_id=course.id) }}">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <span class="icon icon-star-fill"></span> 取消收藏
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info">
+    <span class="icon icon-info"></span> 您还没有收藏任何课程。请前往<a href="{{ url_for('content.courses') }}">课程广场</a>浏览并收藏课程。
+</div>
+
+<div class="text-center mt-5">
+    <a href="{{ url_for('content.courses') }}" class="btn btn-primary btn-lg">
+        <span class="icon icon-grid"></span> 浏览课程广场
+    </a>
+</div>
+{% endif %}
+{% endblock %}
