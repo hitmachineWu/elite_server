@@ -1,3 +1,4 @@
+
 from flask import Flask, redirect, url_for
 from flask_login import LoginManager
 from config import Config
@@ -86,6 +87,7 @@ def create_app():
                 print("为测试用户添加收藏")
     
     return app
+
 
 if __name__ == '__main__':
     app = create_app()
