@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 import os
 import re
+import pymysql
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'  # 用于session加密
@@ -198,24 +199,40 @@ model_details = {
     }
 }
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    conn = pymysql.connect(
+        host="localhost",
+        user="root",
+        password="123456",
+        database="bigmodel",
+        charset="utf8mb4"
+
+    )
+    cursor = conn.cursor()
+
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-        
-        if username in users and users[username] == password:
-            session['username'] = username
+        sql = "select password from student where student_id = " + username
+        # 执行 SQL 查询
+        cursor.execute(sql)
+        # 获取单条结果
+        result = cursor.fetchone()
+        if result and result[0] == password:
             flash('登录成功！', 'success')
             return redirect(url_for('dashboard'))
         else:
             flash('用户名或密码错误，请重试！', 'danger')
-    
+
     return render_template('login.html')
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -223,56 +240,60 @@ def register():
         username = request.form.get('username')
         password = request.form.get('password')
         confirm_password = request.form.get('confirm_password')
-        
+
         # 验证用户名是否已存在
         if username in users:
             flash('该用户名已被使用，请选择其他用户名！', 'danger')
             return render_template('register.html')
-        
+
         # 验证密码是否一致
         if password != confirm_password:
             flash('两次输入的密码不一致！', 'danger')
             return render_template('register.html')
-        
+
         # 验证用户名格式
         if not re.match(r'^[a-zA-Z0-9_]{3,20}$', username):
             flash('用户名只能包含字母、数字和下划线，长度为3-20个字符！', 'danger')
             return render_template('register.html')
-        
+
         # 创建新用户
         users[username] = password
-        
+
         flash('账号创建成功！请登录。', 'success')
         return redirect(url_for('login'))
-    
+
     return render_template('register.html')
+
 
 @app.route('/dashboard')
 def dashboard():
     if 'username' not in session:
         flash('请先登录！', 'danger')
         return redirect(url_for('login'))
-    
+
     return render_template('dashboard.html', models=models)
+
 
 @app.route('/model/<model_url>')
 def model_detail(model_url):
     if 'username' not in session:
         flash('请先登录！', 'danger')
         return redirect(url_for('login'))
-    
+
     if model_url not in model_details:
         flash('模型不存在！', 'danger')
         return redirect(url_for('dashboard'))
-    
+
     model = model_details[model_url]
     return render_template('model_detail.html', model=model)
+
 
 @app.route('/logout')
 def logout():
     session.pop('username', None)
     flash('您已成功退出登录！', 'info')
     return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
