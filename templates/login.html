@@ -1,31 +1,41 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}卓工院大模型平台 - 登录{% endblock %}
+{% block title %}登录 - 卓越工程师学院{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
     <div class="col-md-6">
         <div class="card shadow">
             <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">用户登录</h2>
+                <h4 class="mb-0">用户登录</h4>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ url_for('login') }}">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">用户名</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                <form method="POST" action="{{ url_for('auth.login') }}">
+                    <div class="form-group mb-3">
+                        <label for="uid" class="form-label">学号</label>
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-user mr-2"></span>
+                            <input type="text" class="form-control" id="uid" name="uid" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group mb-3">
                         <label for="password" class="form-label">密码</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-lock mr-2"></span>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
                     </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">登录</button>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="icon icon-box-arrow-in-right"></span> 登录
+                        </button>
                     </div>
                 </form>
-            </div>
-            <div class="card-footer text-center">
-                <p class="mb-0">还没有账号？<a href="{{ url_for('register') }}">立即注册</a></p>
+                <hr>
+                <div class="text-center">
+                    <p>还没有账号? <a href="{{ url_for('auth.register') }}">立即注册</a></p>
+                    <p><a href="{{ url_for('content.index') }}">返回首页</a></p>
+                </div>
             </div>
         </div>
     </div>

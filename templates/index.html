@@ -3,51 +3,68 @@
 {% block title %}卓工院大模型平台 - 首页{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8 text-center">
-        <h1 class="display-4 mb-4">欢迎来到卓工院大模型平台</h1>
-        <p class="lead mb-5">探索各种先进的大型语言模型，体验AI技术的前沿进展</p>
-        
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">已有账号？</h5>
-                        <p class="card-text">立即登录，探索各种卓工院大模型</p>
-                        <a href="{{ url_for('login') }}" class="btn btn-primary">登录</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">新用户？</h5>
-                        <p class="card-text">创建账号，开启您的AI之旅</p>
-                        <a href="{{ url_for('register') }}" class="btn btn-outline-primary">注册</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mt-5">
-            <h2 class="h4 mb-4">平台特色</h2>
+<div class="home-banner text-center">
+    <div class="container">
+        <h1>欢迎来到卓工院大模型平台</h1>
+        <p class="lead mb-5">探索各种先进的大型语言模型，体验AI技术的前沿进展，提升您的学习和研究效率</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="feature-box p-3">
-                        <h3 class="h5">多种模型</h3>
-                        <p>提供多种先进的大型语言模型</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow home-card">
+                        <div class="feature-icon">
+                            <span class="icon icon-box-arrow-in-right icon-xl"></span>
+                        </div>
+                        <h3 class="h4 mb-3">已有账号？</h3>
+                        <p class="card-text mb-4">立即登录，探索各种卓工院大模型，开启您的智能学习之旅</p>
+                        <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg">登录</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="feature-box p-3">
-                        <h3 class="h5">详细介绍</h3>
-                        <p>每个模型都有详细的介绍和使用指南</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow home-card">
+                        <div class="feature-icon">
+                            <span class="icon icon-person-plus icon-xl"></span>
+                        </div>
+                        <h3 class="h4 mb-3">新用户？</h3>
+                        <p class="card-text mb-4">创建账号，开启您的AI之旅，体验卓越工程师学院的智能教育平台</p>
+                        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary btn-lg">注册</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="feature-box p-3">
-                        <h3 class="h5">便捷访问</h3>
-                        <p>一键访问各种模型的详细页面和官方网站</p>
+            </div>
+            
+            <div class="mt-5 pt-5 border-top">
+                <h2 class="h3 mb-4">平台特色</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-box shadow-sm">
+                            <div class="feature-icon">
+                                <span class="icon icon-grid icon-xl"></span>
+                            </div>
+                            <h3 class="h5 mb-3">多种模型</h3>
+                            <p class="mb-0">提供多种先进的大型语言模型，满足不同学习需求和研究方向</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-box shadow-sm">
+                            <div class="feature-icon">
+                                <span class="icon icon-info icon-xl"></span>
+                            </div>
+                            <h3 class="h5 mb-3">详细介绍</h3>
+                            <p class="mb-0">每个模型都有详细的介绍和使用指南，帮助您更好地利用AI工具</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-box shadow-sm">
+                            <div class="feature-icon">
+                                <span class="icon icon-link icon-xl"></span>
+                            </div>
+                            <h3 class="h5 mb-3">便捷访问</h3>
+                            <p class="mb-0">一键访问各种模型的详细页面和官方网站，提高学习和研究效率</p>
+                        </div>
                     </div>
                 </div>
             </div>

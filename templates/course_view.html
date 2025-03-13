@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ course.title }} - 卓越工程师学院{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav class="breadcrumb">
+            <a href="{{ url_for('content.courses') }}" class="breadcrumb-item">课程广场</a>
+            <span class="breadcrumb-item active">{{ course.title }}</span>
+        </nav>
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>{{ course.title }}</h2>
+            <div>
+                {% if course.id in user_favorites %}
+                <form method="POST" action="{{ url_for('content.remove_favorite', course_id=course.id) }}" style="display: inline-block;">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <span class="icon icon-star-fill"></span> 取消收藏
+                    </button>
+                </form>
+                {% else %}
+                <form method="POST" action="{{ url_for('content.add_favorite', course_id=course.id) }}" style="display: inline-block;">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <span class="icon icon-star"></span> 收藏
+                    </button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <p class="lead">{{ course.description }}</p>
+            </div>
+        </div>
+        
+        <div class="card shadow">
+            <div class="card-body p-0">
+                <iframe src="{{ course.url }}" class="iframe-container" title="{{ course.title }}"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}课程广场 - 卓越工程师学院{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">课程广场</h2>
+<p class="lead mb-4">探索我们提供的各种AI大模型，选择适合您的学习助手</p>
+
+<div class="row">
+    {% for course in courses %}
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card shadow h-100">
+            {% if course.image_url %}
+            <img src="{{ course.image_url }}" class="card-img-top" alt="{{ course.title }}">
+            {% else %}
+            <div class="bg-primary text-center py-5">
+                <span class="icon icon-grid icon-xl text-white"></span>
+                <h3 class="text-white">{{ course.title }}</h3>
+            </div>
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ course.title }}</h5>
+                <p class="card-text">{{ course.description }}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <a href="{{ url_for('content.view_course', course_id=course.id) }}" class="btn btn-primary">
+                    <span class="icon icon-link"></span> 使用
+                </a>
+                
+                {% if course.id in user_favorites %}
+                <form method="POST" action="{{ url_for('content.remove_favorite', course_id=course.id) }}">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <span class="icon icon-star-fill"></span> 取消收藏
+                    </button>
+                </form>
+                {% else %}
+                <form method="POST" action="{{ url_for('content.add_favorite', course_id=course.id) }}">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <span class="icon icon-star"></span> 收藏
+                    </button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
