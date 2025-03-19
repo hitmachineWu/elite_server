@@ -34,19 +34,22 @@
                         <span class="label">课程广场</span>
                     </a>
                 </li>
+
+
                 <li class="{% if request.path == url_for('course_kd') %}active{% endif %}">
                     <a href="{{ url_for('course_kd') }}">
                         <span class="icon">🔍</span>
                         <span class="label">智能体广场</span>
                     </a>
                 </li>
-
                 <li class="{% if request.path == url_for('his') %}active{% endif %}">
                     <a href="{{ url_for('his') }}">
                         <span class="icon">📚</span>
                         <span class="label">个人知识库</span>
                     </a>
                 </li>
+
+                
 
                 <li class="{% if request.path == url_for('favorites') %}active{% endif %}">
                     <a href="{{ url_for('favorites') }}">
@@ -68,11 +71,11 @@
     <!-- 主内容区域 -->
     <div class="main-content">
         <div class="page-header">
-            <h1>个人收藏</h1>
-            <p>您收藏的智能体都在这里</p>
+            <h1>个人知识库</h1>
+            <p>您的个人知识库 等待开发中ing</p>
         </div>
         
-        <div class="agents-grid">
+        <!-- <div class="agents-grid">
             {% if agents %}
                 {% for agent in agents %}
                 <div class="agent-card">
@@ -99,7 +102,7 @@
                     <a href="{{ url_for('course_agents') }}" class="btn btn-primary">浏览智能体</a>
                 </div>
             {% endif %}
-        </div>
+        </div> -->
     </div>
 </div>
 {% endblock %}

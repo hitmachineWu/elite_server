@@ -7,7 +7,10 @@
     <!-- 侧边导航栏 -->
     <div class="sidebar">
         <div class="sidebar-header">
-            <h2>卓工院教育大模型</h2>
+            
+            <h2 class="hh">
+                <img src="/static/img/logo.png" alt="a" style="width:40px; height: 40px">
+                卓工教育大模型</h2>
         </div>
         
         <div class="user-info">
@@ -28,9 +31,23 @@
                 <li class="{% if request.path == url_for('course_agents') %}active{% endif %}">
                     <a href="{{ url_for('course_agents') }}">
                         <span class="icon">🤖</span>
-                        <span class="label">课程智能体</span>
+                        <span class="label">课程广场</span>
                     </a>
                 </li>
+
+                <li class="{% if request.path == url_for('course_kd') %}active{% endif %}">
+                    <a href="{{ url_for('course_kd') }}">
+                        <span class="icon">🔍</span>
+                        <span class="label">智能体广场</span>
+                    </a>
+                </li>
+                <li class="{% if request.path == url_for('his') %}active{% endif %}">
+                    <a href="{{ url_for('his') }}">
+                        <span class="icon">📚</span>
+                        <span class="label">个人知识库</span>
+                    </a>
+                </li>
+
                 <li class="{% if request.path == url_for('favorites') %}active{% endif %}">
                     <a href="{{ url_for('favorites') }}">
                         <span class="icon">⭐</span>

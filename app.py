@@ -16,36 +16,65 @@ users = {
 }
 # 默认的嵌入URL
 DEFAULT_EMBED_URL = "http://180.85.206.30:3000/chat/share?shareId=rrc0cvrtg9kl80bgl3mz9778"
+new_chat_url="http://180.85.206.30:3000/chat/share?shareId=rrc0cvrtg9kl80bgl3mz9778"
+agent1='http://180.85.206.30:3000/chat/share?shareId=ztwmryjyyn7a6zt6rtyl5pcg'
 
 # 智能体数据
 agents = [
     {
         "id": 1,
-        "name": "DeepSeek Chat",
-        "description": "DeepSeek的官方聊天模型，支持多轮对话和复杂任务处理。",
-        "url": DEFAULT_EMBED_URL,
-        "image_url": "/static/img/deepseek.png"
+        "name": "定量工程设计",
+        "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
+        "url": agent1,
+        "image_url": "/static/img/c0.png"
     },
     {
         "id": 2,
         "name": "编程助手",
         "description": "专注于帮助解决编程问题的智能体，支持多种编程语言。",
         "url": DEFAULT_EMBED_URL,
-        "image_url": "/static/img/coding.png"
+        "image_url": "/static/img/c1.png"
+    },
+
+]
+
+agents_kd1=''
+
+agents_kd = [
+    {
+        "id": 1,
+        "name": "GPT-4",
+        "description": "OpenAI的最先进模型，能够解决复杂任务，理解和生成自然语言。",
+        "url": 'https://openai.com/gpt-4',
+        "image_url": "/static/img/gpt4.png"
+    },
+    {
+        "id": 2,
+        "name": "LLaMA",
+        "description": "Meta的开源大型语言模型，专为研究人员设计，具有强大的语言理解能力。",
+        "url": 'https://ai.meta.com/llama/',
+        "image_url": "/static/img/llama.png"
     },
     {
         "id": 3,
-        "name": "数学导师",
-        "description": "数学问题解答专家，可以帮助解决从基础到高等数学的各类问题。",
-        "url": DEFAULT_EMBED_URL,
-        "image_url": "/static/img/math.png"
+        "name": "Claude",
+        "description": "Anthropic开发的AI助手，专注于安全性和有益的对话，减少有害输出。",
+        "url": 'https://www.anthropic.com/claude',
+        "image_url": "/static/img/cloude.png"
     },
     {
         "id": 4,
-        "name": "论文写作助手",
-        "description": "帮助用户进行学术论文写作、润色和参考文献管理。",
-        "url": DEFAULT_EMBED_URL,
-        "image_url": "/static/img/academic.png"
+        "name": "BERT",
+        "description": "Google的双向Transformer模型，专为自然语言理解而设计，在多种NLP任务中表现出色。",
+        "url": 'https://github.com/google-research/bert',
+        "image_url": "/static/img/bert.png"
+    },
+    {
+        "id": 5,
+        "name": "Gemini",
+        "description": "Google的多模态AI系统，能够理解和生成文本、图像、音频等多种形式的内容。",
+        "url": 'https://deepmind.google/technologies/gemini/',
+        "image_url": "/static/img/gemin.png"
     }
 ]
 
@@ -143,7 +172,36 @@ def logout():
 @login_required
 def new_chat():
     return render_template('dashboard/new_chat.html', 
-                          embed_url=DEFAULT_EMBED_URL,
+                          embed_url=new_chat_url,
+                          username=session.get('username', '用户'))
+
+@app.route('/dashboard/kd')
+@login_required
+def course_kd():
+    # 参照course_agents传递完整智能体列表
+    return render_template('dashboard/kd.html', 
+                         agents=agents_kd,  # 关键修改点：传递列表而非单个URL
+                         username=session.get('username', '用户'))
+
+@app.route('/dashboard/kds/<int:agent_id>')
+@login_required
+def view_kd(agent_id):
+    agent = next((a for a in agents_kd if a['id'] == agent_id), None)
+    if not agent:
+        flash('找不到该知识库智能体', 'error')
+        return redirect(url_for('course_kd'))
+    return render_template('dashboard/new_chat.html',
+                         embed_url=agent['url'],
+                         agent=agent,
+                         username=session.get('username', '用户'))
+
+
+
+@app.route('/dashboard/his')
+@login_required
+def his():
+    return render_template('dashboard/his.html', 
+                          embed_url=new_chat_url,
                           username=session.get('username', '用户'))
 
 @app.route('/dashboard/agents')
@@ -165,6 +223,8 @@ def view_agent(agent_id):
                           embed_url=agent['url'],
                           agent=agent,
                           username=session.get('username', '用户'))
+
+
 
 @app.route('/dashboard/favorites')
 @login_required
