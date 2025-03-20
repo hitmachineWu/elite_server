@@ -24,8 +24,8 @@
         
         <form method="POST" action="{{ url_for('login') }}">
             <div class="form-group">
-                <label for="email">邮箱</label>
-                <input type="email" id="email" name="email" required>
+                <label for="username">学号</label>
+                <input type="text" id="username" name="username" required>
             </div>
             
             <div class="form-group">
@@ -40,6 +40,9 @@
         
         <div class="auth-links">
             <p>还没有账号？<a href="{{ url_for('register') }}">立即注册</a></p>
+        </div>
+        <div class="auth-links">
+            <p>忘记密码？<a href="{{ url_for('forget_password') }}">找回账号</a></p>
         </div>
     </div>
 </div>
