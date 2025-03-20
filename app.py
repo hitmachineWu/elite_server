@@ -154,27 +154,17 @@ def register():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        sql = "select password from student where sid = " + username
-        # 执行 SQL 查询
-        cursor.execute(sql)
-        # 获取单条结果
+        # 判断注册资格 先判断学号是否存在 再判断账号是否注册（邮箱是否为空）
+        cursor.execute("SELECT sid, email FROM student WHERE sid = %s", username)
         result = cursor.fetchone()
-        if result and result[0] == username:
-            flash('该学号已被注册')
+        if result is None:
+            flash('非法学号')
             return redirect(url_for('register'))
-
-        e = "\"" + email + "\""
-        sql = "select email from student where email = " + e
-        # 执行 SQL 查询
-        cursor.execute(sql)
-        # 获取单条结果
-        result = cursor.fetchone()
-        if result and result[0] == email:
-            flash('该邮箱已被注册')
+        elif result[1] is not None:
+            flash('账号已被注册')
             return redirect(url_for('register'))
-
-        cursor.execute("INSERT INTO student (sid, password, email) VALUES (%s, %s, %s)",
-                       (username, password, email))
+        cursor.execute("UPDATE student SET password = %s, email = %s WHERE sid = %s",
+                       (password, email, username))
         conn.commit()
         flash('注册成功，请登录')
         return redirect(url_for('login'))
@@ -283,19 +273,19 @@ def view_agent(agent_id):
 
 
 
-@app.route('/dashboard/favorites')
-@login_required
-def favorites():
-    user_email = session.get('user_email')
-    if not user_email or user_email not in users:
-        return redirect(url_for('logout'))
-
-    user_favorites = users[user_email]['favorites']
-    favorite_agents = [agent for agent in agents if agent['id'] in user_favorites]
-
-    return render_template('dashboard/favorites.html',
-                           agents=favorite_agents,
-                           username=session.get('username', '用户'))
+# @app.route('/dashboard/favorites')
+# @login_required
+# def favorites():
+#     user_email = session.get('user_email')
+#     if not user_email or user_email not in users:
+#         return redirect(url_for('logout'))
+#
+#     user_favorites = users[user_email]['favorites']
+#     favorite_agents = [agent for agent in agents if agent['id'] in user_favorites]
+#
+#     return render_template('dashboard/favorites.html',
+#                            agents=favorite_agents,
+#                            username=session.get('username', '用户'))
 
 
 @app.route('/api/toggle-favorite/<int:agent_id>', methods=['POST'])

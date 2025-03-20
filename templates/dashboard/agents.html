@@ -49,12 +49,6 @@
                     </a>
                 </li>
 
-                <li class="{% if request.path == url_for('favorites') %}active{% endif %}">
-                    <a href="{{ url_for('favorites') }}">
-                        <span class="icon">⭐</span>
-                        <span class="label">个人收藏</span>
-                    </a>
-                </li>
             </ul>
         </nav>
         
@@ -84,9 +78,9 @@
                     <p>{{ agent.description }}</p>
                     <div class="agent-actions">
                         <a href="{{ url_for('view_agent', agent_id=agent.id) }}" class="btn btn-primary">打开对话</a>
-                        <button class="btn btn-favorite" data-agent-id="{{ agent.id }}">
-                            <span class="icon">☆</span> 收藏
-                        </button>
+<!--                        <button class="btn btn-favorite" data-agent-id="{{ agent.id }}">-->
+<!--                            <span class="icon">☆</span> 收藏-->
+<!--                        </button>-->
                     </div>
                 </div>
             </div>
