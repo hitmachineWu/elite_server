@@ -20,9 +20,11 @@ DEFAULT_EMBED_URL = "http://180.85.206.30:3000/chat/share?shareId=rrc0cvrtg9kl80
 new_chat_url="http://180.85.206.30:3000/chat/share?shareId=rrc0cvrtg9kl80bgl3mz9778"
 agent1='http://180.85.206.30:3000/chat/share?shareId=ztwmryjyyn7a6zt6rtyl5pcg'
 
+agent_develop_url = "http://180.85.206.21:3000/chat/share?shareId=3b2pdqik1odzyy3egy0n5o3a&studentUid="
+
 # 智能体数据
 agents = [
-    {
+    { 
         "id": 1,
         "name": "定量工程设计",
         "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
@@ -36,7 +38,13 @@ agents = [
         "url": DEFAULT_EMBED_URL,
         "image_url": "/static/img/c1.png"
     },
-
+    {
+        "id": 3,
+        "name": "Agent内部开发自测",
+        "description": "开发团队内部自测",
+        "url": agent_develop_url,
+        "image_url": "/static/img/c1.png"
+    }
 ]
 
 agents_kd1=''
@@ -271,9 +279,14 @@ def view_agent(agent_id):
     if not agent:
         flash('找不到该智能体')
         return redirect(url_for('course_agents'))
-
+    embed_url = agent['url']
+    username=session.get('username', '用户')
+    if agent_id == 3:  # 仅对 id 为 3 的智能体进行特殊处理
+        # 使用预先定义的包含 studentUid 参数的 URL
+        embed_url = agent_develop_url + username
+    print(f"embed_url  = {embed_url} ")
     return render_template('dashboard/new_chat.html',
-                           embed_url=agent['url'],
+                           embed_url=embed_url,
                            agent=agent,
                            username=session.get('username', '用户'))
 
