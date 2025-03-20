@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}{% if agent %}{{ agent.name }}{% else %}开启新对话{% endif %} - 卓工院教育大模型{% endblock %}
+{% block title %}个人收藏 - 卓工院教育大模型{% endblock %}
 
 {% block content %}
 <div class="dashboard-container">
@@ -35,6 +35,7 @@
                     </a>
                 </li>
 
+
                 <li class="{% if request.path == url_for('course_kd') %}active{% endif %}">
                     <a href="{{ url_for('course_kd') }}">
                         <span class="icon">🔍</span>
@@ -48,6 +49,7 @@
                     </a>
                 </li>
 
+                
 
             </ul>
         </nav>
@@ -63,18 +65,38 @@
     <!-- 主内容区域 -->
     <div class="main-content">
         <div class="page-header">
-            {% if agent %}
-                <h1>{{ agent.name }}</h1>
-                <p>{{ agent.description }}</p>
-            {% else %}
-                <h1>开启新对话</h1>
-                <p>与卓工院教育大模型进行对话，探索AI的无限可能</p>
-            {% endif %}
+            <h1>个人知识库</h1>
+            <p>您的个人知识库 等待开发中ing</p>
         </div>
         
-        <div class="embed-container">
-            <iframe src="{{ embed_url }}" frameborder="0" allow="microphone; camera" allowfullscreen></iframe>
-        </div>
+        <!-- <div class="agents-grid">
+            {% if agents %}
+                {% for agent in agents %}
+                <div class="agent-card">
+                    <div class="agent-image">
+                        <img src="{{ agent.image_url }}" alt="{{ agent.name }}">
+                    </div>
+                    <div class="agent-content">
+                        <h3>{{ agent.name }}</h3>
+                        <p>{{ agent.description }}</p>
+                        <div class="agent-actions">
+                            <a href="{{ url_for('view_agent', agent_id=agent.id) }}" class="btn btn-primary">打开对话</a>
+                            <button class="btn btn-favorite active" data-agent-id="{{ agent.id }}">
+                                <span class="icon">★</span> 取消收藏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon">⭐</div>
+                    <h3>暂无收藏</h3>
+                    <p>您还没有收藏任何智能体，可以在"课程智能体"页面找到并收藏感兴趣的智能体。</p>
+                    <a href="{{ url_for('course_agents') }}" class="btn btn-primary">浏览智能体</a>
+                </div>
+            {% endif %}
+        </div> -->
     </div>
 </div>
 {% endblock %}

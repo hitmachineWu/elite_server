@@ -7,7 +7,10 @@
     <!-- 侧边导航栏 -->
     <div class="sidebar">
         <div class="sidebar-header">
-            <h2>卓工院教育大模型</h2>
+            
+            <h2 class="hh">
+                <img src="/static/img/logo.png" alt="a" style="width:40px; height: 40px">
+                卓工教育大模型</h2>
         </div>
         
         <div class="user-info">
@@ -28,15 +31,29 @@
                 <li class="{% if request.path == url_for('course_agents') %}active{% endif %}">
                     <a href="{{ url_for('course_agents') }}">
                         <span class="icon">🤖</span>
-                        <span class="label">课程智能体</span>
+                        <span class="label">课程广场</span>
                     </a>
                 </li>
-                <li class="{% if request.path == url_for('favorites') %}active{% endif %}">
-                    <a href="{{ url_for('favorites') }}">
-                        <span class="icon">⭐</span>
-                        <span class="label">个人收藏</span>
+                <li class="{% if request.path == url_for('course_kd') %}active{% endif %}">
+                    <a href="{{ url_for('course_kd') }}">
+                        <span class="icon">🔍</span>
+                        <span class="label">智能体广场</span>
                     </a>
                 </li>
+
+                <li class="{% if request.path == url_for('his') %}active{% endif %}">
+                    <a href="{{ url_for('his') }}">
+                        <span class="icon">📚</span>
+                        <span class="label">个人知识库</span>
+                    </a>
+                </li>
+
+<!--                <li class="{% if request.path == url_for('favorites') %}active{% endif %}">-->
+<!--                    <a href="{{ url_for('favorites') }}">-->
+<!--                        <span class="icon">⭐</span>-->
+<!--                        <span class="label">个人收藏</span>-->
+<!--                    </a>-->
+<!--                </li>-->
             </ul>
         </nav>
         
@@ -51,38 +68,42 @@
     <!-- 主内容区域 -->
     <div class="main-content">
         <div class="page-header">
-            <h1>个人收藏</h1>
-            <p>您收藏的智能体都在这里</p>
+            <h1>个人知识库</h1>
+            <p>您的个人知识库 等待开发中ing</p>
         </div>
-        
-        <div class="agents-grid">
-            {% if agents %}
-                {% for agent in agents %}
-                <div class="agent-card">
-                    <div class="agent-image">
-                        <img src="{{ agent.image_url }}" alt="{{ agent.name }}">
-                    </div>
-                    <div class="agent-content">
-                        <h3>{{ agent.name }}</h3>
-                        <p>{{ agent.description }}</p>
-                        <div class="agent-actions">
-                            <a href="{{ url_for('view_agent', agent_id=agent.id) }}" class="btn btn-primary">打开对话</a>
-                            <button class="btn btn-favorite active" data-agent-id="{{ agent.id }}">
-                                <span class="icon">★</span> 取消收藏
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            {% else %}
-                <div class="empty-state">
-                    <div class="empty-icon">⭐</div>
-                    <h3>暂无收藏</h3>
-                    <p>您还没有收藏任何智能体，可以在"课程智能体"页面找到并收藏感兴趣的智能体。</p>
-                    <a href="{{ url_for('course_agents') }}" class="btn btn-primary">浏览智能体</a>
-                </div>
-            {% endif %}
-        </div>
+<!--        <div class="page-header">-->
+<!--            <h1>个人收藏</h1>-->
+<!--            <p>您收藏的智能体都在这里</p>-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="agents-grid">-->
+<!--            {% if agents %}-->
+<!--                {% for agent in agents %}-->
+<!--                <div class="agent-card">-->
+<!--                    <div class="agent-image">-->
+<!--                        <img src="{{ agent.image_url }}" alt="{{ agent.name }}">-->
+<!--                    </div>-->
+<!--                    <div class="agent-content">-->
+<!--                        <h3>{{ agent.name }}</h3>-->
+<!--                        <p>{{ agent.description }}</p>-->
+<!--                        <div class="agent-actions">-->
+<!--                            <a href="{{ url_for('view_agent', agent_id=agent.id) }}" class="btn btn-primary">打开对话</a>-->
+<!--                            <button class="btn btn-favorite active" data-agent-id="{{ agent.id }}">-->
+<!--                                <span class="icon">★</span> 取消收藏-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                {% endfor %}-->
+<!--            {% else %}-->
+<!--                <div class="empty-state">-->
+<!--                    <div class="empty-icon">⭐</div>-->
+<!--                    <h3>暂无收藏</h3>-->
+<!--                    <p>您还没有收藏任何智能体，可以在"课程智能体"页面找到并收藏感兴趣的智能体。</p>-->
+<!--                    <a href="{{ url_for('course_agents') }}" class="btn btn-primary">浏览智能体</a>-->
+<!--                </div>-->
+<!--            {% endif %}-->
+<!--        </div>-->
     </div>
 </div>
 {% endblock %}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态内容加载示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .content-container {
+            margin: 20px;
+        }
+        .content-section {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .nav-button {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <a href="#" class="nav-button" onclick="showContent('section1')">显示内容 1</a>
+        <a href="#" class="nav-button" onclick="showContent('section2')">显示内容 2</a>
+        <a href="#" class="nav-button" onclick="showContent('section3')">显示内容 3</a>
+
+        <div id="section1" class="content-section active">
+            <h2>内容 1</h2>
+            <p>这是内容区域 1 的内容。</p>
+        </div>
+        <div id="section2" class="content-section">
+            <h2>内容 2</h2>
+            <p>这是内容区域 2 的内容。</p>
+        </div>
+        <div id="section3" class="content-section">
+            <h2>内容 3</h2>
+            <p>这是内容区域 3 的内容。</p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // 获取所有内容区域
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // 隐藏所有内容区域
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 显示指定的内容区域
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+            
+            // 阻止链接的默认行为（即跳转）
+            event.preventDefault();
+        }
+
+        // 由于onclick事件处理函数内部使用了event对象，但在示例中未显式传递，
+        // 这里我们添加一个事件监听器来确保event对象可用。然而，在实际应用中，
+        // 由于onclick已经隐式传递了event对象，下面的代码通常不是必需的。
+        // 但为了完整性，我还是展示了如何添加事件监听器。
+        // 注意：下面的代码行应该被注释掉或删除，因为onclick已经足够。
+        // document.querySelectorAll('.nav-button').forEach(button => {
+        //     button.addEventListener('click', function(event) {
+        //         showContent(this.getAttribute('onclick').match(/'([^']+)'/)[1]);
+        //         event.preventDefault();
+        //     });
+        // });
+
+        // 注意：上面的事件监听器代码示例并不完美，因为它试图从onclick属性中解析sectionId，
+        // 这不是最佳实践。在实际应用中，你应该使用data属性或其他方法来存储需要的信息。
+        // 例如，你可以给每个按钮添加一个data-section属性，并在事件处理函数中读取它。
+    </script>
+
+    <!-- 注意：由于onclick事件处理函数内部已经调用了event.preventDefault()，
+         并且直接传递了sectionId，因此上面的事件监听器代码块应该被忽略。 -->
+</body>
+</html>
