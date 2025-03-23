@@ -31,13 +31,7 @@ agents = [
         "url": agent1,
         "image_url": "/static/img/c0.png"
     },
-    {
-        "id": 2,
-        "name": "编程助手",
-        "description": "专注于帮助解决编程问题的智能体，支持多种编程语言。",
-        "url": DEFAULT_EMBED_URL,
-        "image_url": "/static/img/c1.png"
-    },
+
     {
         "id": 3,
         "name": "Agent内部开发自测",
@@ -51,39 +45,11 @@ agents_kd1=''
 
 agents_kd = [
     {
-        "id": 1,
-        "name": "GPT-4",
-        "description": "OpenAI的最先进模型，能够解决复杂任务，理解和生成自然语言。",
-        "url": 'https://openai.com/gpt-4',
-        "image_url": "/static/img/gpt4.png"
-    },
-    {
         "id": 2,
-        "name": "LLaMA",
-        "description": "Meta的开源大型语言模型，专为研究人员设计，具有强大的语言理解能力。",
-        "url": 'https://ai.meta.com/llama/',
-        "image_url": "/static/img/llama.png"
-    },
-    {
-        "id": 3,
-        "name": "Claude",
-        "description": "Anthropic开发的AI助手，专注于安全性和有益的对话，减少有害输出。",
-        "url": 'https://www.anthropic.com/claude',
-        "image_url": "/static/img/cloude.png"
-    },
-    {
-        "id": 4,
-        "name": "BERT",
-        "description": "Google的双向Transformer模型，专为自然语言理解而设计，在多种NLP任务中表现出色。",
-        "url": 'https://github.com/google-research/bert',
-        "image_url": "/static/img/bert.png"
-    },
-    {
-        "id": 5,
-        "name": "Gemini",
-        "description": "Google的多模态AI系统，能够理解和生成文本、图像、音频等多种形式的内容。",
-        "url": 'https://deepmind.google/technologies/gemini/',
-        "image_url": "/static/img/gemin.png"
+        "name": "编程助手",
+        "description": "专注于帮助解决编程问题的智能体，支持多种编程语言。",
+        "url": ,
+        "image_url": "/static/img/c1.png"
     }
 ]
 
