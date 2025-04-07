@@ -16,10 +16,10 @@ users = {
     }
 }
 # 默认的嵌入URL
-DEFAULT_EMBED_URL = "http://180.85.206.30:3000/chat/share?shareId=rrc0cvrtg9kl80bgl3mz9778"
-new_chat_url="http://180.85.206.30:3000/chat/share?shareId=rrc0cvrtg9kl80bgl3mz9778"
-agent1='http://180.85.206.30:3000/chat/share?shareId=ztwmryjyyn7a6zt6rtyl5pcg'
-
+DEFAULT_EMBED_URL = "http://180.85.206.30:3000/chat/share?shareId=cc1greng47slrl6ivb6ik03p"
+new_chat_url="http://180.85.206.30:3000/chat/share?shareId=cc1greng47slrl6ivb6ik03p" # 默认
+agent1='http://180.85.206.30:3000/chat/share?shareId=ztwmryjyyn7a6zt6rtyl5pcg' # 不用
+agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=zci1ditlgimgguu13dz5ra5n&studentUid="
 agent_develop_url = "http://180.85.206.21:3000/chat/share?shareId=3b2pdqik1odzyy3egy0n5o3a&studentUid="
 
 # 智能体数据
@@ -28,10 +28,16 @@ agents = [
         "id": 1,
         "name": "定量工程设计",
         "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
-        "url": agent1,
+        "url": agent_class_url,
         "image_url": "/static/img/c0.png"
     },
-
+    { 
+        "id": 2,
+        "name": "课程",
+        "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
+        "url": agent_class_url,
+        "image_url": "/static/img/c0.png"
+    },
     {
         "id": 3,
         "name": "Agent内部开发自测",
@@ -48,7 +54,7 @@ agents_kd = [
         "id": 2,
         "name": "编程助手",
         "description": "专注于帮助解决编程问题的智能体，支持多种编程语言。",
-        "url": ,
+        "url": 0,
         "image_url": "/static/img/c1.png"
     }
 ]
@@ -247,9 +253,10 @@ def view_agent(agent_id):
         return redirect(url_for('course_agents'))
     embed_url = agent['url']
     username=session.get('username', '用户')
-    if agent_id == 3:  # 仅对 id 为 3 的智能体进行特殊处理
-        # 使用预先定义的包含 studentUid 参数的 URL
-        embed_url = agent_develop_url + username
+    # if agent_id == 3:  # 仅对 id 为 3 的智能体进行特殊处理
+    #     # 使用预先定义的包含 studentUid 参数的 URL
+    print(f"username = {username}")
+    embed_url = embed_url + username
     print(f"embed_url  = {embed_url} ")
     return render_template('dashboard/new_chat.html',
                            embed_url=embed_url,
