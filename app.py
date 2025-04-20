@@ -16,11 +16,16 @@ users = {
         "favorites": []
     }
 }
+
+
 # 默认的嵌入URL
 DEFAULT_EMBED_URL = "http://180.85.206.30:3000/chat/share?shareId=cc1greng47slrl6ivb6ik03p"
 new_chat_url="http://180.85.206.30:3000/chat/share?shareId=cc1greng47slrl6ivb6ik03p" # 默认
 agent1='http://180.85.206.30:3000/chat/share?shareId=ztwmryjyyn7a6zt6rtyl5pcg' # 不用
-agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=zci1ditlgimgguu13dz5ra5n&studentUid="
+QEA_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=zci1ditlgimgguu13dz5ra5n&studentUid="
+XD_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=fhw37s0q4ksu2mdt46yye54r&studentUid="
+AMOS_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=uqopdvmtnc674zvl1pxfa55f&studentUid="
+GCYL_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=l7ytzllnh7h8tco321hmxacs&studentUid="
 agent_develop_url = "http://180.85.206.21:3000/chat/share?shareId=3b2pdqik1odzyy3egy0n5o3a&studentUid="
 
 # 智能体数据
@@ -28,34 +33,52 @@ agents = [
     { 
         "id": 1,
         "name": "定量工程设计",
-        "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
-        "url": agent_class_url,
+        "description": "学习运用定量分析方法解决工程设计中的实际问题，掌握科学决策的核心技能。",
+        "url": QEA_agent_class_url,
         "image_url": "/static/img/c0.png"
     },
+    # { 
+    #     "id": 2,
+    #     "name": "课程",
+    #     "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
+    #     "url": agent_class_url,
+    #     "image_url": "/static/img/c0.png"
+    # },
+    # {
+    #     "id": 3,
+    #     "name": "Agent内部开发自测",
+    #     "description": "开发团队内部自测",
+    #     "url": agent_develop_url,
+    #     "image_url": "/static/img/c1.png"
+    # }
     { 
         "id": 2,
-        "name": "课程",
-        "description": "助你学习如何在工程设计过程中运用定量分析方法，作出更加科学的决策。",
-        "url": agent_class_url,
+        "name": "线性代数",
+        "description": "掌握线性代数的核心理论与方法，学会用矩阵和线性变换解决实际问题。",
+        "url": XD_agent_class_url,
         "image_url": "/static/img/c0.png"
-    },
-    {
+    },{ 
         "id": 3,
-        "name": "Agent内部开发自测",
-        "description": "开发团队内部自测",
-        "url": agent_develop_url,
-        "image_url": "/static/img/c1.png"
+        "name": "汽车操作系统及应用",
+        "description": "深入探索汽车操作系统的核心技术，掌从基础理论到开发实践的全方位技能。",
+        "url": AMOS_agent_class_url,
+        "image_url": "/static/img/c0.png"
+    },{ 
+        "id": 4,
+        "name": "工程原理",
+        "description": "学习如何运用工程原理解决工程设计中的实际问题，掌握科学决策的核心技能。",
+        "url": GCYL_agent_class_url,
+        "image_url": "/static/img/c0.png"
     }
 ]
 
-agents_kd1=''
 
 agents_kd = [
     {
         "id": 2,
         "name": "编程助手",
         "description": "专注于帮助解决编程问题的智能体，支持多种编程语言。",
-        "url": 0,
+        "url": new_chat_url,
         "image_url": "/static/img/c1.png"
     }
 ]
