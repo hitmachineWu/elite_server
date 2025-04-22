@@ -1,0 +1,166 @@
+{
+    "nodes": [
+        {
+            "name": "检查点功能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "成本控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "里程碑功能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "决策性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "质量控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目计划",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "进度监控",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "标志性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "需求分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可评估性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "决策点功能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "沟通机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "方案选择",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "依存性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "资源分配",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程节点1",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "工程节点1",
+            "target": "标志性",
+            "name": "具有"
+        },
+        {
+            "source": "决策点功能",
+            "target": "方案选择",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "检查点功能",
+            "target": "成本控制",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "决策点功能",
+            "target": "需求分析",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "工程节点1",
+            "target": "时间性",
+            "name": "具有"
+        },
+        {
+            "source": "工程节点1",
+            "target": "可评估性",
+            "name": "具有"
+        },
+        {
+            "source": "工程节点1",
+            "target": "决策性",
+            "name": "具有"
+        },
+        {
+            "source": "检查点功能",
+            "target": "质量控制",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "里程碑功能",
+            "target": "项目计划",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "工程节点1",
+            "target": "依存性",
+            "name": "具有"
+        },
+        {
+            "source": "决策点功能",
+            "target": "资源分配",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "里程碑功能",
+            "target": "沟通机制",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "检查点功能",
+            "target": "进度监控",
+            "name": "方法论支撑"
+        },
+        {
+            "source": "里程碑功能",
+            "target": "风险管理",
+            "name": "方法论支撑"
+        }
+    ]
+}

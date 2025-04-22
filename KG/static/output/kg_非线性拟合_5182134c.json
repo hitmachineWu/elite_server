@@ -1,0 +1,251 @@
+{
+    "nodes": [
+        {
+            "name": "化学反应动力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料疲劳预测",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "酶动力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非线性振动分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "适用范围",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复杂现象",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经济预测",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "化学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生物学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会网络",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物理学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "行为模式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信号处理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非线性动力学系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "量子力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生物过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非线性拟合",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "土木工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "认知过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "分子结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生长曲线",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "市场行为",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经济学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机械工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "心理学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "群体行为",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电气工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "地质模型",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "化学",
+            "target": "化学反应动力学",
+            "name": "用于分析"
+        },
+        {
+            "source": "物理学",
+            "target": "非线性动力学系统",
+            "name": "用于描述"
+        },
+        {
+            "source": "生物学",
+            "target": "酶动力学",
+            "name": "用于建模"
+        },
+        {
+            "source": "适用范围",
+            "target": "复杂现象",
+            "name": "能够更准确地描述"
+        },
+        {
+            "source": "社会学",
+            "target": "群体行为",
+            "name": "用于分析"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "统计方法",
+            "name": "是一种"
+        },
+        {
+            "source": "化学",
+            "target": "分子结构",
+            "name": "用于分析"
+        },
+        {
+            "source": "心理学",
+            "target": "行为模式",
+            "name": "用于建模"
+        },
+        {
+            "source": "物理学",
+            "target": "量子力学",
+            "name": "用于描述"
+        },
+        {
+            "source": "土木工程",
+            "target": "地质模型",
+            "name": "用于结构分析"
+        },
+        {
+            "source": "生物学",
+            "target": "生长曲线",
+            "name": "用于建模"
+        },
+        {
+            "source": "机械工程",
+            "target": "非线性振动分析",
+            "name": "用于系统建模和控制"
+        },
+        {
+            "source": "心理学",
+            "target": "认知过程",
+            "name": "用于建模"
+        },
+        {
+            "source": "电气工程",
+            "target": "信号处理",
+            "name": "用于电路建模"
+        },
+        {
+            "source": "机械工程",
+            "target": "材料疲劳预测",
+            "name": "用于系统建模和控制"
+        },
+        {
+            "source": "生物学",
+            "target": "生物过程",
+            "name": "用于建模"
+        },
+        {
+            "source": "社会学",
+            "target": "社会网络",
+            "name": "用于分析"
+        },
+        {
+            "source": "经济学",
+            "target": "经济预测",
+            "name": "用于分析"
+        },
+        {
+            "source": "经济学",
+            "target": "市场行为",
+            "name": "用于分析"
+        }
+    ]
+}
