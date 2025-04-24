@@ -139,6 +139,8 @@ def login():
         # 执行 SQL 查询
         cursor.execute(sql)
         # 获取单条结果
+        if not conn.open:
+            conn.ping(reconnect=True)  # 重新连接
         result = cursor.fetchone()
         if result and result[0] == password:
             session['username'] = username
@@ -161,6 +163,8 @@ def register():
         password = request.form.get('password')
 
         # 判断注册资格 先判断学号是否存在 再判断账号是否注册（邮箱是否为空）
+        if not conn.open:
+            conn.ping(reconnect=True)  # 重新连接
         cursor.execute("SELECT sid, email FROM student WHERE sid = %s", username)
         result = cursor.fetchone()
         if result is None:
@@ -191,6 +195,8 @@ def change_password():
         p1 = request.form.get('p1')
         p2 = request.form.get('p2')
         if p1 == p2:
+            if not conn.open:
+                conn.ping(reconnect=True)  # 重新连接
             cursor.execute("UPDATE student SET password = %s WHERE sid = %s", (p1, session["username"]))
         else:
             flash('两次输入的密码不相同，请重新修改')
@@ -200,6 +206,8 @@ def change_password():
 @app.route('/forget_password', methods=['GET', 'POST'])
 def forget_password():
     if request.method == 'POST':
+        if not conn.open:
+            conn.ping(reconnect=True)  # 重新连接
         sid = request.form.get('username')
         email = request.form.get('email')
 
@@ -282,7 +290,7 @@ def view_agent(agent_id):
     print(f"username = {username}")
     embed_url = embed_url + username
     print(f"embed_url  = {embed_url} ")
-    return render_template('dashboard/new_chat.html',
+    return render_template('dashboard/class_chat.html',
                            embed_url=embed_url,
                            agent=agent,
                            username=session.get('username', '用户'))
@@ -317,11 +325,28 @@ def kg_index():
     """显示知识图谱主页"""
     return send_from_directory(KG_FOLDER, 'nn_output_enhanced.html')
 
+## 课程广场知识图谱路由
+@app.route('/classkg/<int:course_id>')
+def kg_page(course_id):
+    """根据课程编号显示对应的知识图谱页面"""
+    filename = f'nn_output_enhanced{course_id}.html'
+    return send_from_directory(KG_FOLDER, filename)
+
+# @app.route('/classkg1')
+# def kg_index():
+#     """显示知识图谱主页"""
+#     return send_from_directory(KG_FOLDER, 'nn_output_enhanced1.html')
+
+# @app.route('/classkg2')
+# def kg_index2():
+#     """显示知识图谱主页"""
+#     return send_from_directory(KG_FOLDER, 'nn_output_enhanced2.html')
+
 @app.route('/js/<path:filename>')
 def kg_js(filename):
     """提供JavaScript文件服务"""
     return send_from_directory(KG_FOLDER, filename)
-
+    
 @app.route('/generate_kg', methods=['POST'])
 def proxy_generate_kg():
     """处理生成知识图谱的请求"""

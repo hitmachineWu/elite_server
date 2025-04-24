@@ -1,0 +1,161 @@
+{
+    "nodes": [
+        {
+            "name": "- **逻辑关系**：输入输出设备",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "处理器设计的基础",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "寻址方式和指令类型等",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机的核心部件，负责执行指令和处理数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指研究计算机硬件系统各个部件的功能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机组成原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指令格式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：指令系统定义了处理器可以执行的所有指令",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "处理器与外部设备之间的重要桥梁",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "键盘",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **层级结构**",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "软件与硬件之间的接口",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机硬件系统的核心层级",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：处理器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **控制单元**：负责指令的解码和执行控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机与外部世界交互的接口，负责数据的输入和输出",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机内部各部件之间传输数据和控制信号的通路",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "处理器的核心控制部分",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：存储器用于存放数据和指令",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：总线",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "- **逻辑关系**：输入输出设备",
+            "target": "计算机与外部世界交互的接口，负责数据的输入和输出",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：指令系统定义了处理器可以执行的所有指令",
+            "target": "软件与硬件之间的接口",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：总线",
+            "target": "计算机内部各部件之间传输数据和控制信号的通路",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：处理器",
+            "target": "计算机的核心部件，负责执行指令和处理数据",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**",
+            "target": "指令格式",
+            "name": "包括"
+        },
+        {
+            "source": "- **逻辑关系**：存储器用于存放数据和指令",
+            "target": "处理器与外部设备之间的重要桥梁",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**",
+            "target": "计算机硬件系统的核心层级",
+            "name": "属于"
+        },
+        {
+            "source": "计算机组成原理",
+            "target": "指研究计算机硬件系统各个部件的功能",
+            "name": "是"
+        },
+        {
+            "source": "寻址方式和指令类型等",
+            "target": "处理器设计的基础",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**",
+            "target": "键盘",
+            "name": "包括"
+        },
+        {
+            "source": "- **控制单元**：负责指令的解码和执行控制",
+            "target": "处理器的核心控制部分",
+            "name": "是"
+        }
+    ]
+}

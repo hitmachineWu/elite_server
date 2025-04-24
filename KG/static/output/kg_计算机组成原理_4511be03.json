@@ -1,0 +1,246 @@
+{
+    "nodes": [
+        {
+            "name": "运算单元和寄存器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据表示的三个主要方面，它们之间通过不同的编码和运算方法相互支撑",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **处理器设计**：研究处理器（CPU）的内部结构和工作原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "总线架构等都",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机组成原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "寻址方式和指令类型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "内存系统管理的进一步应用",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "加法器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指令格式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "控制单元",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **指令格式**：指令的结构和组成",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **控制单元**：负责指令的解释和执行控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "处理器的三个主要组成部分，流水线设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **应用延伸**：虚拟内存和存储器保护",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **指令集体系结构**：定义了计算机系统的基本指令集",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指令寄存器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "各部件的功能及其相互关系。它从逻辑层面描述了计算机系统的工作机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "存储器类型和存储器管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "构成指令集体系结构的基础，微指令",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **并行理论**：RISC与CISC",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "输出设备和I/O接口",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机科学与技术领域的一个基础学科，主要研究计算机硬件系统的结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "输入输出系统的三个主要组成部分，中断机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **运算单元**：负责数据的算术和逻辑运算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据表示",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "字符编码和浮点数表示",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "操作码",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "并行理论在指令集体系结构中的应用",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **数据表示**：研究计算机如何表示数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "内存系统的三个主要方面，存储器访问",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "各自领域的方法论支撑",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "- **数据表示**：研究计算机如何表示数据",
+            "target": "数制",
+            "name": "包括"
+        },
+        {
+            "source": "- **处理器设计**：研究处理器（CPU）的内部结构和工作原理",
+            "target": "控制单元",
+            "name": "包括"
+        },
+        {
+            "source": "各部件的功能及其相互关系。它从逻辑层面描述了计算机系统的工作机制",
+            "target": "数据表示",
+            "name": "包括"
+        },
+        {
+            "source": "输出设备和I/O接口",
+            "target": "输入输出系统的三个主要组成部分，中断机制",
+            "name": "是"
+        },
+        {
+            "source": "- **控制单元**：负责指令的解释和执行控制",
+            "target": "指令寄存器",
+            "name": "包括"
+        },
+        {
+            "source": "总线架构等都",
+            "target": "各自领域的方法论支撑",
+            "name": "是"
+        },
+        {
+            "source": "运算单元和寄存器",
+            "target": "处理器的三个主要组成部分，流水线设计",
+            "name": "是"
+        },
+        {
+            "source": "- **运算单元**：负责数据的算术和逻辑运算",
+            "target": "加法器",
+            "name": "包括"
+        },
+        {
+            "source": "计算机组成原理",
+            "target": "计算机科学与技术领域的一个基础学科，主要研究计算机硬件系统的结构",
+            "name": "是"
+        },
+        {
+            "source": "- **并行理论**：RISC与CISC",
+            "target": "并行理论在指令集体系结构中的应用",
+            "name": "是"
+        },
+        {
+            "source": "寻址方式和指令类型",
+            "target": "构成指令集体系结构的基础，微指令",
+            "name": "是"
+        },
+        {
+            "source": "存储器类型和存储器管理",
+            "target": "内存系统的三个主要方面，存储器访问",
+            "name": "是"
+        },
+        {
+            "source": "- **指令格式**：指令的结构和组成",
+            "target": "操作码",
+            "name": "包括"
+        },
+        {
+            "source": "字符编码和浮点数表示",
+            "target": "数据表示的三个主要方面，它们之间通过不同的编码和运算方法相互支撑",
+            "name": "是"
+        },
+        {
+            "source": "- **应用延伸**：虚拟内存和存储器保护",
+            "target": "内存系统管理的进一步应用",
+            "name": "是"
+        },
+        {
+            "source": "- **指令集体系结构**：定义了计算机系统的基本指令集",
+            "target": "指令格式",
+            "name": "包括"
+        }
+    ]
+}

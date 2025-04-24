@@ -1,0 +1,633 @@
+{ 
+  "categories": [
+    {"name": "课程体系"},
+    {"name": "工具类"},
+    {"name": "知识类"}
+  ],
+  "nodes": [
+    {
+      "name": "定量工程设计方法",
+      "des": "面向机器人工程专业大学一年级学生基于理论与实践项目学习的专业核心课程。通过实际工程示例介绍对工程问题进行定量分析的各种方法。掌握如何在工程挑战的背景下在不同的工具和不同的方法之间进行选择，如何使用许多不同的工具进行定量分析。",
+      "symbolSize": 70,
+      "category": "课程体系"
+    },
+    {
+      "name": "课程软件体系",
+      "des": "课程中涉及的各类软件工具及其功能体系",
+      "symbolSize": 60,
+      "category": "课程体系"
+    },
+    {
+      "name": "三维建模与仿真工具",
+      "des": "用于三维模型设计与多物理场仿真的工具",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "SolidWorks",
+      "des": "主流三维建模软件，支持参数化设计与工程分析",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "ANSYS/COMSOL",
+      "des": "多物理场耦合仿真软件",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "编程计算工具",
+      "des": "用于数值计算与数据分析的软件工具",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "Matlab",
+      "des": "专业科学计算与仿真软件",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "Python",
+      "des": "一种广泛使用的编程语言，用于编程计算",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "嵌入式开发工具",
+      "des": "嵌入式系统开发相关工具",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "STM32",
+      "des": "主流嵌入式开发平台",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "ESP32",
+      "des": "用于嵌入式开发，具备物联网功能的套件",
+      "symbolSize": 50,
+      "category": "工具类"
+    },
+    {
+      "name": "课程主要内容",
+      "des": "课程核心知识领域与技术要点",
+      "symbolSize": 60,
+      "category": "课程体系"
+    },
+    {
+      "name": "物理相关知识点",
+      "des": "物理理论在工程中的应用知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "离散/连续物体的质心分布",
+      "des": "质心分布理论与计算方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "非对称结构的质心偏移",
+      "des": "分析非对称结构质心偏移的应用",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "动态系统的等效质心",
+      "des": "计算动态系统等效质心的应用",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "浮力与浮心",
+      "des": "关于浮力和浮心的知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "重心/浮心计算",
+      "des": "重心与浮心的数值计算方法及误差控制",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "蒙特卡洛随机采样法",
+      "des": "通过随机采样估算重心/浮心的数值方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "有限元离散化方法",
+      "des": "基于有限元网格的离散化计算方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "网格划分与加权平均法",
+      "des": "通过网格划分和加权平均计算质心的方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "力与力矩系统",
+      "des": "静力学分析与动力学扩展知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "稳心与扶正力矩",
+      "des": "稳心计算与扶正力矩分析知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "数学相关知识点",
+      "des": "工程数学方法与应用",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "曲线下面积计算",
+      "des": "积分方法在面积计算中的应用",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "解析方法",
+      "des": "基于数学公式的精确计算方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "数值方法",
+      "des": "用数值方式计算曲线下面积的方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "离散化与微积分",
+      "des": "关于离散化和微积分的知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "离散化思想",
+      "des": "离散化的基本思想和概念",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "工程数学",
+      "des": "离散化和微积分在工程中的应用",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "船体设计",
+      "des": "船体结构与性能设计知识体系",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "船型设计基础",
+      "des": "船体线型设计理论与方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "型线图要素",
+      "des": "船体型线图的核心构成要素",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "性能优化",
+      "des": "船型综合性能优化设计原则",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "结构设计",
+      "des": "船体结构参数计算与材料选型",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "构件计算",
+      "des": "船体关键构件力学计算方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "材料选择",
+      "des": "船体材料特性与适用场景",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "动力系统",
+      "des": "船舶动力系统设计知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "推进系统",
+      "des": "船舶推进理论与设计",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "螺旋桨理论",
+      "des": "螺旋桨工作原理与性能分析",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "匹配设计",
+      "des": "推进系统各部件匹配设计的方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "控制系统",
+      "des": "动力系统中控制部分的知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "遥控系统",
+      "des": "动力系统的遥控控制知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "自主控制",
+      "des": "动力系统的自主控制知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "制造工艺",
+      "des": "船体建造技术与工艺规范",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "传统工艺",
+      "des": "木质船舶建造核心工艺",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "现代工艺",
+      "des": "数字化制造技术在船体中的应用",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "测试与优化",
+      "des": "模型测试与设计优化知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "实验方法",
+      "des": "船体模型实验技术",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "优化设计",
+      "des": "船体设计优化方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "项目管理",
+      "des": "工程项目管理理论与方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "工程文档",
+      "des": "工程项目文档管理知识",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "BOM表",
+      "des": "物料清单编制与管理",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "技术报告",
+      "des": "技术报告编制规范",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "团队协作",
+      "des": "工程项目团队协作方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "任务分配",
+      "des": "项目任务分配方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    },
+    {
+      "name": "质量管控",
+      "des": "项目质量控制方法",
+      "symbolSize": 40,
+      "category": "知识类"
+    }
+  ],
+  "links": [
+    {
+      "source": "定量工程设计方法",
+      "target": "课程软件体系",
+      "name": "包含"
+    },
+    {
+      "source": "定量工程设计方法",
+      "target": "课程主要内容",
+      "name": "包含"
+    },
+    {
+      "source": "课程软件体系",
+      "target": "三维建模与仿真工具",
+      "name": "包括"
+    },
+    {
+      "source": "三维建模与仿真工具",
+      "target": "SolidWorks",
+      "name": "包含"
+    },
+    {
+      "source": "三维建模与仿真工具",
+      "target": "ANSYS/COMSOL",
+      "name": "包含"
+    },
+    {
+      "source": "课程软件体系",
+      "target": "编程计算工具",
+      "name": "包括"
+    },
+    {
+      "source": "编程计算工具",
+      "target": "Matlab",
+      "name": "包含"
+    },
+    {
+      "source": "编程计算工具",
+      "target": "Python",
+      "name": "包含"
+    },
+    {
+      "source": "课程软件体系",
+      "target": "嵌入式开发工具",
+      "name": "包括"
+    },
+    {
+      "source": "嵌入式开发工具",
+      "target": "STM32",
+      "name": "包含"
+    },
+    {
+      "source": "嵌入式开发工具",
+      "target": "ESP32",
+      "name": "包含"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "物理相关知识点",
+      "name": "包含"
+    },
+    {
+      "source": "物理相关知识点",
+      "target": "离散/连续物体的质心分布",
+      "name": "包括"
+    },
+    {
+      "source": "离散/连续物体的质心分布",
+      "target": "非对称结构的质心偏移",
+      "name": "涉及"
+    },
+    {
+      "source": "离散/连续物体的质心分布",
+      "target": "动态系统的等效质心",
+      "name": "涉及"
+    },
+    {
+      "source": "物理相关知识点",
+      "target": "浮力与浮心",
+      "name": "包括"
+    },
+    {
+      "source": "物理相关知识点",
+      "target": "重心/浮心计算",
+      "name": "包含"
+    },
+    {
+      "source": "重心/浮心计算",
+      "target": "蒙特卡洛随机采样法",
+      "name": "涉及"
+    },
+    {
+      "source": "重心/浮心计算",
+      "target": "有限元离散化方法",
+      "name": "涉及"
+    },
+    {
+      "source": "重心/浮心计算",
+      "target": "网格划分与加权平均法",
+      "name": "涉及"
+    },
+    {
+      "source": "物理相关知识点",
+      "target": "力与力矩系统",
+      "name": "包含"
+    },
+    {
+      "source": "物理相关知识点",
+      "target": "稳心与扶正力矩",
+      "name": "包含"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "数学相关知识点",
+      "name": "包含"
+    },
+    {
+      "source": "数学相关知识点",
+      "target": "曲线下面积计算",
+      "name": "包括"
+    },
+    {
+      "source": "数学相关知识点",
+      "target": "离散化与微积分",
+      "name": "包括"
+    },
+    {
+      "source": "曲线下面积计算",
+      "target": "解析方法",
+      "name": "包含"
+    },
+    {
+      "source": "曲线下面积计算",
+      "target": "数值方法",
+      "name": "包含"
+    },
+    {
+      "source": "离散化与微积分",
+      "target": "离散化思想",
+      "name": "包含"
+    },
+    {
+      "source": "离散化与微积分",
+      "target": "工程数学",
+      "name": "包含"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "船体设计",
+      "name": "包含"
+    },
+    {
+      "source": "船体设计",
+      "target": "船型设计基础",
+      "name": "包括"
+    },
+    {
+      "source": "船体设计",
+      "target": "结构设计",
+      "name": "包括"
+    },
+    {
+      "source": "船型设计基础",
+      "target": "型线图要素",
+      "name": "包含"
+    },
+    {
+      "source": "船型设计基础",
+      "target": "性能优化",
+      "name": "包含"
+    },
+    {
+      "source": "结构设计",
+      "target": "构件计算",
+      "name": "包含"
+    },
+    {
+      "source": "结构设计",
+      "target": "材料选择",
+      "name": "包含"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "动力系统",
+      "name": "包含"
+    },
+    {
+      "source": "动力系统",
+      "target": "推进系统",
+      "name": "包括"
+    },
+    {
+      "source": "动力系统",
+      "target": "控制系统",
+      "name": "包括"
+    },
+    {
+      "source": "推进系统",
+      "target": "螺旋桨理论",
+      "name": "包含"
+    },
+    {
+      "source": "推进系统",
+      "target": "匹配设计",
+      "name": "包含"
+    },
+    {
+      "source": "控制系统",
+      "target": "遥控系统",
+      "name": "包含"
+    },
+    {
+      "source": "控制系统",
+      "target": "自主控制",
+      "name": "包含"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "制造工艺",
+      "name": "包含"
+    },
+    {
+      "source": "制造工艺",
+      "target": "传统工艺",
+      "name": "包括"
+    },
+    {
+      "source": "制造工艺",
+      "target": "现代工艺",
+      "name": "包括"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "测试与优化",
+      "name": "包含"
+    },
+    {
+      "source": "测试与优化",
+      "target": "实验方法",
+      "name": "包括"
+    },
+    {
+      "source": "测试与优化",
+      "target": "优化设计",
+      "name": "包括"
+    },
+    {
+      "source": "课程主要内容",
+      "target": "项目管理",
+      "name": "包含"
+    },
+    {
+      "source": "项目管理",
+      "target": "工程文档",
+      "name": "包括"
+    },
+    {
+      "source": "工程文档",
+      "target": "BOM表",
+      "name": "包含"
+    },
+    {
+      "source": "工程文档",
+      "target": "技术报告",
+      "name": "包含"
+    },
+    {
+      "source": "项目管理",
+      "target": "团队协作",
+      "name": "包括"
+    },
+    {
+      "source": "团队协作",
+      "target": "任务分配",
+      "name": "包含"
+    },
+    {
+      "source": "团队协作",
+      "target": "质量管控",
+      "name": "包含"
+    }
+  ]
+}

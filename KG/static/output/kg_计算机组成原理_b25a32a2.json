@@ -1,0 +1,291 @@
+{
+    "nodes": [
+        {
+            "name": "信号传递等。它强调的",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **定义**：内存系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机组成原理的核心，它集成了控制单元和算术逻辑单元（ALU）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：ISA 是计算机体系结构的基石，它",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机的主要存储器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **主存 (RAM)**：用于存储当前运行的程序和数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **指令格式**：定义了指令的结构和编码方式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "寻址模式等。它关注的",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "了计算机硬件如何解释和执行软件指令。计算机组织则是根据 ISA 的要求来设计和实现硬件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：内存系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机体系结构的一部分，定义了机器语言指令的格式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **定义**：总线系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机体系结构的基石，它决定了计算机硬件如何解释和执行软件指令。计算机组织则",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：ISA",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **寻址模式**：描述了指令中地址的表示和访问方式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "主存（RAM）和高速缓存（Cache），用于存储数据和指令",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：总线系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指令的解析和执行",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **定义**：指令集架构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机组织中的重要组成部分，与 CPU 的数据访问速度和效率密切相关",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机与外部世界交互的接口，其设计和实现直接影响计算机的可用性和性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机的可用性和性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机内部各个部件之间数据和控制信号传递的通道",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机的“大脑”，负责执行指令集架构定义的指令，管理数据的处理和运算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "输入设备（如键盘",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机组织中的数据传输基础设施，连接 CPU",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "了数据的获取方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **计算机组织**：侧重于计算机硬件的物理组织和实现",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "各个部件的功能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：I/O 系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "如何为计算机设计一个高效",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **定义**：I/O 系统负责计算机与外部设备的通信",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：I/O 系统是计算机与外部世界交互的接口，其设计和实现直接",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机科学领域的一个基础学科，主要研究计算机硬件系统的结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "**计算机组成原理**（Computer Organization and Architecture）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：CPU",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机内部",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **定义**：CPU",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "- **逻辑关系**：I/O 系统是计算机与外部世界交互的接口，其设计和实现直接",
+            "target": "计算机的可用性和性能",
+            "name": "影响"
+        },
+        {
+            "source": "信号传递等。它强调的",
+            "target": "计算机内部",
+            "name": "是"
+        },
+        {
+            "source": "- **主存 (RAM)**：用于存储当前运行的程序和数据",
+            "target": "计算机的主要存储器",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：ISA",
+            "target": "计算机体系结构的基石，它决定了计算机硬件如何解释和执行软件指令。计算机组织则",
+            "name": "是"
+        },
+        {
+            "source": "- **定义**：I/O 系统负责计算机与外部设备的通信",
+            "target": "输入设备（如键盘",
+            "name": "包括"
+        },
+        {
+            "source": "- **逻辑关系**：ISA 是计算机体系结构的基石，它",
+            "target": "了计算机硬件如何解释和执行软件指令。计算机组织则是根据 ISA 的要求来设计和实现硬件",
+            "name": "决定"
+        },
+        {
+            "source": "- **定义**：总线系统",
+            "target": "计算机内部各个部件之间数据和控制信号传递的通道",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：I/O 系统",
+            "target": "计算机与外部世界交互的接口，其设计和实现直接影响计算机的可用性和性能",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：内存系统",
+            "target": "计算机组织中的重要组成部分，与 CPU 的数据访问速度和效率密切相关",
+            "name": "是"
+        },
+        {
+            "source": "- **定义**：CPU",
+            "target": "计算机的“大脑”，负责执行指令集架构定义的指令，管理数据的处理和运算",
+            "name": "是"
+        },
+        {
+            "source": "- **指令格式**：定义了指令的结构和编码方式",
+            "target": "指令的解析和执行",
+            "name": "影响"
+        },
+        {
+            "source": "- **定义**：内存系统",
+            "target": "主存（RAM）和高速缓存（Cache），用于存储数据和指令",
+            "name": "包括"
+        },
+        {
+            "source": "寻址模式等。它关注的",
+            "target": "如何为计算机设计一个高效",
+            "name": "是"
+        },
+        {
+            "source": "- **定义**：指令集架构",
+            "target": "计算机体系结构的一部分，定义了机器语言指令的格式",
+            "name": "是"
+        },
+        {
+            "source": "- **寻址模式**：描述了指令中地址的表示和访问方式",
+            "target": "了数据的获取方法",
+            "name": "决定"
+        },
+        {
+            "source": "- **逻辑关系**：总线系统",
+            "target": "计算机组织中的数据传输基础设施，连接 CPU",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：CPU",
+            "target": "计算机组成原理的核心，它集成了控制单元和算术逻辑单元（ALU）",
+            "name": "是"
+        },
+        {
+            "source": "- **计算机组织**：侧重于计算机硬件的物理组织和实现",
+            "target": "各个部件的功能",
+            "name": "包括"
+        },
+        {
+            "source": "**计算机组成原理**（Computer Organization and Architecture）",
+            "target": "计算机科学领域的一个基础学科，主要研究计算机硬件系统的结构",
+            "name": "是"
+        }
+    ]
+}

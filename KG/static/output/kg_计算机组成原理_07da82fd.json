@@ -1,0 +1,301 @@
+{
+    "nodes": [
+        {
+            "name": "存储层次结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "中断机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时序控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "运算器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "I/O接口",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "微程序控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "逻辑门电路",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "输入设备",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机组成原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "状态寄存器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "内存",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "加法器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "寄存器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "ALU",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "乘法器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "输出设备",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "输入/输出设备",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "存储器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "缓存",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "性能与功耗的平衡",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "外存",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "硬件层次性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指令流控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "DMA",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "硬连线控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "流水线技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "I/O系统架构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "存储技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "虚拟内存",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "控制器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "功能模块化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "浮点运算单元",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "运算器",
+            "target": "寄存器",
+            "name": "包括"
+        },
+        {
+            "source": "输入/输出设备",
+            "target": "输入设备",
+            "name": "包括"
+        },
+        {
+            "source": "运算器",
+            "target": "乘法器",
+            "name": "包括"
+        },
+        {
+            "source": "控制器",
+            "target": "状态寄存器",
+            "name": "保存"
+        },
+        {
+            "source": "控制器",
+            "target": "时序控制",
+            "name": "负责"
+        },
+        {
+            "source": "输入/输出设备",
+            "target": "I/O接口",
+            "name": "包括"
+        },
+        {
+            "source": "控制器",
+            "target": "指令流控制",
+            "name": "负责"
+        },
+        {
+            "source": "运算器",
+            "target": "逻辑门电路",
+            "name": "构成"
+        },
+        {
+            "source": "存储器",
+            "target": "虚拟内存",
+            "name": "使用"
+        },
+        {
+            "source": "运算器",
+            "target": "浮点运算单元",
+            "name": "包括"
+        },
+        {
+            "source": "输入/输出设备",
+            "target": "DMA",
+            "name": "使用"
+        },
+        {
+            "source": "存储器",
+            "target": "存储层次结构",
+            "name": "形成"
+        },
+        {
+            "source": "运算器",
+            "target": "ALU",
+            "name": "包括"
+        },
+        {
+            "source": "输入/输出设备",
+            "target": "输出设备",
+            "name": "包括"
+        },
+        {
+            "source": "运算器",
+            "target": "加法器",
+            "name": "包括"
+        },
+        {
+            "source": "存储器",
+            "target": "外存",
+            "name": "包括"
+        },
+        {
+            "source": "存储器",
+            "target": "内存",
+            "name": "包括"
+        },
+        {
+            "source": "存储器",
+            "target": "缓存",
+            "name": "包括"
+        },
+        {
+            "source": "输入/输出设备",
+            "target": "中断机制",
+            "name": "使用"
+        },
+        {
+            "source": "计算机组成原理",
+            "target": "硬件层次性",
+            "name": "包括"
+        },
+        {
+            "source": "计算机组成原理",
+            "target": "性能与功耗的平衡",
+            "name": "包括"
+        },
+        {
+            "source": "存储器",
+            "target": "存储技术",
+            "name": "包括"
+        },
+        {
+            "source": "控制器",
+            "target": "硬连线控制",
+            "name": "实现"
+        },
+        {
+            "source": "控制器",
+            "target": "流水线技术",
+            "name": "使用"
+        },
+        {
+            "source": "输入/输出设备",
+            "target": "I/O系统架构",
+            "name": "包括"
+        },
+        {
+            "source": "控制器",
+            "target": "微程序控制",
+            "name": "实现"
+        },
+        {
+            "source": "计算机组成原理",
+            "target": "功能模块化",
+            "name": "包括"
+        }
+    ]
+}

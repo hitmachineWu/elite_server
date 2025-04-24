@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block title %}{% if agent %}{{ agent.name }}{% else %}开启新对话{% endif %} - 卓工院教育大模型{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- 侧边导航栏 -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="hh">
+                <img src="/static/img/logo.png" alt="a" style="width:40px; height: 40px">
+                卓工教育大模型</h2>
+        </div>
+        
+        <div class="user-info">
+            <div class="user-avatar">
+                <span>{{ username[0].upper() }}</span>
+            </div>
+            <div class="user-name">{{ username }}</div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="{% if request.path == url_for('new_chat') %}active{% endif %}">
+                    <a href="{{ url_for('new_chat') }}">
+                        <span class="icon">💬</span>
+                        <span class="label">开启新对话</span>
+                    </a>
+                </li>
+                <li class="{% if request.path == url_for('course_agents') %}active{% endif %}">
+                    <a href="{{ url_for('course_agents') }}">
+                        <span class="icon">🤖</span>
+                        <span class="label">课程广场</span>
+                    </a>
+                </li>
+
+                <li class="{% if request.path == url_for('course_kd') %}active{% endif %}">
+                    <a href="{{ url_for('course_kd') }}">
+                        <span class="icon">🔍</span>
+                        <span class="label">智能体广场</span>
+                    </a>
+                </li>
+                <li class="{% if request.path == url_for('his') %}active{% endif %}">
+                    <a href="{{ url_for('his') }}">
+                        <span class="icon">📚</span>
+                        <span class="label">个人知识库</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="{{ url_for('logout') }}" class="logout-btn">
+                <span class="icon">🚪</span>
+                <span class="label">退出登录</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- 主内容区域 -->
+    <div class="main-content">
+        <div class="page-header">
+            {% if agent %}
+                <h1>{{ agent.name }}</h1>
+                <p>{{ agent.description }}</p>
+            {% else %}
+                <h1>开启新对话</h1>
+                <p>与卓工院教育大模型进行对话，探索AI的无限可能</p>
+            {% endif %}
+        </div>
+        
+        <!-- 双栏布局容器 -->
+        <div class="dual-container">
+            <!-- 左侧知识图谱 -->
+            <div class="kg-container">
+                <iframe src="/classkg/{{agent.id}}" frameborder="0" allowfullscreen id="kg-iframe"></iframe>
+            </div>
+            
+            <!-- 右侧聊天界面 -->
+            <div class="embed-container">
+                <iframe src="{{ embed_url }}" frameborder="0" allow="microphone; camera" allowfullscreen id="chat-iframe"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加CSS样式 -->
+<style>
+.dual-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 150px); /* 调整高度，减去顶部空间 */
+    gap: 20px;
+}
+
+.kg-container {
+    flex: 1;
+    min-width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.embed-container {
+    flex: 1;
+    min-width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#kg-iframe, #chat-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .dual-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .kg-container, .embed-container {
+        width: 100%;
+        height: 600px;
+        margin-bottom: 20px;
+    }
+}
+</style>
+{% endblock %}
