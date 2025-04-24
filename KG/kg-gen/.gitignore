@@ -1,0 +1,6 @@
+**.env
+**_packaging_tutorial**
+__pycache__/
+*.py[cod]
+*$py.class
+**scratch**

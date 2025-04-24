@@ -1,0 +1,296 @@
+{
+    "nodes": [
+        {
+            "name": "经济学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "离散数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非线性关系",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "基因表达数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "最优化理论",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "市场波动",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非线性拟合",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "蛋白质结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "贝叶斯方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "污染物扩散",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "平滑性要求",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科学实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "因变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "参数的不确定性估计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "供给曲线",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "贝叶斯回归",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "金融工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "连续数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学建模",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计建模方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "参数范围限制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "气候变化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生物信息学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间序列数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "需求曲线",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "非线性拟合",
+            "target": "市场波动",
+            "name": "用于建模"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "平滑性要求",
+            "name": "可以有"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "供给曲线",
+            "name": "用于建模"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "风险管理",
+            "name": "用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "需求曲线",
+            "name": "用于建模"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "生物信息学",
+            "name": "用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "参数范围限制",
+            "name": "可以有"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "非线性关系",
+            "name": "用于确定"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "离散数据",
+            "name": "可以处理"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "科学实验",
+            "name": "广泛应用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "污染物扩散",
+            "name": "用于建模"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "工程设计",
+            "name": "用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "数学建模",
+            "name": "涉及"
+        },
+        {
+            "source": "贝叶斯回归",
+            "target": "参数的不确定性估计",
+            "name": "提供"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "统计学",
+            "name": "基于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "经济学",
+            "name": "用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "最优化理论",
+            "name": "基于"
+        },
+        {
+            "source": "非线性关系",
+            "target": "自变量",
+            "name": "存在于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "连续数据",
+            "name": "可以处理"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "环境科学",
+            "name": "用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "蛋白质结构",
+            "name": "用于分析"
+        },
+        {
+            "source": "非线性关系",
+            "target": "因变量",
+            "name": "存在于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "气候变化",
+            "name": "用于建模"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "基因表达数据",
+            "name": "用于分析"
+        },
+        {
+            "source": "贝叶斯回归",
+            "target": "贝叶斯方法",
+            "name": "通过"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "时间序列数据",
+            "name": "可以处理"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "金融工程",
+            "name": "用于"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "统计建模方法",
+            "name": "是一种"
+        }
+    ]
+}

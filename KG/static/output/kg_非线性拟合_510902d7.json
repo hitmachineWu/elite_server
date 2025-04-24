@@ -1,0 +1,96 @@
+{
+    "nodes": [
+        {
+            "name": "非线性拟合",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **步长选择**：确定每次迭代的步长",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **适用性**：适用于复杂数据关系的建模，特别",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **初始值选择**：选择合适的初始参数值",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "全局最优解",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **模型形式**：非线性模型可以",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "一种统计方法，用于确定两个或多个变量之间的关系，特别",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "迭代过程的收敛性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "在线性模型无法准确描述的情况下",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "收敛速度和稳定性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "多项式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **收敛性**：非线性拟合的迭代过程可能不收敛，或者收敛到局部最优解而不",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "- **收敛性**：非线性拟合的迭代过程可能不收敛，或者收敛到局部最优解而不",
+            "target": "全局最优解",
+            "name": "是"
+        },
+        {
+            "source": "- **适用性**：适用于复杂数据关系的建模，特别",
+            "target": "在线性模型无法准确描述的情况下",
+            "name": "是"
+        },
+        {
+            "source": "- **模型形式**：非线性模型可以",
+            "target": "多项式",
+            "name": "是"
+        },
+        {
+            "source": "非线性拟合",
+            "target": "一种统计方法，用于确定两个或多个变量之间的关系，特别",
+            "name": "是"
+        },
+        {
+            "source": "- **步长选择**：确定每次迭代的步长",
+            "target": "收敛速度和稳定性",
+            "name": "影响"
+        },
+        {
+            "source": "- **初始值选择**：选择合适的初始参数值",
+            "target": "迭代过程的收敛性",
+            "name": "影响"
+        }
+    ]
+}

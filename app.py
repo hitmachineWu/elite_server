@@ -24,7 +24,7 @@ new_chat_url="http://180.85.206.30:3000/chat/share?shareId=cc1greng47slrl6ivb6ik
 agent1='http://180.85.206.30:3000/chat/share?shareId=ztwmryjyyn7a6zt6rtyl5pcg' # 不用
 QEA_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=zci1ditlgimgguu13dz5ra5n&studentUid="
 XD_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=fhw37s0q4ksu2mdt46yye54r&studentUid="
-AMOS_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=uqopdvmtnc674zvl1pxfa55f&studentUid="
+ACP_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=my14ciwq8qa7moats2q4p28v&studentUid="
 GCYL_agent_class_url = "http://180.85.206.30:3000/chat/share?shareId=l7ytzllnh7h8tco321hmxacs&studentUid="
 agent_develop_url = "http://180.85.206.21:3000/chat/share?shareId=3b2pdqik1odzyy3egy0n5o3a&studentUid="
 
@@ -59,9 +59,9 @@ agents = [
         "image_url": "/static/img/c0.png"
     },{ 
         "id": 3,
-        "name": "汽车操作系统及应用",
-        "description": "深入探索汽车操作系统的核心技术，掌从基础理论到开发实践的全方位技能。",
-        "url": AMOS_agent_class_url,
+        "name": "自动控制原理",
+        "description": "深入学习控制理论的核心知识，掌握控制系统分析与设计的关键技能。",
+        "url": ACP_agent_class_url,
         "image_url": "/static/img/c0.png"
     },{ 
         "id": 4,

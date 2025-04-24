@@ -1,0 +1,446 @@
+{
+    "entities": [
+      "associations",
+      "atmosphere",
+      "belonging",
+      "blood pressure",
+      "butterfly",
+      "calming",
+      "camaraderie",
+      "change",
+      "classical",
+      "comfort",
+      "concert",
+      "confident",
+      "connection",
+      "cortisol levels",
+      "cultural background",
+      "electronic",
+      "elegance",
+      "elevate",
+      "emotional needs",
+      "emotional state",
+      "emotions",
+      "empathy",
+      "empowering",
+      "energized",
+      "energy levels",
+      "enhance",
+      "essay",
+      "excitement",
+      "experiences",
+      "explore",
+      "fast-paced",
+      "genre",
+      "happy",
+      "heart rate",
+      "impact",
+      "indicators",
+      "individual preferences",
+      "influence",
+      "inspired",
+      "inspiring",
+      "intensity",
+      "introspection",
+      "jarring",
+      "jazz",
+      "joy",
+      "life cycle",
+      "listeners",
+      "lyrics",
+      "mechanisms",
+      "medium",
+      "melancholy",
+      "memories",
+      "messages",
+      "mood",
+      "motivation",
+      "music",
+      "negative",
+      "nostalgia",
+      "party",
+      "past experiences",
+      "personal level",
+      "personal tastes",
+      "phenomenon",
+      "physiological responses",
+      "piece",
+      "pop",
+      "positive",
+      "preferences",
+      "rebellion",
+      "regulate",
+      "relaxation",
+      "relaxed",
+      "rock",
+      "role",
+      "sad",
+      "sensitivities",
+      "shared space",
+      "slow",
+      "social bonds",
+      "song",
+      "sophistication",
+      "sorrow",
+      "spirits",
+      "studies",
+      "style",
+      "subjective",
+      "themes",
+      "tool",
+      "transform",
+      "trigger",
+      "unity",
+      "unsettling",
+      "upbeat",
+      "uplifting"
+    ],
+    "relations": [
+      [
+        "calming",
+        "induce",
+        "relaxation"
+      ],
+      [
+        "classical",
+        "associated with",
+        "elegance"
+      ],
+      [
+        "classical",
+        "associated with",
+        "relaxation"
+      ],
+      [
+        "classical",
+        "associated with",
+        "sophistication"
+      ],
+      [
+        "concert",
+        "experience",
+        "belonging"
+      ],
+      [
+        "essay",
+        "explore",
+        "influence"
+      ],
+      [
+        "experiences",
+        "are",
+        "negative"
+      ],
+      [
+        "experiences",
+        "are",
+        "positive"
+      ],
+      [
+        "fast-paced",
+        "increase",
+        "energy levels"
+      ],
+      [
+        "fast-paced",
+        "lead to",
+        "excitement"
+      ],
+      [
+        "fast-paced",
+        "lead to",
+        "motivation"
+      ],
+      [
+        "genre",
+        "impact",
+        "mood"
+      ],
+      [
+        "heart rate",
+        "are",
+        "indicators"
+      ],
+      [
+        "listeners",
+        "feel",
+        "confident"
+      ],
+      [
+        "listeners",
+        "feel",
+        "empathy"
+      ],
+      [
+        "listeners",
+        "feel",
+        "empowering"
+      ],
+      [
+        "listeners",
+        "feel",
+        "inspired"
+      ],
+      [
+        "listeners",
+        "feel",
+        "introspection"
+      ],
+      [
+        "lyrics",
+        "influence",
+        "mood"
+      ],
+      [
+        "messages",
+        "resonate with",
+        "listeners"
+      ],
+      [
+        "music",
+        "affect",
+        "physiological responses"
+      ],
+      [
+        "music",
+        "consider",
+        "personal tastes"
+      ],
+      [
+        "music",
+        "consider",
+        "sensitivities"
+      ],
+      [
+        "music",
+        "create",
+        "atmosphere"
+      ],
+      [
+        "music",
+        "create",
+        "connection"
+      ],
+      [
+        "music",
+        "create",
+        "unity"
+      ],
+      [
+        "music",
+        "elevate",
+        "spirits"
+      ],
+      [
+        "music",
+        "enhance or change",
+        "emotional state"
+      ],
+      [
+        "music",
+        "evoke",
+        "associations"
+      ],
+      [
+        "music",
+        "evoke",
+        "memories"
+      ],
+      [
+        "music",
+        "impact",
+        "blood pressure"
+      ],
+      [
+        "music",
+        "impact",
+        "cortisol levels"
+      ],
+      [
+        "music",
+        "impact",
+        "heart rate"
+      ],
+      [
+        "music",
+        "influence",
+        "emotions"
+      ],
+      [
+        "music",
+        "influence",
+        "mood"
+      ],
+      [
+        "music",
+        "is",
+        "inspiring"
+      ],
+      [
+        "music",
+        "is",
+        "jarring"
+      ],
+      [
+        "music",
+        "is",
+        "subjective"
+      ],
+      [
+        "music",
+        "is",
+        "unsettling"
+      ],
+      [
+        "music",
+        "is",
+        "uplifting"
+      ],
+      [
+        "music",
+        "is a",
+        "medium"
+      ],
+      [
+        "music",
+        "is a",
+        "tool"
+      ],
+      [
+        "music",
+        "regulate",
+        "emotions"
+      ],
+      [
+        "music",
+        "strengthen",
+        "social bonds"
+      ],
+      [
+        "music",
+        "transform",
+        "mood"
+      ],
+      [
+        "music",
+        "vary depending on",
+        "cultural background"
+      ],
+      [
+        "music",
+        "vary depending on",
+        "past experiences"
+      ],
+      [
+        "party",
+        "experience",
+        "belonging"
+      ],
+      [
+        "preferences",
+        "based on",
+        "emotional needs"
+      ],
+      [
+        "preferences",
+        "vary from",
+        "individual preferences"
+      ],
+      [
+        "rock",
+        "known for",
+        "intensity"
+      ],
+      [
+        "rock",
+        "known for",
+        "rebellion"
+      ],
+      [
+        "shared space",
+        "experience",
+        "belonging"
+      ],
+      [
+        "slow",
+        "induce",
+        "relaxation"
+      ],
+      [
+        "song",
+        "bring back",
+        "joy"
+      ],
+      [
+        "song",
+        "bring back",
+        "nostalgia"
+      ],
+      [
+        "song",
+        "evoke",
+        "melancholy"
+      ],
+      [
+        "song",
+        "evoke",
+        "sorrow"
+      ],
+      [
+        "song",
+        "trigger",
+        "experiences"
+      ],
+      [
+        "studies",
+        "show",
+        "impact"
+      ],
+      [
+        "style",
+        "impact",
+        "mood"
+      ],
+      [
+        "themes",
+        "resonate with",
+        "listeners"
+      ],
+      [
+        "upbeat",
+        "increase",
+        "heart rate"
+      ]
+    ],
+    "edges": [
+      "affect",
+      "are",
+      "associated with",
+      "based on",
+      "bring back",
+      "consider",
+      "create",
+      "elevate",
+      "enhance or change",
+      "evoke",
+      "experience",
+      "explore",
+      "feel",
+      "impact",
+      "increase",
+      "induce",
+      "influence",
+      "is",
+      "is a",
+      "known for",
+      "lead to",
+      "regulate",
+      "resonate with",
+      "show",
+      "strengthen",
+      "transform",
+      "trigger",
+      "vary depending on",
+      "vary from"
+    ]
+  }

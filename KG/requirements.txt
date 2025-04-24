@@ -1,0 +1,4 @@
+flask==2.3.3
+pyecharts==2.0.8
+requests==2.31.0
+# 添加您的kg_gen库所需依赖，请根据实际情况修改 
