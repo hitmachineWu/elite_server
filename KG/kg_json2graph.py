@@ -512,14 +512,14 @@ if __name__ == "__main__":
                                  'padding: 8px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);';
         
         // 创建输入和按钮容器
-        var inputContainer = document.createElement('div');
+       var inputContainer = document.createElement('div');
         inputContainer.style.display = 'flex';
         
         // 创建输入框
         searchInput = document.createElement('input');
         searchInput.id = 'nodeSearchInput';
         searchInput.type = 'text';
-        searchInput.placeholder = '输入节点名称搜索...';
+        searchInput.placeholder = '输入节点名称搜索';
         searchInput.style.cssText = 'padding: 6px 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; ' +
                                    'width: 180px; outline: none;';
         
@@ -531,6 +531,14 @@ if __name__ == "__main__":
                                  'border: none; border-radius: 4px; cursor: pointer; font-size: 13px;';
         
         // 创建搜索结果容器
+        
+        reset = document.createElement('button')
+        reset.id = 'refreshButton'
+        reset.textContent = '刷新页面'
+        reset.setAttribute('onclick', 'location.reload()')
+        reset.style.cssText = 'padding:8px 15px; background-color:#4b8bf4; color:white; border:none; border-radius:4px; cursor:pointer; margin:10px 0;'
+        
+        
         searchResults = document.createElement('div');
         searchResults.id = 'searchResults';
         searchResults.style.cssText = 'display: none; position: absolute; top: 45px; left: 0; right: 0; max-height: 300px; ' +
@@ -538,8 +546,57 @@ if __name__ == "__main__":
                                      'box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1002;';
         
         // 组装DOM
+        // 共同样式变量
+        var buttonHeight = '36px';
+        var fontSize = '13px';
+        var padding = '6px 12px';
+        var borderRadius = '4px';
+
+        // 搜索输入框样式
+        searchInput.style.cssText = `
+            padding: ${padding}; 
+            border: 1px solid #ddd; 
+            border-radius: ${borderRadius}; 
+            font-size: ${fontSize}; 
+            width: 180px; 
+            outline: none;
+            height: ${buttonHeight};
+            box-sizing: border-box;
+            vertical-align: middle;
+        `;
+
+        // 搜索按钮样式
+        searchBtn.style.cssText = `
+            margin-left: 6px; 
+            padding: ${padding}; 
+            background-color: #4b8bf4; 
+            color: white; 
+            border: none; 
+            border-radius: ${borderRadius}; 
+            cursor: pointer; 
+            font-size: ${fontSize};
+            height: ${buttonHeight};
+            box-sizing: border-box;
+            vertical-align: middle;
+        `;
+
+        // 刷新按钮样式
+        reset.style.cssText = `
+            margin-left: 6px;
+            padding: ${padding}; 
+            background-color: #4b8bf4; 
+            color: white; 
+            border: none; 
+            border-radius: ${borderRadius}; 
+            cursor: pointer; 
+            font-size: ${fontSize};
+            height: ${buttonHeight};
+            box-sizing: border-box;
+            vertical-align: middle;
+        `;
         inputContainer.appendChild(searchInput);
         inputContainer.appendChild(searchBtn);
+        inputContainer.appendChild(reset);
         searchBox.appendChild(inputContainer);
         searchBox.appendChild(searchResults);
         
