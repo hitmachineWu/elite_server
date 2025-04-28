@@ -6,7 +6,7 @@ import webbrowser
 import os
 import re
 
-def create_graph(categories=None, nodes=None, links=None):
+def create_graph(nodes=None, links=None):
     """
     创建关系图
     :param nodes: 节点数据
@@ -14,35 +14,25 @@ def create_graph(categories=None, nodes=None, links=None):
     :return: 图表对象
     """
     # 定义节点类别
-    # categories = [
-    #     {"name": "Neural Center"},
-    #     {"name": "工程技术"},
-       
-       
-    # ]
+    categories = [
+        {"name": "Neural Center"},
+        {"name": "工程技术"},
+        {"name": "艺术设计"},
+        {"name": "数理逻辑"},
+        {"name": "视野"},
+        {"name": "人文社科"},
+        {"name": "沟通表达"},
+        {"name": "FCL"},
+        {"name": "研二"}
+    ]
 
     # 如果没有提供数据，加载示例数据
-    if nodes is None or links is None:
-        print("未提供节点或连接数据，使用示例数据")
-        categories , nodes, links = load_example_data()
-    else:
-        print(f"使用提供的数据: {len(nodes)} 个节点和 {len(links)} 个连接")
-        
-    # 打印前几个节点和链接以便调试
-    # if nodes and len(nodes) > 0:
-    #     print(f"使用的第一个节点: {nodes[0]}")
-    # if links and len(links) > 0:
-    #     print(f"使用的第一个连接: {links[0]}")
+    # if nodes is None or links is None:
+    nodes, links = load_example_data()
 
     # 创建图表
     c = (
-        Graph(init_opts=opts.InitOpts(
-            width="1000px", 
-            height="800px", 
-            theme=ThemeType.LIGHT,
-            js_host="js/",  # 使用相对路径
-            animation_opts=opts.AnimationOpts(animation=True)
-        ))
+        Graph(init_opts=opts.InitOpts(width="1000px", height="800px", theme=ThemeType.LIGHT))
         .add(
             series_name="",
             nodes=nodes,
@@ -63,7 +53,7 @@ def create_graph(categories=None, nodes=None, links=None):
         )
         # 在.add()方法外单独设置力导向图的配置
         .set_global_opts(
-            title_opts=opts.TitleOpts(title="工程原理设计"),
+            title_opts=opts.TitleOpts(title="卓工课程图谱"),
             tooltip_opts=opts.TooltipOpts(
                 formatter="{b}"  # 简化tooltip显示
             ),
@@ -71,7 +61,7 @@ def create_graph(categories=None, nodes=None, links=None):
                 is_show=True,
             ),
             toolbox_opts=opts.ToolboxOpts(
-                is_show=False,
+                is_show=True,
                 feature={
                     "mark": {"show": True},
                     "restore": {"show": True},
@@ -98,16 +88,10 @@ def load_json_data(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            print(f"加载 JSON 成功: 找到 {len(data.get('nodes', []))} 个节点和 {len(data.get('links', []))} 个连接")
-            # 打印前几个节点和连接以检查格式
-            if data.get('nodes'):
-                print(f"节点示例: {data['nodes'][0]}")
-            if data.get('links'):
-                print(f"连接示例: {data['links'][0]}")
-            return data.get('categories', []), data.get('nodes', []), data.get('links', [])
+            return data.get('nodes', []), data.get('links', [])
     except Exception as e:
-        print(f"加载JSON文件时出错: {e}")
-        return None, None, None
+        print("加载JSON文件时出错")
+        return None, None
 
 def load_example_data():
     """
@@ -115,17 +99,6 @@ def load_example_data():
     :return: 节点和连接数据
     """
     # 示例节点数据
-    categories = [
-        {"name": "Neural Center"},
-        {"name": "工程技术"},
-        {"name": "艺术设计"},
-        {"name": "数理逻辑"},
-        {"name": "视野"},
-        {"name": "人文社科"},
-        {"name": "沟通表达"},
-        {"name": "FCL"}
-    ]
-    
     nodes = [
         {"name": "中心节点", "symbolSize": 70, "category": 0, "des": "这是中心节点的详细描述"},
         {"name": "工程节点1", "symbolSize": 50, "category": 1, "des": "工程技术节点1"},
@@ -136,7 +109,7 @@ def load_example_data():
         {"name": "人文节点", "symbolSize": 50, "category": 5, "des": "人文社科节点"},
         {"name": "沟通节点", "symbolSize": 50, "category": 6, "des": "沟通表达节点"},
         {"name": "FCL节点", "symbolSize": 50, "category": 7, "des": "FCL节点"},
-        {"name": "非线性拟合", "symbolSize": 50, "category": 8, "des": "非线性拟合节点"}
+        {"name": "非线性拟合", "symbolSize": 50, "category": 8, "des": "李开茂是一个好人"}
     ]
     
     # 示例连接数据
@@ -161,7 +134,7 @@ def load_example_data():
         {"source": "FCL节点", "target": "非线性拟合"}
     ]
     
-    return categories,nodes, links
+    return nodes, links
 
 # 添加一个示例数据生成函数，方便测试
 def generate_example_json():
@@ -183,24 +156,24 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='创建神经网络关系图')
-    parser.add_argument('--json_path', type=str, help='JSON数据文件路径')
+    parser.add_argument('--json_path', type=str, default='dlgc.json', help='JSON数据文件路径')
     parser.add_argument('--save-json', action='store_true', help='保存当前示例数据为JSON文件')
-    parser.add_argument('--output', type=str, default='course_graph_html/nn_output_enhanced.html', help='输出HTML文件路径')
+    parser.add_argument('--output', type=str, default='nn_output_enhanced4.html', help='输出HTML文件路径')
     args = parser.parse_args()
     
     try:
         # 是否保存JSON示例数据
         if args.save_json:
             json_file = generate_example_json()
-            print(f"示例数据已保存到 {json_file}")
+            print("示例数据已保存到 {}".format(json_file))
         
         # 是否使用指定JSON文件
         if args.json_path:
-            categories, nodes, links = load_json_data(args.json_path)
+            nodes, links = load_json_data('dlgc.json')
             if nodes and links:
-                c = create_graph(categories, nodes, links)
+                c = create_graph(nodes, links)
             else:
-                print(f"无法从{args.json_path}加载有效数据，将使用默认示例数据")
+                print("无法从{}加载有效数据，将使用默认示例数据".format(args.json_path))
                 c = create_graph()
         else:
             # 默认使用示例数据
@@ -212,58 +185,9 @@ if __name__ == "__main__":
         # 先保存基础图表
         c.render(output_file)
         
-        # 检查js目录是否存在
-        js_dir = os.path.join(os.path.dirname(os.path.abspath(output_file)), "js")
-        if not os.path.exists(js_dir):
-            print(f"警告: JS目录不存在，创建目录: {js_dir}")
-            os.makedirs(js_dir, exist_ok=True)
-            
-        # 检查必要的JS文件是否存在
-        echarts_min_js = os.path.join(js_dir, "echarts.min.js")
-        jquery_min_js = os.path.join(js_dir, "jquery-3.7.1.min.js")
-        
-        if not os.path.exists(echarts_min_js):
-            print(f"警告: 缺少必要的JS文件: {echarts_min_js}")
-            print("请确保将echarts.min.js文件放入js目录中")
-            
-        if not os.path.exists(jquery_min_js):
-            print(f"提示: jQuery文件不存在: {jquery_min_js}")
-            
         # 读取基础HTML文件
-        try:
-            with open(output_file, 'r', encoding='utf-8') as f:
-                content = f.read()
-        except Exception as e:
-            print(f"读取生成的HTML文件时出错: {e}")
-            print("将重新生成HTML内容")
-            # 如果无法读取生成的HTML，尝试直接生成
-            content = """<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Awesome-pyecharts</title>
-    <script type="text/javascript" src="js/echarts.min.js"></script>
-</head>
-<body>
-    <div id="chart_container" class="chart-container" style="width:1000px; height:800px;"></div>
-
-    <script>
-        // 基础图表代码将在这里插入
-    </script>
-</body>
-</html>"""
-
-        # 替换CDN链接为本地链接
-            # 
-        content = content.replace('https://assets.pyecharts.org/assets/v5/echarts.min.js', '../js/echarts.min.js')
-        content = content.replace('https://assets.pyecharts.org/assets/v5/jquery.min.js', '../js/jquery-3.7.1.min.js')
-
-        # 只处理实际可能出现的路径格式问题
-        content = content.replace('src="./js/echarts.min.js"', 'src="js/echarts.min.js"')
-        content = content.replace('src="./js/jquery.min.js"', 'src="js/jquery-3.7.1.min.js"')
-        content = content.replace('src="/js/echarts.min.js"', 'src="js/echarts.min.js"')
-        content = content.replace('src="/js/echarts.js"', 'src="js/echarts.min.js"')
-        content = content.replace('src="/js/jquery-3.7.1.min.js"', 'src="js/jquery-3.7.1.min.js"')
+        with open(output_file, 'r', encoding='utf-8') as f:
+            content = f.read()
         
         # 添加CSS样式
         css_styles = """
@@ -465,8 +389,8 @@ if __name__ == "__main__":
         # 添加交互脚本
         click_script = """
 <script>
-    // 配置服务器URL，使用当前页面的主机地址，而不是硬编码localhost
-    var serverUrl = window.location.protocol + '//' + window.location.host;
+    // 配置服务器URL，强制使用本地服务器地址
+    var serverUrl = 'http://localhost:5000';
     console.log("服务器URL设置为:", serverUrl);
     
     // 图表操作相关变量
@@ -480,7 +404,6 @@ if __name__ == "__main__":
         focusedNode: null,       // 当前聚焦的节点名称
         highlightedNode: null    // 当前高亮的节点名称
     };
-    var categoriesCache = [];    // 用于缓存分类数据，避免重复获取
     
     // DOM元素
     var modal = document.getElementById("nodeModal");
@@ -589,7 +512,7 @@ if __name__ == "__main__":
                                  'padding: 8px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);';
         
         // 创建输入和按钮容器
-        var inputContainer = document.createElement('div');
+       var inputContainer = document.createElement('div');
         inputContainer.style.display = 'flex';
         
         // 创建输入框
@@ -942,13 +865,8 @@ if __name__ == "__main__":
         var content = "";
         
         if (nodeData.category !== undefined) {
-            // 使用缓存的分类数据
-            if (categoriesCache.length > nodeData.category) {
-                content += "<p><strong>分类：</strong>" + categoriesCache[nodeData.category] + "</p>";
-            } else {
-                debugLog(`分类索引超出范围: ${nodeData.category}, 分类数组长度: ${categoriesCache.length}`);
-                content += "<p><strong>分类：</strong>未知分类</p>";
-            }
+            var categories = ["Neural Center", "工程技术", "艺术设计", "数理逻辑", "视野", "人文社科", "沟通表达", "FCL", "研二"];
+            content += "<p><strong>分类：</strong>" + categories[nodeData.category] + "</p>";
         }
         
         if (nodeData.des) {
@@ -1156,17 +1074,6 @@ if __name__ == "__main__":
                     // 获取并保存原始数据
                     var option = myChart.getOption();
                     
-                    // 获取并缓存分类数据
-                    if (option.legend && option.legend[0] && option.legend[0].data) {
-                        categoriesCache = option.legend[0].data;
-                        debugLog(`已缓存${categoriesCache.length}个分类: ${categoriesCache.join(', ')}`);
-                    } else if (option.series && option.series[0] && option.series[0].categories) {
-                        categoriesCache = option.series[0].categories.map(function(cat) {
-                            return cat.name;
-                        });
-                        debugLog(`已缓存${categoriesCache.length}个分类: ${categoriesCache.join(', ')}`);
-                    }
-                    
                     // 确保深拷贝原始数据，避免引用问题
                     if (option.series[0].data && option.series[0].links) {
                         rawData.nodes = JSON.parse(JSON.stringify(option.series[0].data));
@@ -1256,41 +1163,17 @@ if __name__ == "__main__":
             content = content + click_script
 
         # 写入文件
-        try:
-            with open(output_file, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"图表已生成并保存为: {output_file}")
-        except Exception as e:
-            print(f"写入HTML文件时出错: {e}")
-            # 尝试使用不同的文件名
-            alt_output_file = f"backup_{output_file}"
-            try:
-                with open(alt_output_file, 'w', encoding='utf-8') as f:
-                    f.write(content)
-                print(f"已使用备用文件名保存: {alt_output_file}")
-                output_file = alt_output_file
-            except Exception as e2:
-                print(f"备用文件名也无法写入: {e2}")
-                print("无法生成HTML文件，请检查文件系统权限")
-                # 无法写入文件，抛出异常中断执行
-                raise IOError("无法写入HTML文件")
-
-        # 检查文件是否已成功生成
-        if os.path.exists(output_file) and os.path.getsize(output_file) > 0:
-            # 自动打开生成的HTML文件
-            try:
-                webbrowser.open('file://' + os.path.realpath(output_file))
-                print("已在浏览器中打开图表文件")
-            except Exception as e:
-                print(f"无法自动打开文件: {e}")
-                print(f"请手动打开文件: {os.path.realpath(output_file)}")
-        else:
-            print(f"警告: 生成的文件 {output_file} 不存在或为空")
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(content)
         
+        # 自动打开生成的HTML文件
+        webbrowser.open('file://' + os.path.realpath(output_file))
+        
+        print("图表已生成并保存为: {}".format(output_file))
         if not args.json_path:
             print("提示：")
             print("1. 使用自定义JSON文件：python nn.py --json_path 你的数据文件.json")
             print("2. 保存示例数据为JSON文件：python nn.py --save-json")
     except Exception as e:
-        print(f"程序运行出错: {e}")
+        print("程序运行出错: {}".format(e))
         print("请检查pyecharts版本是否为2.0.8，可以使用 pip install pyecharts==2.0.8 安装兼容版本") 

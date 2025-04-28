@@ -1,0 +1,231 @@
+{
+    "nodes": [
+        {
+            "name": "仿真软件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "权重分配",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "决策支持",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "概率分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "回归分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "优化算法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "多目标优化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据收集",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "不确定性分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学建模",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "帕累托最优",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "仿真验证",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "仿真模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机仿真",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "敏感性分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "假设检验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "遗传算法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非线性规划",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险评估",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "线性规划",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "定量工程设计方法",
+            "target": "不确定性分析",
+            "name": "包括"
+        },
+        {
+            "source": "统计分析",
+            "target": "回归分析",
+            "name": "用于"
+        },
+        {
+            "source": "多目标优化",
+            "target": "决策支持",
+            "name": "提供"
+        },
+        {
+            "source": "不确定性分析",
+            "target": "风险评估",
+            "name": "包括"
+        },
+        {
+            "source": "计算机仿真",
+            "target": "仿真验证",
+            "name": "进行"
+        },
+        {
+            "source": "多目标优化",
+            "target": "权重分配",
+            "name": "涉及"
+        },
+        {
+            "source": "优化算法",
+            "target": "遗传算法",
+            "name": "包括"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "多目标优化",
+            "name": "包括"
+        },
+        {
+            "source": "不确定性分析",
+            "target": "概率分析",
+            "name": "包括"
+        },
+        {
+            "source": "计算机仿真",
+            "target": "仿真软件",
+            "name": "使用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "计算机仿真",
+            "name": "包括"
+        },
+        {
+            "source": "优化算法",
+            "target": "线性规划",
+            "name": "包括"
+        },
+        {
+            "source": "优化算法",
+            "target": "非线性规划",
+            "name": "包括"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "统计分析",
+            "name": "包括"
+        },
+        {
+            "source": "数学建模",
+            "target": "数学模型",
+            "name": "是"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "数学建模",
+            "name": "包括"
+        },
+        {
+            "source": "不确定性分析",
+            "target": "敏感性分析",
+            "name": "包括"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "优化算法",
+            "name": "包括"
+        },
+        {
+            "source": "计算机仿真",
+            "target": "仿真模型",
+            "name": "构建"
+        },
+        {
+            "source": "多目标优化",
+            "target": "帕累托最优",
+            "name": "寻找"
+        },
+        {
+            "source": "统计分析",
+            "target": "假设检验",
+            "name": "用于"
+        },
+        {
+            "source": "统计分析",
+            "target": "数据收集",
+            "name": "用于"
+        }
+    ]
+}

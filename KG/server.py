@@ -73,6 +73,28 @@ def generate_kg():
         # 渲染HTML文件
         c.render(html_file)
         
+        # 添加以下代码进行CDN替换
+        try:
+            with open(html_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # 替换CDN链接为本地链接
+            content = content.replace('https://assets.pyecharts.org/assets/v5/echarts.min.js', '../js/echarts.min.js')
+            content = content.replace('https://assets.pyecharts.org/assets/v5/jquery.min.js', '../js/jquery-3.7.1.min.js')
+            
+            # 处理其他路径问题
+            content = content.replace('src="./js/echarts.min.js"', 'src="js/echarts.min.js"')
+            content = content.replace('src="./js/jquery.min.js"', 'src="js/jquery-3.7.1.min.js"')
+            content = content.replace('src="/js/echarts.min.js"', 'src="js/echarts.min.js"')
+            content = content.replace('src="/js/echarts.js"', 'src="js/echarts.min.js"')
+            content = content.replace('src="/js/jquery-3.7.1.min.js"', 'src="js/jquery-3.7.1.min.js"')
+            
+            # 写回文件
+            with open(html_file, 'w', encoding='utf-8') as f:
+                f.write(content)
+        except Exception as e:
+            print(f"替换CDN链接时出错: {e}")
+        
         result = {
             'success': True,
             'keyword': keyword,

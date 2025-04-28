@@ -1,0 +1,386 @@
+{
+    "nodes": [
+        {
+            "name": "制造工艺",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "激光加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "废物处理与回收",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "全自动化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "刀具与夹具设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机械加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机床与加工设备",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "热加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设备使用",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据采集与处理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复杂工艺",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "控制工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "产品类型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料类型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "精密加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自动化程度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "简单工艺",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "半自动化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "手工操作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "检测与测试技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环保技术和安全规范",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "加工方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料选择与性能优化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机械工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "质量管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "金属加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术复杂度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大批量生产加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料选择",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "非金属加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境与安全",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电化学加工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "传感器与控制系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "无损检测与在线监测",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工艺类型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "质量控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料测试与表征",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "控制工程",
+            "target": "传感器与控制系统",
+            "name": "子类"
+        },
+        {
+            "source": "制造工艺",
+            "target": "加工方法",
+            "name": "包括"
+        },
+        {
+            "source": "材料类型",
+            "target": "金属加工",
+            "name": "分类"
+        },
+        {
+            "source": "环境与安全",
+            "target": "环保技术和安全规范",
+            "name": "子类"
+        },
+        {
+            "source": "制造工艺",
+            "target": "材料选择",
+            "name": "包括"
+        },
+        {
+            "source": "控制工程",
+            "target": "制造工艺",
+            "name": "关键作用"
+        },
+        {
+            "source": "检测与测试技术",
+            "target": "质量管理",
+            "name": "具体应用"
+        },
+        {
+            "source": "技术复杂度",
+            "target": "复杂工艺",
+            "name": "分类"
+        },
+        {
+            "source": "机床与加工设备",
+            "target": "刀具与夹具设计",
+            "name": "子类"
+        },
+        {
+            "source": "工艺类型",
+            "target": "机械加工",
+            "name": "分类"
+        },
+        {
+            "source": "环境与安全",
+            "target": "制造工艺",
+            "name": "因素"
+        },
+        {
+            "source": "制造工艺",
+            "target": "质量控制",
+            "name": "包括"
+        },
+        {
+            "source": "传感器与控制系统",
+            "target": "控制工程",
+            "name": "具体应用"
+        },
+        {
+            "source": "质量管理",
+            "target": "检测与测试技术",
+            "name": "子类"
+        },
+        {
+            "source": "材料选择与性能优化",
+            "target": "材料测试与表征",
+            "name": "子类"
+        },
+        {
+            "source": "制造工艺",
+            "target": "设备使用",
+            "name": "包括"
+        },
+        {
+            "source": "自动化程度",
+            "target": "手工操作",
+            "name": "分类"
+        },
+        {
+            "source": "环保技术和安全规范",
+            "target": "废物处理与回收",
+            "name": "子类"
+        },
+        {
+            "source": "产品类型",
+            "target": "大批量生产加工",
+            "name": "分类"
+        },
+        {
+            "source": "工艺类型",
+            "target": "激光加工",
+            "name": "分类"
+        },
+        {
+            "source": "环保技术和安全规范",
+            "target": "环境与安全",
+            "name": "具体应用"
+        },
+        {
+            "source": "自动化程度",
+            "target": "半自动化",
+            "name": "分类"
+        },
+        {
+            "source": "产品类型",
+            "target": "精密加工",
+            "name": "分类"
+        },
+        {
+            "source": "技术复杂度",
+            "target": "简单工艺",
+            "name": "分类"
+        },
+        {
+            "source": "材料科学",
+            "target": "制造工艺",
+            "name": "基础"
+        },
+        {
+            "source": "材料科学",
+            "target": "材料选择与性能优化",
+            "name": "子类"
+        },
+        {
+            "source": "传感器与控制系统",
+            "target": "数据采集与处理",
+            "name": "子类"
+        },
+        {
+            "source": "材料选择与性能优化",
+            "target": "材料科学",
+            "name": "具体应用"
+        },
+        {
+            "source": "机床与加工设备",
+            "target": "机械工程",
+            "name": "具体应用"
+        },
+        {
+            "source": "自动化程度",
+            "target": "全自动化",
+            "name": "分类"
+        },
+        {
+            "source": "检测与测试技术",
+            "target": "无损检测与在线监测",
+            "name": "子类"
+        },
+        {
+            "source": "制造工艺",
+            "target": "设计",
+            "name": "包括"
+        },
+        {
+            "source": "机械工程",
+            "target": "机床与加工设备",
+            "name": "子类"
+        },
+        {
+            "source": "工艺类型",
+            "target": "热加工",
+            "name": "分类"
+        },
+        {
+            "source": "质量管理",
+            "target": "制造工艺",
+            "name": "组成部分"
+        },
+        {
+            "source": "材料类型",
+            "target": "非金属加工",
+            "name": "分类"
+        },
+        {
+            "source": "工艺类型",
+            "target": "电化学加工",
+            "name": "分类"
+        }
+    ]
+}
