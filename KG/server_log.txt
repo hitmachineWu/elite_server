@@ -1,5 +1,0 @@
-nohup: 忽略输入
-  File "server.py", line 39
-    print(f"收到生成知识图谱请求：关键词 = {keyword}, 显示模式 = {display_mode}")
-                                                             ^
-SyntaxError: invalid syntax

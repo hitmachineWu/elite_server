@@ -1,0 +1,166 @@
+{
+    "nodes": [
+        {
+            "name": "准确性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程文档",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可追溯性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "应用规范",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "完整性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时效性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用户手册",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术规范",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息检索效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "测试报告",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "施工日志",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "边",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "知识图谱",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计依据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计图纸",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "节点",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "工程文档",
+            "target": "完整性",
+            "name": "具有"
+        },
+        {
+            "source": "工程文档",
+            "target": "时效性",
+            "name": "具有"
+        },
+        {
+            "source": "工程文档",
+            "target": "测试报告",
+            "name": "包括"
+        },
+        {
+            "source": "工程文档",
+            "target": "准确性",
+            "name": "具有"
+        },
+        {
+            "source": "设计图纸",
+            "target": "设计依据",
+            "name": "通过"
+        },
+        {
+            "source": "工程文档",
+            "target": "用户手册",
+            "name": "包括"
+        },
+        {
+            "source": "工程文档",
+            "target": "设计图纸",
+            "name": "包括"
+        },
+        {
+            "source": "工程文档",
+            "target": "技术规范",
+            "name": "包括"
+        },
+        {
+            "source": "工程文档",
+            "target": "可追溯性",
+            "name": "具有"
+        },
+        {
+            "source": "知识图谱",
+            "target": "节点",
+            "name": "包含"
+        },
+        {
+            "source": "工程文档",
+            "target": "施工日志",
+            "name": "包括"
+        },
+        {
+            "source": "设计依据",
+            "target": "技术规范",
+            "name": "连接到"
+        },
+        {
+            "source": "技术规范",
+            "target": "应用规范",
+            "name": "通过"
+        },
+        {
+            "source": "知识图谱",
+            "target": "边",
+            "name": "包含"
+        },
+        {
+            "source": "知识图谱",
+            "target": "信息检索效率",
+            "name": "提高"
+        },
+        {
+            "source": "应用规范",
+            "target": "施工日志",
+            "name": "连接到"
+        }
+    ]
+}

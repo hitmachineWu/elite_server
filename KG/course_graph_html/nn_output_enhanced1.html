@@ -2,13 +2,12 @@
 <html>
 <head>
     <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="../js/echarts.js"></script>
-
+    
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
                 <script type="text/javascript" src="../js/echarts.min.js"></script>
 
-    
+
 
 <style>
     /* 对话框样式 */
@@ -190,11 +189,11 @@
 </style>
 </head>
 <body >
-    <div id="418f8bcd2cf841aa8d8bd1afef884d99" class="chart-container" style="width:1000px; height:800px; "></div>
+    <div id="b8775a0b863549b184bbc2fb1ef4f3c7" class="chart-container" style="width:1000px; height:800px; "></div>
     <script>
-        var chart_418f8bcd2cf841aa8d8bd1afef884d99 = echarts.init(
-            document.getElementById('418f8bcd2cf841aa8d8bd1afef884d99'), 'light', {renderer: 'canvas'});
-        var option_418f8bcd2cf841aa8d8bd1afef884d99 = {
+        var chart_b8775a0b863549b184bbc2fb1ef4f3c7 = echarts.init(
+            document.getElementById('b8775a0b863549b184bbc2fb1ef4f3c7'), 'light', {renderer: 'canvas'});
+        var option_b8775a0b863549b184bbc2fb1ef4f3c7 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -970,7 +969,7 @@
         }
     }
 };
-        chart_418f8bcd2cf841aa8d8bd1afef884d99.setOption(option_418f8bcd2cf841aa8d8bd1afef884d99);
+        chart_b8775a0b863549b184bbc2fb1ef4f3c7.setOption(option_b8775a0b863549b184bbc2fb1ef4f3c7);
     </script>
 
 <!-- 添加对话框结构 -->
@@ -987,7 +986,7 @@
 
 <script>
     // 配置服务器URL，使用当前页面的主机地址，而不是硬编码localhost
-    var serverUrl = window.location.protocol + '//' + window.location.host;
+    var serverUrl = window.location.protocol + '//' + window.location.hostname + ':7000';
     console.log("服务器URL设置为:", serverUrl);
     
     // 图表操作相关变量

@@ -1,0 +1,111 @@
+{
+    "nodes": [
+        {
+            "name": "数学模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "精确性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "优化性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "系统工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算模拟",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "优化算法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "系统性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可预测性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "迭代性",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "定量工程设计方法",
+            "target": "计算模拟",
+            "name": "依赖于"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "统计分析",
+            "name": "依赖于"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "可预测性",
+            "name": "具有"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "优化算法",
+            "name": "依赖于"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "系统性",
+            "name": "具有"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "优化性",
+            "name": "具有"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "精确性",
+            "name": "具有"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "数学模型",
+            "name": "依赖于"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "迭代性",
+            "name": "具有"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "系统工程",
+            "name": "依赖于"
+        }
+    ]
+}

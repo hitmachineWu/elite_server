@@ -1,0 +1,231 @@
+{
+    "nodes": [
+        {
+            "name": "数的基本概念",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数论",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "无理数",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "立体几何",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自然数",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "概率论",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "整数",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "整数的性质",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "平面几何",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数和数的关系",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复数",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "加减乘除四则运算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "家庭预算的管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "代数学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "建筑设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "地图绘制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数的运算规律",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "字母符号",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复杂的数学问题",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "购物时的找零",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "密码学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "有理数",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "统计学",
+            "target": "数学",
+            "name": "引入"
+        },
+        {
+            "source": "数的基本概念",
+            "target": "整数",
+            "name": "包括"
+        },
+        {
+            "source": "平面几何",
+            "target": "建筑设计",
+            "name": "应用在"
+        },
+        {
+            "source": "加减乘除四则运算",
+            "target": "购物时的找零",
+            "name": "应用在"
+        },
+        {
+            "source": "数的运算规律",
+            "target": "加减乘除四则运算",
+            "name": "包括"
+        },
+        {
+            "source": "立体几何",
+            "target": "地图绘制",
+            "name": "应用在"
+        },
+        {
+            "source": "加减乘除四则运算",
+            "target": "代数学",
+            "name": "应用在"
+        },
+        {
+            "source": "概率论",
+            "target": "数学",
+            "name": "引入"
+        },
+        {
+            "source": "数的基本概念",
+            "target": "自然数",
+            "name": "包括"
+        },
+        {
+            "source": "代数学",
+            "target": "复杂的数学问题",
+            "name": "解决"
+        },
+        {
+            "source": "加减乘除四则运算",
+            "target": "家庭预算的管理",
+            "name": "应用在"
+        },
+        {
+            "source": "数的基本概念",
+            "target": "有理数",
+            "name": "扩展到"
+        },
+        {
+            "source": "代数学",
+            "target": "字母符号",
+            "name": "通过"
+        },
+        {
+            "source": "立体几何",
+            "target": "建筑设计",
+            "name": "应用在"
+        },
+        {
+            "source": "数的基本概念",
+            "target": "无理数",
+            "name": "扩展到"
+        },
+        {
+            "source": "数的基本概念",
+            "target": "复数",
+            "name": "扩展到"
+        },
+        {
+            "source": "数论",
+            "target": "密码学",
+            "name": "与"
+        },
+        {
+            "source": "加减乘除四则运算",
+            "target": "数论",
+            "name": "应用在"
+        },
+        {
+            "source": "代数学",
+            "target": "数和数的关系",
+            "name": "表示"
+        },
+        {
+            "source": "数论",
+            "target": "整数的性质",
+            "name": "研究"
+        },
+        {
+            "source": "平面几何",
+            "target": "地图绘制",
+            "name": "应用在"
+        }
+    ]
+}

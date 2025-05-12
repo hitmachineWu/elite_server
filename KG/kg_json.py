@@ -8,7 +8,7 @@ class KnowledgeGraphGenerator:
     """
     
     def __init__(self, api_url="http://180.85.206.30:3000/api/v1/chat/completions", 
-                 share_id="yvahlm0gunjce40uc91yaaqf",
+                 share_id="ytln4c6g30jgcl99z2wjms1q",
                  kg_model="openai/Qwen/Qwen2.5-72B-Instruct",
                  kg_api_base="http://180.85.206.19:8123/v1",
                  kg_api_key="local"):

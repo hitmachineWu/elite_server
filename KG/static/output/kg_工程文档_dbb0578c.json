@@ -1,0 +1,241 @@
+{
+    "nodes": [
+        {
+            "name": "工作内容",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "文档管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全文档",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料清单",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "解决方案",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "施工图纸",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目计划书",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "遇到的问题",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "目标",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程质量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理的透明度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目按时按质完成",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "误解",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间表",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术文件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程文档",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目的范围",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全操作规程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料使用情况",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "施工日志",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "突发问题",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "预算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术设计文档",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "纠纷",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "应急预案",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "安全文档",
+            "target": "安全操作规程",
+            "name": "包括"
+        },
+        {
+            "source": "项目计划书",
+            "target": "预算",
+            "name": "明确"
+        },
+        {
+            "source": "文档管理",
+            "target": "项目按时按质完成",
+            "name": "确保"
+        },
+        {
+            "source": "施工日志",
+            "target": "工作内容",
+            "name": "记录"
+        },
+        {
+            "source": "技术文件",
+            "target": "技术设计文档",
+            "name": "包括"
+        },
+        {
+            "source": "项目计划书",
+            "target": "项目的范围",
+            "name": "明确"
+        },
+        {
+            "source": "安全文档",
+            "target": "应急预案",
+            "name": "包括"
+        },
+        {
+            "source": "技术文件",
+            "target": "施工图纸",
+            "name": "包括"
+        },
+        {
+            "source": "施工日志",
+            "target": "遇到的问题",
+            "name": "记录"
+        },
+        {
+            "source": "施工日志",
+            "target": "工程质量",
+            "name": "保证"
+        },
+        {
+            "source": "文档管理",
+            "target": "纠纷",
+            "name": "减少"
+        },
+        {
+            "source": "技术文件",
+            "target": "材料清单",
+            "name": "包括"
+        },
+        {
+            "source": "文档管理",
+            "target": "误解",
+            "name": "减少"
+        },
+        {
+            "source": "工程文档",
+            "target": "项目计划书",
+            "name": "包括"
+        },
+        {
+            "source": "施工日志",
+            "target": "材料使用情况",
+            "name": "记录"
+        },
+        {
+            "source": "项目计划书",
+            "target": "目标",
+            "name": "明确"
+        },
+        {
+            "source": "施工日志",
+            "target": "解决方案",
+            "name": "记录"
+        },
+        {
+            "source": "项目计划书",
+            "target": "时间表",
+            "name": "明确"
+        },
+        {
+            "source": "文档管理",
+            "target": "效率",
+            "name": "提高"
+        },
+        {
+            "source": "文档管理",
+            "target": "项目管理的透明度",
+            "name": "提高"
+        },
+        {
+            "source": "施工日志",
+            "target": "突发问题",
+            "name": "解决"
+        }
+    ]
+}

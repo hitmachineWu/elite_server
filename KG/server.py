@@ -21,7 +21,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 @app.route('/')
 def index():
     """主页路由"""
-    return send_from_directory('.', 'nn_output_enhanced.html')
+    return send_from_directory('course_graph_html/', 'nn_output_enhanced1.html')
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -33,6 +33,8 @@ def generate_kg():
     """处理生成知识图谱的请求"""
     # 获取请求数据
     data = request.json
+    print("收到请求数据:", data)
+    print("正在生成知识图谱")
     keyword = data.get('keyword')
     display_mode = data.get('display_mode', 'new_page')  # 默认为新页面打开，实则当前页面打开
     
@@ -61,7 +63,7 @@ def generate_kg():
             return jsonify({'error': '知识图谱生成失败'}), 500
         
         # 加载生成的JSON数据
-        nodes, links = load_json_data(json_file)
+        _, nodes, links = load_json_data(json_file)
         
         if not nodes or not links:
             print(f"知识图谱数据为空：nodes={nodes}, links={links}")

@@ -1,0 +1,136 @@
+{
+    "nodes": [
+        {
+            "name": "制造成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "人工智能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新材料",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生产效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "产品性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "纳米材料",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "3D打印技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "资源消耗",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "产品质量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "智能制造系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "现代工艺",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "3D打印技术",
+            "target": "制造成本",
+            "name": "降低"
+        },
+        {
+            "source": "现代工艺",
+            "target": "新方法",
+            "name": "是指"
+        },
+        {
+            "source": "现代工艺",
+            "target": "新技术",
+            "name": "是指"
+        },
+        {
+            "source": "纳米材料",
+            "target": "资源消耗",
+            "name": "减少"
+        },
+        {
+            "source": "智能制造系统",
+            "target": "大数据分析",
+            "name": "通过"
+        },
+        {
+            "source": "现代工艺",
+            "target": "新材料",
+            "name": "是指"
+        },
+        {
+            "source": "智能制造系统",
+            "target": "人工智能",
+            "name": "通过"
+        },
+        {
+            "source": "智能制造系统",
+            "target": "产品质量",
+            "name": "提高"
+        },
+        {
+            "source": "信息技术",
+            "target": "现代工艺",
+            "name": "结合"
+        },
+        {
+            "source": "智能制造系统",
+            "target": "生产效率",
+            "name": "提高"
+        },
+        {
+            "source": "纳米材料",
+            "target": "产品性能",
+            "name": "提高"
+        }
+    ]
+}

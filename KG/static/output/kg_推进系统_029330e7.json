@@ -1,0 +1,776 @@
+{
+    "nodes": [
+        {
+            "name": "燃烧过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "水",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电推进",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "喷气发动机",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电磁推进",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电力转换",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "腐蚀",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "维护与保养",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "结构设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "热效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "重力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "火箭",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "核推进",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电磁原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "装配技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "温度适应性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "高强度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "耐高温",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机械推进",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "介质适应性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工作介质",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "推力产生方式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "液体推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "制造精度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "化学推进",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "磨损",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "加速",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "太空",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "真空推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "喷嘴设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "飞机",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "推进效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "水下推进器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境适应性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "压力适应性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "耐温性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "燃烧效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "压力调节机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "粒子加速机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "密封性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "地面车辆推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "燃料",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "核能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "航空航天推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "船只",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大气推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "热膨胀系数",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "燃烧产物",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "火箭发动机",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电磁场",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "海洋推进系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "能量来源",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "空气",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "喷气速度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料选择",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "运动状态",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "化学能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "喷射推进",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "耐腐蚀",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物体",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "螺旋桨",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可靠性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电磁轨道炮",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "应用领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "摩擦力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "涡轮",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "推力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "能量损耗",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计与制造",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "喷射动力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机械能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "推力产生机制",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "燃烧过程",
+            "target": "燃烧产物",
+            "name": "涉及"
+        },
+        {
+            "source": "推进系统",
+            "target": "物体",
+            "name": "使"
+        },
+        {
+            "source": "推进系统",
+            "target": "运动状态",
+            "name": "维持"
+        },
+        {
+            "source": "推进效率",
+            "target": "推力产生机制",
+            "name": "涉及"
+        },
+        {
+            "source": "推进系统",
+            "target": "应用领域",
+            "name": "根据"
+        },
+        {
+            "source": "物体",
+            "target": "飞机",
+            "name": "包括"
+        },
+        {
+            "source": "推力产生方式",
+            "target": "机械推进",
+            "name": "包括"
+        },
+        {
+            "source": "推进系统",
+            "target": "核能",
+            "name": "转换"
+        },
+        {
+            "source": "可靠性",
+            "target": "材料选择",
+            "name": "涉及"
+        },
+        {
+            "source": "能量来源",
+            "target": "电推进",
+            "name": "包括"
+        },
+        {
+            "source": "推力产生机制",
+            "target": "喷射动力学",
+            "name": "包括"
+        },
+        {
+            "source": "推进系统",
+            "target": "电能",
+            "name": "转换"
+        },
+        {
+            "source": "推进系统",
+            "target": "能量来源",
+            "name": "根据"
+        },
+        {
+            "source": "液体推进系统",
+            "target": "水下推进器",
+            "name": "包括"
+        },
+        {
+            "source": "推力产生方式",
+            "target": "电磁推进",
+            "name": "包括"
+        },
+        {
+            "source": "工作介质",
+            "target": "液体推进系统",
+            "name": "包括"
+        },
+        {
+            "source": "效率",
+            "target": "热效率",
+            "name": "包括"
+        },
+        {
+            "source": "能量来源",
+            "target": "核推进",
+            "name": "包括"
+        },
+        {
+            "source": "电磁推进",
+            "target": "电磁轨道炮",
+            "name": "包括"
+        },
+        {
+            "source": "大气推进系统",
+            "target": "喷气发动机",
+            "name": "包括"
+        },
+        {
+            "source": "喷射推进",
+            "target": "喷气发动机",
+            "name": "包括"
+        },
+        {
+            "source": "推力产生机制",
+            "target": "燃烧过程",
+            "name": "包括"
+        },
+        {
+            "source": "电磁原理",
+            "target": "粒子加速机制",
+            "name": "涉及"
+        },
+        {
+            "source": "压力适应性",
+            "target": "压力调节机制",
+            "name": "涉及"
+        },
+        {
+            "source": "工作介质",
+            "target": "真空推进系统",
+            "name": "包括"
+        },
+        {
+            "source": "效率",
+            "target": "电效率",
+            "name": "包括"
+        },
+        {
+            "source": "推进系统",
+            "target": "摩擦力",
+            "name": "克服"
+        },
+        {
+            "source": "设计与制造",
+            "target": "制造精度",
+            "name": "涉及"
+        },
+        {
+            "source": "应用领域",
+            "target": "地面车辆推进系统",
+            "name": "包括"
+        },
+        {
+            "source": "电效率",
+            "target": "电力转换",
+            "name": "涉及"
+        },
+        {
+            "source": "材料选择",
+            "target": "耐腐蚀",
+            "name": "需要"
+        },
+        {
+            "source": "能量来源",
+            "target": "化学推进",
+            "name": "包括"
+        },
+        {
+            "source": "物体",
+            "target": "水",
+            "name": "在"
+        },
+        {
+            "source": "环境适应性",
+            "target": "压力适应性",
+            "name": "包括"
+        },
+        {
+            "source": "喷射动力学",
+            "target": "喷嘴设计",
+            "name": "涉及"
+        },
+        {
+            "source": "电效率",
+            "target": "能量损耗",
+            "name": "涉及"
+        },
+        {
+            "source": "环境适应性",
+            "target": "温度适应性",
+            "name": "包括"
+        },
+        {
+            "source": "介质适应性",
+            "target": "磨损",
+            "name": "涉及"
+        },
+        {
+            "source": "推进系统",
+            "target": "推力",
+            "name": "产生"
+        },
+        {
+            "source": "设计与制造",
+            "target": "装配技术",
+            "name": "涉及"
+        },
+        {
+            "source": "温度适应性",
+            "target": "耐温性能",
+            "name": "涉及"
+        },
+        {
+            "source": "工作介质",
+            "target": "大气推进系统",
+            "name": "包括"
+        },
+        {
+            "source": "介质适应性",
+            "target": "腐蚀",
+            "name": "涉及"
+        },
+        {
+            "source": "设计与制造",
+            "target": "结构设计",
+            "name": "涉及"
+        },
+        {
+            "source": "压力适应性",
+            "target": "密封性能",
+            "name": "涉及"
+        },
+        {
+            "source": "机械推进",
+            "target": "螺旋桨",
+            "name": "包括"
+        },
+        {
+            "source": "燃烧过程",
+            "target": "燃烧效率",
+            "name": "涉及"
+        },
+        {
+            "source": "燃烧过程",
+            "target": "燃料",
+            "name": "涉及"
+        },
+        {
+            "source": "推进系统",
+            "target": "加速",
+            "name": "实现"
+        },
+        {
+            "source": "推力产生机制",
+            "target": "电磁原理",
+            "name": "包括"
+        },
+        {
+            "source": "电磁原理",
+            "target": "电磁场",
+            "name": "涉及"
+        },
+        {
+            "source": "物体",
+            "target": "太空",
+            "name": "在"
+        },
+        {
+            "source": "推进系统",
+            "target": "推力产生机制",
+            "name": "通过"
+        },
+        {
+            "source": "推进系统",
+            "target": "化学能",
+            "name": "转换"
+        },
+        {
+            "source": "机械推进",
+            "target": "涡轮",
+            "name": "包括"
+        },
+        {
+            "source": "可靠性",
+            "target": "维护与保养",
+            "name": "涉及"
+        },
+        {
+            "source": "可靠性",
+            "target": "设计与制造",
+            "name": "涉及"
+        },
+        {
+            "source": "推进系统",
+            "target": "工作介质",
+            "name": "根据"
+        },
+        {
+            "source": "材料选择",
+            "target": "高强度",
+            "name": "需要"
+        },
+        {
+            "source": "应用领域",
+            "target": "航空航天推进系统",
+            "name": "包括"
+        },
+        {
+            "source": "喷射推进",
+            "target": "火箭",
+            "name": "包括"
+        },
+        {
+            "source": "物体",
+            "target": "火箭",
+            "name": "包括"
+        },
+        {
+            "source": "效率",
+            "target": "推进效率",
+            "name": "包括"
+        },
+        {
+            "source": "推进系统",
+            "target": "可靠性",
+            "name": "评价"
+        },
+        {
+            "source": "推进系统",
+            "target": "重力",
+            "name": "克服"
+        },
+        {
+            "source": "推力产生方式",
+            "target": "喷射推进",
+            "name": "包括"
+        },
+        {
+            "source": "环境适应性",
+            "target": "介质适应性",
+            "name": "包括"
+        },
+        {
+            "source": "物体",
+            "target": "船只",
+            "name": "包括"
+        },
+        {
+            "source": "推进系统",
+            "target": "效率",
+            "name": "评价"
+        },
+        {
+            "source": "材料选择",
+            "target": "耐高温",
+            "name": "需要"
+        },
+        {
+            "source": "推进系统",
+            "target": "推力产生方式",
+            "name": "根据"
+        },
+        {
+            "source": "物体",
+            "target": "空气",
+            "name": "在"
+        },
+        {
+            "source": "推进系统",
+            "target": "机械能",
+            "name": "转换为"
+        },
+        {
+            "source": "真空推进系统",
+            "target": "火箭发动机",
+            "name": "包括"
+        },
+        {
+            "source": "推进系统",
+            "target": "环境适应性",
+            "name": "评价"
+        },
+        {
+            "source": "喷射动力学",
+            "target": "喷气速度",
+            "name": "涉及"
+        },
+        {
+            "source": "应用领域",
+            "target": "海洋推进系统",
+            "name": "包括"
+        },
+        {
+            "source": "温度适应性",
+            "target": "热膨胀系数",
+            "name": "涉及"
+        }
+    ]
+}

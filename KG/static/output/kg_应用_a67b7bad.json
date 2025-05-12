@@ -1,0 +1,391 @@
+{
+    "nodes": [
+        {
+            "name": "多平台支持",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全协议",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用户体验测试",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "功能迭代",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境适配",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用户培训",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "应用",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "代码质量控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "反馈机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "性能优化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "硬件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "多渠道用户支持",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术栈评估",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "功能设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用户配置管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "需求分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "多语言支持",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全审计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可扩展性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据加密",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "配置管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全培训",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "适应性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "功能实现",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术文档",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "权限管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用户体验设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "软件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可用性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "功能性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据备份",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "模块化设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用户支持",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "多语言翻译",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术选型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息技术领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "功能测试",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "可用性",
+            "target": "反馈机制",
+            "name": "机制"
+        },
+        {
+            "source": "可用性",
+            "target": "用户体验设计",
+            "name": "设计"
+        },
+        {
+            "source": "安全性",
+            "target": "数据备份",
+            "name": "备份"
+        },
+        {
+            "source": "功能性",
+            "target": "模块化设计",
+            "name": "设计"
+        },
+        {
+            "source": "应用",
+            "target": "适应性",
+            "name": "具备"
+        },
+        {
+            "source": "可用性",
+            "target": "用户培训",
+            "name": "培训"
+        },
+        {
+            "source": "适应性",
+            "target": "环境适配",
+            "name": "适配"
+        },
+        {
+            "source": "功能性",
+            "target": "功能迭代",
+            "name": "迭代"
+        },
+        {
+            "source": "功能性",
+            "target": "功能设计",
+            "name": "设计"
+        },
+        {
+            "source": "技术性",
+            "target": "可扩展性",
+            "name": "考虑"
+        },
+        {
+            "source": "应用",
+            "target": "硬件",
+            "name": "实现"
+        },
+        {
+            "source": "应用",
+            "target": "功能性",
+            "name": "具备"
+        },
+        {
+            "source": "安全性",
+            "target": "安全培训",
+            "name": "培训"
+        },
+        {
+            "source": "可用性",
+            "target": "用户支持",
+            "name": "支持"
+        },
+        {
+            "source": "适应性",
+            "target": "用户配置管理",
+            "name": "管理"
+        },
+        {
+            "source": "安全性",
+            "target": "数据加密",
+            "name": "加密"
+        },
+        {
+            "source": "应用",
+            "target": "可用性",
+            "name": "具备"
+        },
+        {
+            "source": "功能性",
+            "target": "功能测试",
+            "name": "测试"
+        },
+        {
+            "source": "可用性",
+            "target": "用户体验测试",
+            "name": "测试"
+        },
+        {
+            "source": "技术性",
+            "target": "技术文档",
+            "name": "编写"
+        },
+        {
+            "source": "应用",
+            "target": "信息技术领域",
+            "name": "领域"
+        },
+        {
+            "source": "技术性",
+            "target": "技术选型",
+            "name": "选型"
+        },
+        {
+            "source": "可用性",
+            "target": "多渠道用户支持",
+            "name": "支持"
+        },
+        {
+            "source": "安全性",
+            "target": "安全协议",
+            "name": "使用"
+        },
+        {
+            "source": "应用",
+            "target": "软件",
+            "name": "实现"
+        },
+        {
+            "source": "适应性",
+            "target": "多语言支持",
+            "name": "支持"
+        },
+        {
+            "source": "安全性",
+            "target": "安全审计",
+            "name": "审计"
+        },
+        {
+            "source": "功能性",
+            "target": "需求分析",
+            "name": "分析"
+        },
+        {
+            "source": "应用",
+            "target": "技术性",
+            "name": "具备"
+        },
+        {
+            "source": "安全性",
+            "target": "权限管理",
+            "name": "管理"
+        },
+        {
+            "source": "应用",
+            "target": "安全性",
+            "name": "具备"
+        },
+        {
+            "source": "功能性",
+            "target": "功能实现",
+            "name": "实现"
+        },
+        {
+            "source": "适应性",
+            "target": "多平台支持",
+            "name": "支持"
+        },
+        {
+            "source": "适应性",
+            "target": "配置管理",
+            "name": "管理"
+        },
+        {
+            "source": "适应性",
+            "target": "多语言翻译",
+            "name": "翻译"
+        },
+        {
+            "source": "技术性",
+            "target": "性能优化",
+            "name": "优化"
+        },
+        {
+            "source": "技术性",
+            "target": "技术栈评估",
+            "name": "评估"
+        },
+        {
+            "source": "技术性",
+            "target": "代码质量控制",
+            "name": "控制"
+        }
+    ]
+}

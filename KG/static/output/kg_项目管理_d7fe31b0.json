@@ -1,0 +1,411 @@
+{
+    "nodes": [
+        {
+            "name": "质量管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险监控",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险应对",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "干系人分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "人力资源管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "启动过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目报告",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理知识领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目生命周期",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "规划过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "采购管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目文档",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目干系人",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "团队组建",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "阶段交付物",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "干系人管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险评估",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "阶段划分",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "团队建设",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "执行过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "利益相关者管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目风险管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理过程组",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目日志",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险识别",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "阶段审查",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "团队角色",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "干系人识别",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "范围管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "收尾过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "沟通管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目计划",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "成本管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "干系人沟通",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "团队绩效",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目团队",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "变更请求",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "监控过程",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "项目管理",
+            "target": "项目团队",
+            "name": "执行主体"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目干系人",
+            "name": "考虑因素"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "采购管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目生命周期",
+            "target": "阶段交付物",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理过程组",
+            "target": "收尾过程",
+            "name": "包括"
+        },
+        {
+            "source": "项目团队",
+            "target": "团队组建",
+            "name": "包括"
+        },
+        {
+            "source": "项目文档",
+            "target": "项目计划",
+            "name": "包括"
+        },
+        {
+            "source": "项目文档",
+            "target": "项目日志",
+            "name": "包括"
+        },
+        {
+            "source": "项目团队",
+            "target": "团队角色",
+            "name": "包括"
+        },
+        {
+            "source": "项目团队",
+            "target": "团队建设",
+            "name": "包括"
+        },
+        {
+            "source": "项目文档",
+            "target": "项目报告",
+            "name": "包括"
+        },
+        {
+            "source": "项目干系人",
+            "target": "干系人识别",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "质量管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "人力资源管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "沟通管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目风险管理",
+            "name": "重要组成部分"
+        },
+        {
+            "source": "项目干系人",
+            "target": "干系人管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目风险管理",
+            "target": "风险评估",
+            "name": "包括"
+        },
+        {
+            "source": "项目风险管理",
+            "target": "风险应对",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "成本管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目干系人",
+            "target": "干系人沟通",
+            "name": "包括"
+        },
+        {
+            "source": "项目风险管理",
+            "target": "风险监控",
+            "name": "包括"
+        },
+        {
+            "source": "项目团队",
+            "target": "团队绩效",
+            "name": "包括"
+        },
+        {
+            "source": "项目生命周期",
+            "target": "阶段划分",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目管理过程组",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "利益相关者管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目干系人",
+            "target": "干系人分析",
+            "name": "包括"
+        },
+        {
+            "source": "项目文档",
+            "target": "变更请求",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "风险管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目文档",
+            "name": "重要输出"
+        },
+        {
+            "source": "项目生命周期",
+            "target": "阶段审查",
+            "name": "包括"
+        },
+        {
+            "source": "项目风险管理",
+            "target": "风险识别",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理过程组",
+            "target": "监控过程",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "时间管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目管理知识领域",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目生命周期",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理过程组",
+            "target": "执行过程",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理过程组",
+            "target": "规划过程",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理过程组",
+            "target": "启动过程",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理知识领域",
+            "target": "范围管理",
+            "name": "包括"
+        }
+    ]
+}

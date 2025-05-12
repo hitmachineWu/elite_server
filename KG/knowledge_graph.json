@@ -1,0 +1,96 @@
+{
+    "nodes": [
+        {
+            "name": "工程学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "亚里士多德",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科技进步",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "创新思维",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "航天技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电动汽车",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "第一性原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "化学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物理学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "埃隆·马斯克",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "埃隆·马斯克",
+            "target": "电动汽车",
+            "name": "重新审视并改进"
+        },
+        {
+            "source": "第一性原理",
+            "target": "工程学",
+            "name": "应用于"
+        },
+        {
+            "source": "第一性原理",
+            "target": "化学",
+            "name": "应用于"
+        },
+        {
+            "source": "第一性原理",
+            "target": "创新思维",
+            "name": "激发"
+        },
+        {
+            "source": "第一性原理",
+            "target": "亚里士多德",
+            "name": "被提出"
+        },
+        {
+            "source": "第一性原理",
+            "target": "科技进步",
+            "name": "推动"
+        },
+        {
+            "source": "第一性原理",
+            "target": "物理学",
+            "name": "应用于"
+        },
+        {
+            "source": "埃隆·马斯克",
+            "target": "航天技术",
+            "name": "重新审视并改进"
+        }
+    ]
+}

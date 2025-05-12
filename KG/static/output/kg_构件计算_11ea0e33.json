@@ -1,0 +1,186 @@
+{
+    "nodes": [
+        {
+            "name": "- **层级结构**：从上层概念到子类分支，接口定义",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：构件组装",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "构件计算的实际应用",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：接口定义",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "构件计算（Component Computing）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：构件库",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实现构件互操作性的关键，确保不同构件可以正确地通信和协作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "保证构件质量的前提",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **逻辑关系**：构件模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **扩展内容**：**Web服务描述语言（WSDL）**：WSDL",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **层级结构**：从前提条件到推论结果，构件测试",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "存储和管理构件的集合，支持构件的重用和管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实现构件重用的基础",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "隐藏的，外部只能通过接口与构件进行交互",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **扩展内容**：**面向服务架构（SOA）**：SOA",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "一种架构风格，强调服务的松耦合和重用，与构件模型的理念相契合",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "构件计算的理论基础，定义了构件的基本属性和行为",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **封装性**：构件内部的实现细节对外部",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "构件模型的具体实现之一",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "指在软件开发中，将软件系统划分为一系列可重用",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **层级结构**：从前提条件到推论结果，构件库的存在",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "用于描述Web服务接口的标准，支持基于HTTP和SOAP的通信",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "- **层级结构**：从理论基础到应用延伸，构件组装",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "将多个构件组合成一个完整系统的过程",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "- **扩展内容**：**Web服务描述语言（WSDL）**：WSDL",
+            "target": "用于描述Web服务接口的标准，支持基于HTTP和SOAP的通信",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**：从上层概念到子类分支，接口定义",
+            "target": "构件模型的具体实现之一",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：构件模型",
+            "target": "构件计算的理论基础，定义了构件的基本属性和行为",
+            "name": "是"
+        },
+        {
+            "source": "- **扩展内容**：**面向服务架构（SOA）**：SOA",
+            "target": "一种架构风格，强调服务的松耦合和重用，与构件模型的理念相契合",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**：从前提条件到推论结果，构件库的存在",
+            "target": "实现构件重用的基础",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：构件组装",
+            "target": "将多个构件组合成一个完整系统的过程",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：构件库",
+            "target": "存储和管理构件的集合，支持构件的重用和管理",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**：从前提条件到推论结果，构件测试",
+            "target": "保证构件质量的前提",
+            "name": "是"
+        },
+        {
+            "source": "- **封装性**：构件内部的实现细节对外部",
+            "target": "隐藏的，外部只能通过接口与构件进行交互",
+            "name": "是"
+        },
+        {
+            "source": "构件计算（Component Computing）",
+            "target": "指在软件开发中，将软件系统划分为一系列可重用",
+            "name": "是"
+        },
+        {
+            "source": "- **层级结构**：从理论基础到应用延伸，构件组装",
+            "target": "构件计算的实际应用",
+            "name": "是"
+        },
+        {
+            "source": "- **逻辑关系**：接口定义",
+            "target": "实现构件互操作性的关键，确保不同构件可以正确地通信和协作",
+            "name": "是"
+        }
+    ]
+}

@@ -40,7 +40,8 @@ def create_graph(categories=None, nodes=None, links=None):
             width="1000px", 
             height="800px", 
             theme=ThemeType.LIGHT,
-            js_host="js/",  # 使用相对路径
+            js_host="../js/",  # 使用相对路径
+            # js_host=None,
             animation_opts=opts.AnimationOpts(animation=True)
         ))
         .add(
@@ -178,12 +179,83 @@ def generate_example_json():
     print("示例数据已生成到 example_data.json")
     return "example_data.json"
 
+def fix_js_paths(content):
+    """统一处理 JS 文件路径"""
+    # 定义目标路径格式
+    target_jquery_path = '../js/jquery-3.7.1.min.js'
+    target_echarts_path = '../js/echarts.min.js'
+    
+    # 首先替换简单路径
+    content = content.replace('src="js/echarts.min.js"', f'src="{target_echarts_path}"')
+    content = content.replace('src="js/echarts.js"', f'src="{target_echarts_path}"')
+    content = content.replace('src="js/jquery-3.7.1.min.js"', f'src="{target_jquery_path}"')
+    
+    # 然后处理其他可能的路径
+    # patterns = [
+    #     # CDN 路径
+    #     ('https://assets.pyecharts.org/assets/v5/echarts.min.js', target_echarts_path),
+    #     ('https://assets.pyecharts.org/assets/v5/jquery.min.js', target_jquery_path),
+
+       
+    #     # 其他可能的路径
+    #     ('./js/echarts.min.js', target_echarts_path),
+    #     ('./js/jquery.min.js', target_jquery_path),
+    #     ('/js/echarts.min.js', target_echarts_path),
+    #     ('/js/echarts.js', target_echarts_path),
+    #     ('/js/jquery-3.7.1.min.js', target_jquery_path)
+    # ]
+    
+    # for old_path, new_path in patterns:
+    #     content = content.replace(f'src="{old_path}"', f'src="{new_path}"')
+    
+    return content
+
+def modify_html_structure(content):
+    """修改HTML结构，确保只加载一次echarts"""
+    # 定义要插入的脚本（只保留jQuery）
+    scripts_to_insert = """
+    <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    """
+    
+    # 移除重复的echarts加载
+    content = content.replace('<script type="text/javascript" src="../js/echarts.js"></script>', '')
+    
+    # 确保echarts.min.js只出现一次
+    if '<script type="text/javascript" src="../js/echarts.min.js"></script>' in content:
+        content = content.replace(
+            '<script type="text/javascript" src="./js/echarts.min.js"></script>', 
+            '', 
+            1  # 只替换第一次出现
+        )
+    
+    # 找到<head>标签的位置
+    head_start = content.find("<head>")
+    if head_start == -1:
+        return content
+    
+    # 找到<head>标签结束的位置
+    head_end = content.find(">", head_start) + 1
+    
+    # 插入脚本到<head>标签后面
+    modified_content = content[:head_end] + scripts_to_insert + content[head_end:]
+    
+    # 确保最后有echarts.min.js
+    if '<script type="text/javascript" src="../js/echarts.min.js"></script>' not in modified_content:
+        head_close = modified_content.find("</head>")
+        if head_close != -1:
+            modified_content = (
+                modified_content[:head_close] +
+                '<script type="text/javascript" src="../js/echarts.min.js"></script>' +
+                modified_content[head_close:]
+            )
+    
+    return modified_content
 # 主函数
 if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='创建神经网络关系图')
-    parser.add_argument('--json_path', type=str, help='JSON数据文件路径')
+    parser.add_argument('--json_path',default='dlgc.json', type=str, help='JSON数据文件路径')
     parser.add_argument('--save-json', action='store_true', help='保存当前示例数据为JSON文件')
     parser.add_argument('--output', type=str, default='course_graph_html/nn_output_enhanced.html', help='输出HTML文件路径')
     args = parser.parse_args()
@@ -213,7 +285,7 @@ if __name__ == "__main__":
         c.render(output_file)
         
         # 检查js目录是否存在
-        js_dir = os.path.join(os.path.dirname(os.path.abspath(output_file)), "js")
+        js_dir = os.path.join(os.path.dirname(__file__), "js")
         if not os.path.exists(js_dir):
             print(f"警告: JS目录不存在，创建目录: {js_dir}")
             os.makedirs(js_dir, exist_ok=True)
@@ -240,9 +312,12 @@ if __name__ == "__main__":
             content = """<!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/echarts.js"></script>
+
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
-    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/echarts.min.js"></script>
 </head>
 <body>
     <div id="chart_container" class="chart-container" style="width:1000px; height:800px;"></div>
@@ -255,16 +330,11 @@ if __name__ == "__main__":
 
         # 替换CDN链接为本地链接
             # 
-        content = content.replace('https://assets.pyecharts.org/assets/v5/echarts.min.js', '../js/echarts.min.js')
-        content = content.replace('https://assets.pyecharts.org/assets/v5/jquery.min.js', '../js/jquery-3.7.1.min.js')
+        # content = content.replace('https://assets.pyecharts.org/assets/v5/echarts.min.js', '../js/echarts.min.js')
+        # content = content.replace('https://assets.pyecharts.org/assets/v5/jquery.min.js', '../js/jquery-3.7.1.min.js')
 
-        # 只处理实际可能出现的路径格式问题
-        content = content.replace('src="./js/echarts.min.js"', 'src="js/echarts.min.js"')
-        content = content.replace('src="./js/jquery.min.js"', 'src="js/jquery-3.7.1.min.js"')
-        content = content.replace('src="/js/echarts.min.js"', 'src="js/echarts.min.js"')
-        content = content.replace('src="/js/echarts.js"', 'src="js/echarts.min.js"')
-        content = content.replace('src="/js/jquery-3.7.1.min.js"', 'src="js/jquery-3.7.1.min.js"')
-        
+        content = fix_js_paths(content)
+        content = modify_html_structure(content)
         # 添加CSS样式
         css_styles = """
 <style>
@@ -466,7 +536,7 @@ if __name__ == "__main__":
         click_script = """
 <script>
     // 配置服务器URL，使用当前页面的主机地址，而不是硬编码localhost
-    var serverUrl = window.location.protocol + '//' + window.location.host;
+    var serverUrl = window.location.protocol + '//' + window.location.hostname + ':7000';
     console.log("服务器URL设置为:", serverUrl);
     
     // 图表操作相关变量
@@ -1279,14 +1349,13 @@ if __name__ == "__main__":
         if os.path.exists(output_file) and os.path.getsize(output_file) > 0:
             # 自动打开生成的HTML文件
             try:
-                webbrowser.open('file://' + os.path.realpath(output_file))
-                print("已在浏览器中打开图表文件")
+                # webbrowser.open('file://' + os.path.realpath(output_file))
+                print("请手动在浏览器中打开图表文件")
             except Exception as e:
                 print(f"无法自动打开文件: {e}")
                 print(f"请手动打开文件: {os.path.realpath(output_file)}")
         else:
             print(f"警告: 生成的文件 {output_file} 不存在或为空")
-        
         if not args.json_path:
             print("提示：")
             print("1. 使用自定义JSON文件：python nn.py --json_path 你的数据文件.json")

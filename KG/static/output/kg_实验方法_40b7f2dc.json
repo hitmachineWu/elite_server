@@ -1,0 +1,321 @@
+{
+    "nodes": [
+        {
+            "name": "描述性实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "随机化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "控制变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "结论推导",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "局限性分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实验室实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据验证",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据收集",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实验方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "宏观实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "因变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "结果解释",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "控制性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "探索性实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "假设验证",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实验设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自然科学实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实验变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "系统性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "测量工具",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据可视化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可重复性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "微观实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据记录",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "模型构建",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会科学实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "分析性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "对照组",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "验证性实验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "观察性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "现场实验",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "实验方法",
+            "target": "分析性",
+            "name": "包括"
+        },
+        {
+            "source": "数据分析",
+            "target": "统计方法",
+            "name": "包括"
+        },
+        {
+            "source": "数据收集",
+            "target": "数据验证",
+            "name": "包括"
+        },
+        {
+            "source": "实验变量",
+            "target": "自变量",
+            "name": "包括"
+        },
+        {
+            "source": "实验变量",
+            "target": "因变量",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "系统性",
+            "name": "包括"
+        },
+        {
+            "source": "数据收集",
+            "target": "测量工具",
+            "name": "包括"
+        },
+        {
+            "source": "实验设计",
+            "target": "随机化",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "可重复性",
+            "name": "包括"
+        },
+        {
+            "source": "结果解释",
+            "target": "结论推导",
+            "name": "包括"
+        },
+        {
+            "source": "实验变量",
+            "target": "控制变量",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "控制性",
+            "name": "包括"
+        },
+        {
+            "source": "数据收集",
+            "target": "数据记录",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "探索性实验",
+            "name": "分类"
+        },
+        {
+            "source": "数据分析",
+            "target": "模型构建",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "验证性实验",
+            "name": "分类"
+        },
+        {
+            "source": "结果解释",
+            "target": "局限性分析",
+            "name": "包括"
+        },
+        {
+            "source": "数据分析",
+            "target": "数据可视化",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "观察性",
+            "name": "包括"
+        },
+        {
+            "source": "实验设计",
+            "target": "实验变量",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "实验室实验",
+            "name": "分类"
+        },
+        {
+            "source": "实验方法",
+            "target": "现场实验",
+            "name": "分类"
+        },
+        {
+            "source": "实验方法",
+            "target": "自然科学实验",
+            "name": "分类"
+        },
+        {
+            "source": "实验方法",
+            "target": "描述性实验",
+            "name": "分类"
+        },
+        {
+            "source": "实验方法",
+            "target": "宏观实验",
+            "name": "分类"
+        },
+        {
+            "source": "实验方法",
+            "target": "社会科学实验",
+            "name": "分类"
+        },
+        {
+            "source": "实验设计",
+            "target": "对照组",
+            "name": "包括"
+        },
+        {
+            "source": "结果解释",
+            "target": "假设验证",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "微观实验",
+            "name": "分类"
+        }
+    ]
+}

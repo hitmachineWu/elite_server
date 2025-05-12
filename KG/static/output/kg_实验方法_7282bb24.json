@@ -1,0 +1,51 @@
+{
+    "nodes": [
+        {
+            "name": "实验变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实验设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据收集",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实验方法",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "实验方法",
+            "target": "实验设计",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "数据分析",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "数据收集",
+            "name": "包括"
+        },
+        {
+            "source": "实验方法",
+            "target": "实验变量",
+            "name": "包括"
+        }
+    ]
+}

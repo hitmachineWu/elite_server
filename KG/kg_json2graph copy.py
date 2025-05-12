@@ -1,12 +1,342 @@
-<!DOCTYPE html>
+from pyecharts import options as opts
+from pyecharts.charts import Graph
+from pyecharts.globals import ThemeType
+import json
+import webbrowser
+import os
+import re
+
+def create_graph(categories=None, nodes=None, links=None):
+    """
+    创建关系图
+    :param nodes: 节点数据
+    :param links: 连接数据
+    :return: 图表对象
+    """
+    # 定义节点类别
+    # categories = [
+    #     {"name": "Neural Center"},
+    #     {"name": "工程技术"},
+       
+       
+    # ]
+
+    # 如果没有提供数据，加载示例数据
+    if nodes is None or links is None:
+        print("未提供节点或连接数据，使用示例数据")
+        categories , nodes, links = load_example_data()
+    else:
+        print(f"使用提供的数据: {len(nodes)} 个节点和 {len(links)} 个连接")
+        
+    # 打印前几个节点和链接以便调试
+    # if nodes and len(nodes) > 0:
+    #     print(f"使用的第一个节点: {nodes[0]}")
+    # if links and len(links) > 0:
+    #     print(f"使用的第一个连接: {links[0]}")
+
+    # 创建图表
+    c = (
+        Graph(init_opts=opts.InitOpts(
+            width="1000px", 
+            height="800px", 
+            theme=ThemeType.LIGHT,
+            js_host="../js/",  # 使用相对路径
+            # js_host=None,
+            animation_opts=opts.AnimationOpts(animation=True)
+        ))
+        .add(
+            series_name="",
+            nodes=nodes,
+            links=links,
+            categories=categories,
+            layout="force",
+            is_roam=True,
+            is_draggable=True,
+            edge_symbol=["circle", "arrow"],
+            edge_symbol_size=[2, 10],
+            edge_label=opts.LabelOpts(is_show=False),
+            linestyle_opts=opts.LineStyleOpts(
+                width=2,
+                color="#4b565b",
+                opacity=0.5,
+            ),
+            label_opts=opts.LabelOpts(is_show=True),
+        )
+        # 在.add()方法外单独设置力导向图的配置
+        .set_global_opts(
+            title_opts=opts.TitleOpts(title="工程原理设计"),
+            tooltip_opts=opts.TooltipOpts(
+                formatter="{b}"  # 简化tooltip显示
+            ),
+            legend_opts=opts.LegendOpts(
+                is_show=True,
+            ),
+            toolbox_opts=opts.ToolboxOpts(
+                is_show=False,
+                feature={
+                    "mark": {"show": True},
+                    "restore": {"show": True},
+                    "saveAsImage": {"show": True}
+                }
+            )
+        )
+    )
+    
+    # 单独设置力导向图参数
+    c.options.get('series')[0]['force'] = {
+        "repulsion": 2500,
+        "edgeLength": 50
+    }
+
+    return c
+
+def load_json_data(file_path):
+    """
+    从JSON文件加载数据
+    :param file_path: JSON文件路径
+    :return: 节点和连接数据
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            print(f"加载 JSON 成功: 找到 {len(data.get('nodes', []))} 个节点和 {len(data.get('links', []))} 个连接")
+            # 打印前几个节点和连接以检查格式
+            if data.get('nodes'):
+                print(f"节点示例: {data['nodes'][0]}")
+            if data.get('links'):
+                print(f"连接示例: {data['links'][0]}")
+            return data.get('categories', []), data.get('nodes', []), data.get('links', [])
+    except Exception as e:
+        print(f"加载JSON文件时出错: {e}")
+        return None, None, None
+
+def load_example_data():
+    """
+    加载示例数据
+    :return: 节点和连接数据
+    """
+    # 示例节点数据
+    categories = [
+        {"name": "Neural Center"},
+        {"name": "工程技术"},
+        {"name": "艺术设计"},
+        {"name": "数理逻辑"},
+        {"name": "视野"},
+        {"name": "人文社科"},
+        {"name": "沟通表达"},
+        {"name": "FCL"}
+    ]
+    
+    nodes = [
+        {"name": "中心节点", "symbolSize": 70, "category": 0, "des": "这是中心节点的详细描述"},
+        {"name": "工程节点1", "symbolSize": 50, "category": 1, "des": "工程技术节点1"},
+        {"name": "工程节点2", "symbolSize": 50, "category": 1, "des": "工程技术节点2"},
+        {"name": "艺术节点", "symbolSize": 50, "category": 2, "des": "艺术设计节点"},
+        {"name": "数理节点", "symbolSize": 50, "category": 3, "des": "数理逻辑节点"},
+        {"name": "视野节点", "symbolSize": 50, "category": 4, "des": "视野节点"},
+        {"name": "人文节点", "symbolSize": 50, "category": 5, "des": "人文社科节点"},
+        {"name": "沟通节点", "symbolSize": 50, "category": 6, "des": "沟通表达节点"},
+        {"name": "FCL节点", "symbolSize": 50, "category": 7, "des": "FCL节点"},
+        {"name": "非线性拟合", "symbolSize": 50, "category": 8, "des": "非线性拟合节点"}
+    ]
+    
+    # 示例连接数据
+    links = [
+        {"source": "中心节点", "target": "工程节点1"},
+        {"source": "中心节点", "target": "工程节点2"},
+        {"source": "中心节点", "target": "艺术节点"},
+        {"source": "中心节点", "target": "数理节点"},
+        {"source": "中心节点", "target": "视野节点"},
+        {"source": "中心节点", "target": "人文节点"},
+        {"source": "中心节点", "target": "沟通节点"},
+        {"source": "中心节点", "target": "FCL节点"},
+        {"source": "工程节点1", "target": "工程节点2"},
+        {"source": "工程节点1", "target": "数理节点"},
+        {"source": "工程节点1", "target": "非线性拟合"},
+        {"source": "艺术节点", "target": "视野节点"},
+        {"source": "人文节点", "target": "沟通节点"},
+        {"source": "工程节点2", "target": "非线性拟合"},
+        {"source": "数理节点", "target": "非线性拟合"},
+        {"source": "视野节点", "target": "非线性拟合"},
+        {"source": "沟通节点", "target": "非线性拟合"},
+        {"source": "FCL节点", "target": "非线性拟合"}
+    ]
+    
+    return categories,nodes, links
+
+# 添加一个示例数据生成函数，方便测试
+def generate_example_json():
+    """生成一个示例JSON文件，用于测试"""
+    nodes, links = load_example_data()
+    data = {
+        "nodes": nodes,
+        "links": links
+    }
+    
+    with open("example_data.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    
+    print("示例数据已生成到 example_data.json")
+    return "example_data.json"
+
+def fix_js_paths(content):
+    """统一处理 JS 文件路径"""
+    # 定义目标路径格式
+    target_jquery_path = '../js/jquery-3.7.1.min.js'
+    target_echarts_path = '../js/echarts.min.js'
+    
+    # 首先替换简单路径
+    content = content.replace('src="js/echarts.min.js"', f'src="{target_echarts_path}"')
+    content = content.replace('src="js/echarts.js"', f'src="{target_echarts_path}"')
+    content = content.replace('src="js/jquery-3.7.1.min.js"', f'src="{target_jquery_path}"')
+    
+    # 然后处理其他可能的路径
+    # patterns = [
+    #     # CDN 路径
+    #     ('https://assets.pyecharts.org/assets/v5/echarts.min.js', target_echarts_path),
+    #     ('https://assets.pyecharts.org/assets/v5/jquery.min.js', target_jquery_path),
+
+       
+    #     # 其他可能的路径
+    #     ('./js/echarts.min.js', target_echarts_path),
+    #     ('./js/jquery.min.js', target_jquery_path),
+    #     ('/js/echarts.min.js', target_echarts_path),
+    #     ('/js/echarts.js', target_echarts_path),
+    #     ('/js/jquery-3.7.1.min.js', target_jquery_path)
+    # ]
+    
+    # for old_path, new_path in patterns:
+    #     content = content.replace(f'src="{old_path}"', f'src="{new_path}"')
+    
+    return content
+
+def modify_html_structure(content):
+    """修改HTML结构，确保只加载一次echarts"""
+    # 定义要插入的脚本（只保留jQuery）
+    scripts_to_insert = """
+    <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    """
+    
+    # 移除重复的echarts加载
+    content = content.replace('<script type="text/javascript" src="../js/echarts.js"></script>', '')
+    
+    # 确保echarts.min.js只出现一次
+    if '<script type="text/javascript" src="../js/echarts.min.js"></script>' in content:
+        content = content.replace(
+            '<script type="text/javascript" src="../js/echarts.min.js"></script>', 
+            '', 
+            1  # 只替换第一次出现
+        )
+    
+    # 找到<head>标签的位置
+    head_start = content.find("<head>")
+    if head_start == -1:
+        return content
+    
+    # 找到<head>标签结束的位置
+    head_end = content.find(">", head_start) + 1
+    
+    # 插入脚本到<head>标签后面
+    modified_content = content[:head_end] + scripts_to_insert + content[head_end:]
+    
+    # 确保最后有echarts.min.js
+    if '<script type="text/javascript" src="../js/echarts.min.js"></script>' not in modified_content:
+        head_close = modified_content.find("</head>")
+        if head_close != -1:
+            modified_content = (
+                modified_content[:head_close] +
+                '<script type="text/javascript" src="../js/echarts.min.js"></script>' +
+                modified_content[head_close:]
+            )
+    
+    return modified_content
+# 主函数
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='创建神经网络关系图')
+    parser.add_argument('--json_path',default='dlgc.json', type=str, help='JSON数据文件路径')
+    parser.add_argument('--save-json', action='store_true', help='保存当前示例数据为JSON文件')
+    parser.add_argument('--output', type=str, default='course_graph_html/nn_output_enhanced.html', help='输出HTML文件路径')
+    args = parser.parse_args()
+    
+    try:
+        # 是否保存JSON示例数据
+        if args.save_json:
+            json_file = generate_example_json()
+            print(f"示例数据已保存到 {json_file}")
+        
+        # 是否使用指定JSON文件
+        if args.json_path:
+            categories, nodes, links = load_json_data(args.json_path)
+            if nodes and links:
+                c = create_graph(categories, nodes, links)
+            else:
+                print(f"无法从{args.json_path}加载有效数据，将使用默认示例数据")
+                c = create_graph()
+        else:
+            # 默认使用示例数据
+            c = create_graph()
+        
+        # 直接生成带交互功能的HTML文件
+        output_file = args.output
+        
+        # 先保存基础图表
+        c.render(output_file)
+        
+        # 检查js目录是否存在
+        js_dir = os.path.join(os.path.dirname(__file__), "js")
+        if not os.path.exists(js_dir):
+            print(f"警告: JS目录不存在，创建目录: {js_dir}")
+            os.makedirs(js_dir, exist_ok=True)
+            
+        # 检查必要的JS文件是否存在
+        echarts_min_js = os.path.join(js_dir, "echarts.min.js")
+        jquery_min_js = os.path.join(js_dir, "jquery-3.7.1.min.js")
+        
+        if not os.path.exists(echarts_min_js):
+            print(f"警告: 缺少必要的JS文件: {echarts_min_js}")
+            print("请确保将echarts.min.js文件放入js目录中")
+            
+        if not os.path.exists(jquery_min_js):
+            print(f"提示: jQuery文件不存在: {jquery_min_js}")
+            
+        # 读取基础HTML文件
+        try:
+            with open(output_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except Exception as e:
+            print(f"读取生成的HTML文件时出错: {e}")
+            print("将重新生成HTML内容")
+            # 如果无法读取生成的HTML，尝试直接生成
+            content = """<!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/echarts.js"></script>
+
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
-                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/echarts.min.js"></script>
+</head>
+<body>
+    <div id="chart_container" class="chart-container" style="width:1000px; height:800px;"></div>
 
-    
+    <script>
+        // 基础图表代码将在这里插入
+    </script>
+</body>
+</html>"""
 
+        # 替换CDN链接为本地链接
+            # 
+        # content = content.replace('https://assets.pyecharts.org/assets/v5/echarts.min.js', '../js/echarts.min.js')
+        # content = content.replace('https://assets.pyecharts.org/assets/v5/jquery.min.js', '../js/jquery-3.7.1.min.js')
+
+        content = fix_js_paths(content)
+        content = modify_html_structure(content)
+        # 添加CSS样式
+        css_styles = """
 <style>
     /* 对话框样式 */
     .modal {
@@ -185,325 +515,10 @@
         overflow: auto;
     }
 </style>
-</head>
-<body >
-    <div id="ca03819bdc3b4cf9b046b9576c0633d3" class="chart-container" style="width:1000px; height:800px; "></div>
-    <script>
-        var chart_ca03819bdc3b4cf9b046b9576c0633d3 = echarts.init(
-            document.getElementById('ca03819bdc3b4cf9b046b9576c0633d3'), 'light', {renderer: 'canvas'});
-        var option_ca03819bdc3b4cf9b046b9576c0633d3 = {
-    "animation": true,
-    "animationThreshold": 2000,
-    "animationDuration": 1000,
-    "animationEasing": "cubicOut",
-    "animationDelay": 0,
-    "animationDurationUpdate": 300,
-    "animationEasingUpdate": "cubicOut",
-    "animationDelayUpdate": 0,
-    "aria": {
-        "enabled": false
-    },
-    "series": [
-        {
-            "type": "graph",
-            "layout": "force",
-            "symbolSize": 10,
-            "circular": {
-                "rotateLabel": false
-            },
-            "force": {
-                "repulsion": 2500,
-                "edgeLength": 50
-            },
-            "label": {
-                "show": true,
-                "margin": 8,
-                "valueAnimation": false
-            },
-            "lineStyle": {
-                "show": true,
-                "width": 2,
-                "opacity": 0.5,
-                "curveness": 0,
-                "type": "solid",
-                "color": "#4b565b"
-            },
-            "roam": true,
-            "draggable": true,
-            "focusNodeAdjacency": true,
-            "data": [
-                {
-                    "name": "\u4e2d\u5fc3\u8282\u70b9",
-                    "symbolSize": 70,
-                    "category": 0,
-                    "des": "\u8fd9\u662f\u4e2d\u5fc3\u8282\u70b9\u7684\u8be6\u7ec6\u63cf\u8ff0"
-                },
-                {
-                    "name": "\u5de5\u7a0b\u8282\u70b91",
-                    "symbolSize": 50,
-                    "category": 1,
-                    "des": "\u5de5\u7a0b\u6280\u672f\u8282\u70b91"
-                },
-                {
-                    "name": "\u5de5\u7a0b\u8282\u70b92",
-                    "symbolSize": 50,
-                    "category": 1,
-                    "des": "\u5de5\u7a0b\u6280\u672f\u8282\u70b92"
-                },
-                {
-                    "name": "\u827a\u672f\u8282\u70b9",
-                    "symbolSize": 50,
-                    "category": 2,
-                    "des": "\u827a\u672f\u8bbe\u8ba1\u8282\u70b9"
-                },
-                {
-                    "name": "\u6570\u7406\u8282\u70b9",
-                    "symbolSize": 50,
-                    "category": 3,
-                    "des": "\u6570\u7406\u903b\u8f91\u8282\u70b9"
-                },
-                {
-                    "name": "\u89c6\u91ce\u8282\u70b9",
-                    "symbolSize": 50,
-                    "category": 4,
-                    "des": "\u89c6\u91ce\u8282\u70b9"
-                },
-                {
-                    "name": "\u4eba\u6587\u8282\u70b9",
-                    "symbolSize": 50,
-                    "category": 5,
-                    "des": "\u4eba\u6587\u793e\u79d1\u8282\u70b9"
-                },
-                {
-                    "name": "\u6c9f\u901a\u8282\u70b9",
-                    "symbolSize": 50,
-                    "category": 6,
-                    "des": "\u6c9f\u901a\u8868\u8fbe\u8282\u70b9"
-                },
-                {
-                    "name": "FCL\u8282\u70b9",
-                    "symbolSize": 50,
-                    "category": 7,
-                    "des": "FCL\u8282\u70b9"
-                },
-                {
-                    "name": "\u975e\u7ebf\u6027\u62df\u5408",
-                    "symbolSize": 50,
-                    "category": 8,
-                    "des": "\u674e\u5f00\u8302\u662f\u4e00\u4e2a\u597d\u4eba"
-                }
-            ],
-            "categories": [
-                {
-                    "name": "Neural Center"
-                },
-                {
-                    "name": "\u5de5\u7a0b\u6280\u672f"
-                },
-                {
-                    "name": "\u827a\u672f\u8bbe\u8ba1"
-                },
-                {
-                    "name": "\u6570\u7406\u903b\u8f91"
-                },
-                {
-                    "name": "\u89c6\u91ce"
-                },
-                {
-                    "name": "\u4eba\u6587\u793e\u79d1"
-                },
-                {
-                    "name": "\u6c9f\u901a\u8868\u8fbe"
-                },
-                {
-                    "name": "FCL"
-                },
-                {
-                    "name": "\u7814\u4e8c"
-                }
-            ],
-            "edgeLabel": {
-                "show": false,
-                "margin": 8,
-                "valueAnimation": false
-            },
-            "edgeSymbol": [
-                "circle",
-                "arrow"
-            ],
-            "edgeSymbolSize": [
-                2,
-                10
-            ],
-            "links": [
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u5de5\u7a0b\u8282\u70b91"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u5de5\u7a0b\u8282\u70b92"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u827a\u672f\u8282\u70b9"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u6570\u7406\u8282\u70b9"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u89c6\u91ce\u8282\u70b9"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u4eba\u6587\u8282\u70b9"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "\u6c9f\u901a\u8282\u70b9"
-                },
-                {
-                    "source": "\u4e2d\u5fc3\u8282\u70b9",
-                    "target": "FCL\u8282\u70b9"
-                },
-                {
-                    "source": "\u5de5\u7a0b\u8282\u70b91",
-                    "target": "\u5de5\u7a0b\u8282\u70b92"
-                },
-                {
-                    "source": "\u5de5\u7a0b\u8282\u70b91",
-                    "target": "\u6570\u7406\u8282\u70b9"
-                },
-                {
-                    "source": "\u5de5\u7a0b\u8282\u70b91",
-                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
-                },
-                {
-                    "source": "\u827a\u672f\u8282\u70b9",
-                    "target": "\u89c6\u91ce\u8282\u70b9"
-                },
-                {
-                    "source": "\u4eba\u6587\u8282\u70b9",
-                    "target": "\u6c9f\u901a\u8282\u70b9"
-                },
-                {
-                    "source": "\u5de5\u7a0b\u8282\u70b92",
-                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
-                },
-                {
-                    "source": "\u6570\u7406\u8282\u70b9",
-                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
-                },
-                {
-                    "source": "\u89c6\u91ce\u8282\u70b9",
-                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
-                },
-                {
-                    "source": "\u6c9f\u901a\u8282\u70b9",
-                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
-                },
-                {
-                    "source": "FCL\u8282\u70b9",
-                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
-                }
-            ]
-        }
-    ],
-    "legend": [
-        {
-            "data": [
-                "Neural Center",
-                "\u5de5\u7a0b\u6280\u672f",
-                "\u827a\u672f\u8bbe\u8ba1",
-                "\u6570\u7406\u903b\u8f91",
-                "\u89c6\u91ce",
-                "\u4eba\u6587\u793e\u79d1",
-                "\u6c9f\u901a\u8868\u8fbe",
-                "FCL",
-                "\u7814\u4e8c"
-            ],
-            "selected": {},
-            "show": true,
-            "padding": 5,
-            "itemGap": 10,
-            "itemWidth": 25,
-            "itemHeight": 14,
-            "backgroundColor": "transparent",
-            "borderColor": "#ccc",
-            "borderRadius": 0,
-            "pageButtonItemGap": 5,
-            "pageButtonPosition": "end",
-            "pageFormatter": "{current}/{total}",
-            "pageIconColor": "#2f4554",
-            "pageIconInactiveColor": "#aaa",
-            "pageIconSize": 15,
-            "animationDurationUpdate": 800,
-            "selector": false,
-            "selectorPosition": "auto",
-            "selectorItemGap": 7,
-            "selectorButtonGap": 10
-        }
-    ],
-    "tooltip": {
-        "show": true,
-        "trigger": "item",
-        "triggerOn": "mousemove|click",
-        "axisPointer": {
-            "type": "line"
-        },
-        "showContent": true,
-        "alwaysShowContent": false,
-        "showDelay": 0,
-        "hideDelay": 100,
-        "enterable": false,
-        "confine": false,
-        "appendToBody": false,
-        "transitionDuration": 0.4,
-        "formatter": "{b}",
-        "textStyle": {
-            "fontSize": 14
-        },
-        "borderWidth": 0,
-        "padding": 5,
-        "order": "seriesAsc"
-    },
-    "title": [
-        {
-            "show": true,
-            "text": "\u5353\u5de5\u8bfe\u7a0b\u56fe\u8c31",
-            "target": "blank",
-            "subtarget": "blank",
-            "padding": 5,
-            "itemGap": 10,
-            "textAlign": "auto",
-            "textVerticalAlign": "auto",
-            "triggerEvent": false
-        }
-    ],
-    "toolbox": {
-        "show": true,
-        "orient": "horizontal",
-        "itemSize": 15,
-        "itemGap": 10,
-        "left": "80%",
-        "feature": {
-            "mark": {
-                "show": true
-            },
-            "restore": {
-                "show": true
-            },
-            "saveAsImage": {
-                "show": true
-            }
-        }
-    }
-};
-        chart_ca03819bdc3b4cf9b046b9576c0633d3.setOption(option_ca03819bdc3b4cf9b046b9576c0633d3);
-    </script>
+"""
 
+        # 添加模态框HTML和搜索框
+        modal_html = """
 <!-- 添加对话框结构 -->
 <div id="nodeModal" class="modal">
     <div class="modal-content">
@@ -515,10 +530,13 @@
 
 <!-- 调试面板 -->
 <div id="debugPanel" class="debug-panel" style="display: none;"></div>
+"""
 
+        # 添加交互脚本
+        click_script = """
 <script>
-    // 配置服务器URL，强制使用本地服务器地址
-    var serverUrl = 'http://localhost:5000';
+    // 配置服务器URL，使用当前页面的主机地址，而不是硬编码localhost
+    var serverUrl = window.location.protocol + '//' + window.location.hostname + ':7000';
     console.log("服务器URL设置为:", serverUrl);
     
     // 图表操作相关变量
@@ -532,6 +550,7 @@
         focusedNode: null,       // 当前聚焦的节点名称
         highlightedNode: null    // 当前高亮的节点名称
     };
+    var categoriesCache = [];    // 用于缓存分类数据，避免重复获取
     
     // DOM元素
     var modal = document.getElementById("nodeModal");
@@ -647,7 +666,7 @@
         searchInput = document.createElement('input');
         searchInput.id = 'nodeSearchInput';
         searchInput.type = 'text';
-        searchInput.placeholder = '输入节点名称搜索...';
+        searchInput.placeholder = '输入节点名称搜索';
         searchInput.style.cssText = 'padding: 6px 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; ' +
                                    'width: 180px; outline: none;';
         
@@ -659,6 +678,14 @@
                                  'border: none; border-radius: 4px; cursor: pointer; font-size: 13px;';
         
         // 创建搜索结果容器
+        
+        reset = document.createElement('button')
+        reset.id = 'refreshButton'
+        reset.textContent = '刷新页面'
+        reset.setAttribute('onclick', 'location.reload()')
+        reset.style.cssText = 'padding:8px 15px; background-color:#4b8bf4; color:white; border:none; border-radius:4px; cursor:pointer; margin:10px 0;'
+        
+        
         searchResults = document.createElement('div');
         searchResults.id = 'searchResults';
         searchResults.style.cssText = 'display: none; position: absolute; top: 45px; left: 0; right: 0; max-height: 300px; ' +
@@ -666,8 +693,57 @@
                                      'box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1002;';
         
         // 组装DOM
+        // 共同样式变量
+        var buttonHeight = '36px';
+        var fontSize = '13px';
+        var padding = '6px 12px';
+        var borderRadius = '4px';
+
+        // 搜索输入框样式
+        searchInput.style.cssText = `
+            padding: ${padding}; 
+            border: 1px solid #ddd; 
+            border-radius: ${borderRadius}; 
+            font-size: ${fontSize}; 
+            width: 180px; 
+            outline: none;
+            height: ${buttonHeight};
+            box-sizing: border-box;
+            vertical-align: middle;
+        `;
+
+        // 搜索按钮样式
+        searchBtn.style.cssText = `
+            margin-left: 6px; 
+            padding: ${padding}; 
+            background-color: #4b8bf4; 
+            color: white; 
+            border: none; 
+            border-radius: ${borderRadius}; 
+            cursor: pointer; 
+            font-size: ${fontSize};
+            height: ${buttonHeight};
+            box-sizing: border-box;
+            vertical-align: middle;
+        `;
+
+        // 刷新按钮样式
+        reset.style.cssText = `
+            margin-left: 6px;
+            padding: ${padding}; 
+            background-color: #4b8bf4; 
+            color: white; 
+            border: none; 
+            border-radius: ${borderRadius}; 
+            cursor: pointer; 
+            font-size: ${fontSize};
+            height: ${buttonHeight};
+            box-sizing: border-box;
+            vertical-align: middle;
+        `;
         inputContainer.appendChild(searchInput);
         inputContainer.appendChild(searchBtn);
+        inputContainer.appendChild(reset);
         searchBox.appendChild(inputContainer);
         searchBox.appendChild(searchResults);
         
@@ -936,8 +1012,13 @@
         var content = "";
         
         if (nodeData.category !== undefined) {
-            var categories = ["Neural Center", "工程技术", "艺术设计", "数理逻辑", "视野", "人文社科", "沟通表达", "FCL", "研二"];
-            content += "<p><strong>分类：</strong>" + categories[nodeData.category] + "</p>";
+            // 使用缓存的分类数据
+            if (categoriesCache.length > nodeData.category) {
+                content += "<p><strong>分类：</strong>" + categoriesCache[nodeData.category] + "</p>";
+            } else {
+                debugLog(`分类索引超出范围: ${nodeData.category}, 分类数组长度: ${categoriesCache.length}`);
+                content += "<p><strong>分类：</strong>未知分类</p>";
+            }
         }
         
         if (nodeData.des) {
@@ -1145,6 +1226,17 @@
                     // 获取并保存原始数据
                     var option = myChart.getOption();
                     
+                    // 获取并缓存分类数据
+                    if (option.legend && option.legend[0] && option.legend[0].data) {
+                        categoriesCache = option.legend[0].data;
+                        debugLog(`已缓存${categoriesCache.length}个分类: ${categoriesCache.join(', ')}`);
+                    } else if (option.series && option.series[0] && option.series[0].categories) {
+                        categoriesCache = option.series[0].categories.map(function(cat) {
+                            return cat.name;
+                        });
+                        debugLog(`已缓存${categoriesCache.length}个分类: ${categoriesCache.join(', ')}`);
+                    }
+                    
                     // 确保深拷贝原始数据，避免引用问题
                     if (option.series[0].data && option.series[0].links) {
                         rawData.nodes = JSON.parse(JSON.stringify(option.series[0].data));
@@ -1213,5 +1305,61 @@
         }, 500);
     });
 </script>
-</body>
-</html>
+"""
+
+        # 插入CSS到<head>结束前
+        if "</head>" in content:
+            content = content.replace("</head>", css_styles + "</head>")
+        else:
+            content = css_styles + content
+
+        # 插入模态框HTML到<body>结束前
+        if "</body>" in content:
+            content = content.replace("</body>", modal_html + "</body>")
+        else:
+            content = content + modal_html
+
+        # 插入点击事件脚本到<body>结束前
+        if "</body>" in content:
+            content = content.replace("</body>", click_script + "</body>")
+        else:
+            content = content + click_script
+
+        # 写入文件
+        try:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"图表已生成并保存为: {output_file}")
+        except Exception as e:
+            print(f"写入HTML文件时出错: {e}")
+            # 尝试使用不同的文件名
+            alt_output_file = f"backup_{output_file}"
+            try:
+                with open(alt_output_file, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                print(f"已使用备用文件名保存: {alt_output_file}")
+                output_file = alt_output_file
+            except Exception as e2:
+                print(f"备用文件名也无法写入: {e2}")
+                print("无法生成HTML文件，请检查文件系统权限")
+                # 无法写入文件，抛出异常中断执行
+                raise IOError("无法写入HTML文件")
+
+        # 检查文件是否已成功生成
+        if os.path.exists(output_file) and os.path.getsize(output_file) > 0:
+            # 自动打开生成的HTML文件
+            try:
+                # webbrowser.open('file://' + os.path.realpath(output_file))
+                print("请手动在浏览器中打开图表文件")
+            except Exception as e:
+                print(f"无法自动打开文件: {e}")
+                print(f"请手动打开文件: {os.path.realpath(output_file)}")
+        else:
+            print(f"警告: 生成的文件 {output_file} 不存在或为空")
+        if not args.json_path:
+            print("提示：")
+            print("1. 使用自定义JSON文件：python nn.py --json_path 你的数据文件.json")
+            print("2. 保存示例数据为JSON文件：python nn.py --save-json")
+    except Exception as e:
+        print(f"程序运行出错: {e}")
+        print("请检查pyecharts版本是否为2.0.8，可以使用 pip install pyecharts==2.0.8 安装兼容版本") 

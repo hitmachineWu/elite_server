@@ -325,12 +325,15 @@ def kg_index():
     """显示知识图谱主页"""
     return send_from_directory(KG_FOLDER, 'nn_output_enhanced.html')
 
+# 定义KG服务相关的常量
+COURSE_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'KG/course_graph_html')
+
 ## 课程广场知识图谱路由
 @app.route('/classkg/<int:course_id>')
 def kg_page(course_id):
     """根据课程编号显示对应的知识图谱页面"""
     filename = f'nn_output_enhanced{course_id}.html'
-    return send_from_directory(KG_FOLDER, filename)
+    return send_from_directory(COURSE_FOLDER, filename)
 
 # @app.route('/classkg1')
 # def kg_index():

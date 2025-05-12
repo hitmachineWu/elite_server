@@ -1,0 +1,316 @@
+{
+    "nodes": [
+        {
+            "name": "社会福祉",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "青铜器时代",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "机械化生产",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "精密加工技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科技进步",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大规模生产",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "探索",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会结构变革",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "个性化定制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "产品质量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物联网",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "创新",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会发展",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "蒸汽机",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息时代",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "制造工艺",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "智能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "3D打印",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "制造过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "智能制造",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新石器时代",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "手工技艺",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工业革命",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "金属冶炼",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "铸造技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "人工智能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "20世纪中叶",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "灵活",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "陶器制作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自动化生产线",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "高效",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生产效率",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "创新",
+            "target": "制造工艺",
+            "name": "推动"
+        },
+        {
+            "source": "青铜器时代",
+            "target": "金属冶炼",
+            "name": "出现"
+        },
+        {
+            "source": "制造过程",
+            "target": "智能",
+            "name": "更加"
+        },
+        {
+            "source": "机械化生产",
+            "target": "大规模生产",
+            "name": "使得"
+        },
+        {
+            "source": "精密加工技术",
+            "target": "产品质量",
+            "name": "提高"
+        },
+        {
+            "source": "青铜器时代",
+            "target": "铸造技术",
+            "name": "出现"
+        },
+        {
+            "source": "自动化生产线",
+            "target": "生产效率",
+            "name": "提高"
+        },
+        {
+            "source": "3D打印",
+            "target": "个性化定制",
+            "name": "提供"
+        },
+        {
+            "source": "制造工艺",
+            "target": "社会福祉",
+            "name": "带来"
+        },
+        {
+            "source": "智能制造",
+            "target": "物联网",
+            "name": "结合"
+        },
+        {
+            "source": "制造过程",
+            "target": "高效",
+            "name": "更加"
+        },
+        {
+            "source": "制造工艺",
+            "target": "社会发展",
+            "name": "推动"
+        },
+        {
+            "source": "探索",
+            "target": "制造工艺",
+            "name": "推动"
+        },
+        {
+            "source": "金属冶炼",
+            "target": "生产效率",
+            "name": "提升"
+        },
+        {
+            "source": "新石器时代",
+            "target": "陶器制作",
+            "name": "进行"
+        },
+        {
+            "source": "智能制造",
+            "target": "制造过程",
+            "name": "使得"
+        },
+        {
+            "source": "智能制造",
+            "target": "人工智能",
+            "name": "结合"
+        },
+        {
+            "source": "计算机技术",
+            "target": "自动化生产线",
+            "name": "促进"
+        },
+        {
+            "source": "铸造技术",
+            "target": "社会结构变革",
+            "name": "促进"
+        },
+        {
+            "source": "20世纪中叶",
+            "target": "计算机技术",
+            "name": "发展"
+        },
+        {
+            "source": "制造过程",
+            "target": "灵活",
+            "name": "更加"
+        },
+        {
+            "source": "计算机技术",
+            "target": "精密加工技术",
+            "name": "促进"
+        },
+        {
+            "source": "工业革命",
+            "target": "蒸汽机",
+            "name": "发明"
+        },
+        {
+            "source": "信息时代",
+            "target": "智能制造",
+            "name": "发展"
+        },
+        {
+            "source": "智能制造",
+            "target": "大数据",
+            "name": "结合"
+        },
+        {
+            "source": "新石器时代",
+            "target": "手工技艺",
+            "name": "开始掌握"
+        },
+        {
+            "source": "计算机技术",
+            "target": "3D打印",
+            "name": "促进"
+        },
+        {
+            "source": "制造工艺",
+            "target": "科技进步",
+            "name": "推动"
+        }
+    ]
+}

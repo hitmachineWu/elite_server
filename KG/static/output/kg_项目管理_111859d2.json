@@ -1,0 +1,341 @@
+{
+    "nodes": [
+        {
+            "name": "成本管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "知识",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "问题",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "采购管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "期望",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目活动",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目干系人",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计划",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "需求",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "质量管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目经理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "专业知识",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "跨文化合作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "范围管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "现代商业环境",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "业务流程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间和成本估算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新产品",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "沟通管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "利益相关者管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "全球化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "人力资源管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术进步",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大型基础设施",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "领导力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "沟通",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "创新能力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "远程团队协作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工具",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "项目管理",
+            "target": "项目干系人",
+            "name": "满足或超越"
+        },
+        {
+            "source": "项目管理",
+            "target": "期望",
+            "name": "满足或超越"
+        },
+        {
+            "source": "风险管理",
+            "target": "问题",
+            "name": "解决"
+        },
+        {
+            "source": "项目管理",
+            "target": "成本管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "范围管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "质量管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "风险管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "采购管理",
+            "name": "包括"
+        },
+        {
+            "source": "沟通",
+            "target": "问题",
+            "name": "解决"
+        },
+        {
+            "source": "沟通",
+            "target": "计划",
+            "name": "保证"
+        },
+        {
+            "source": "风险管理",
+            "target": "计划",
+            "name": "保证"
+        },
+        {
+            "source": "技术进步",
+            "target": "远程团队协作",
+            "name": "带来"
+        },
+        {
+            "source": "项目管理",
+            "target": "知识",
+            "name": "涉及"
+        },
+        {
+            "source": "项目管理",
+            "target": "新产品",
+            "name": "发挥着"
+        },
+        {
+            "source": "项目经理",
+            "target": "领导力",
+            "name": "需要"
+        },
+        {
+            "source": "项目管理",
+            "target": "技术",
+            "name": "涉及"
+        },
+        {
+            "source": "全球化",
+            "target": "跨文化合作",
+            "name": "带来"
+        },
+        {
+            "source": "项目管理",
+            "target": "时间管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "需求",
+            "name": "满足或超越"
+        },
+        {
+            "source": "项目管理",
+            "target": "技能",
+            "name": "涉及"
+        },
+        {
+            "source": "项目管理",
+            "target": "现代商业环境",
+            "name": "发挥着"
+        },
+        {
+            "source": "项目经理",
+            "target": "环境",
+            "name": "适应"
+        },
+        {
+            "source": "范围管理",
+            "target": "时间和成本估算",
+            "name": "为"
+        },
+        {
+            "source": "项目经理",
+            "target": "创新能力",
+            "name": "需要"
+        },
+        {
+            "source": "项目管理",
+            "target": "大型基础设施",
+            "name": "发挥着"
+        },
+        {
+            "source": "项目经理",
+            "target": "专业知识",
+            "name": "需要"
+        },
+        {
+            "source": "项目管理",
+            "target": "沟通管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "利益相关者管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目活动",
+            "name": "应用于"
+        },
+        {
+            "source": "项目管理",
+            "target": "人力资源管理",
+            "name": "包括"
+        },
+        {
+            "source": "项目管理",
+            "target": "业务流程",
+            "name": "发挥着"
+        },
+        {
+            "source": "项目管理",
+            "target": "工具",
+            "name": "涉及"
+        }
+    ]
+}
