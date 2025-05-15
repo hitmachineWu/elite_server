@@ -1,0 +1,146 @@
+{
+    "nodes": [
+        {
+            "name": "定量工程设计方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "运营成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "轻量化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "虚拟模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "航空航天领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "模拟测试",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "飞机的性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "飞机的结构设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "产品开发周期",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计的精确度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程技术进步",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "高强度",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "飞机的结构设计",
+            "target": "轻量化",
+            "name": "实现"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "设计的精确度",
+            "name": "提高"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "数据分析",
+            "name": "基于"
+        },
+        {
+            "source": "飞机的结构设计",
+            "target": "高强度",
+            "name": "实现"
+        },
+        {
+            "source": "高强度",
+            "target": "运营成本",
+            "name": "降低"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "产品开发周期",
+            "name": "缩短"
+        },
+        {
+            "source": "虚拟模型",
+            "target": "模拟测试",
+            "name": "用于"
+        },
+        {
+            "source": "轻量化",
+            "target": "飞机的性能",
+            "name": "提高"
+        },
+        {
+            "source": "高强度",
+            "target": "飞机的性能",
+            "name": "提高"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "工程技术进步",
+            "name": "推动"
+        },
+        {
+            "source": "轻量化",
+            "target": "运营成本",
+            "name": "降低"
+        },
+        {
+            "source": "航空航天领域",
+            "target": "定量工程设计方法",
+            "name": "利用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "飞机的结构设计",
+            "name": "优化"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "数学模型",
+            "name": "基于"
+        }
+    ]
+}

@@ -1,0 +1,141 @@
+{
+    "nodes": [
+        {
+            "name": "研发成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "统计学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程设计领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "航空航天",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "质量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数值分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "土木建筑",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电子通信",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "优化算法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定性分析方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计效率",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "定量工程设计方法",
+            "target": "设计效率",
+            "name": "提高"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "数学",
+            "name": "综合运用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "计算机科学",
+            "name": "综合运用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "质量",
+            "name": "提高"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "航空航天",
+            "name": "在"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "数值分析",
+            "name": "利用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "研发成本",
+            "name": "降低"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "土木建筑",
+            "name": "在"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "定性分析方法",
+            "name": "相比"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "电子通信",
+            "name": "在"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "统计学",
+            "name": "综合运用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "优化算法",
+            "name": "利用"
+        },
+        {
+            "source": "定量工程设计方法",
+            "target": "工程设计领域",
+            "name": "是"
+        }
+    ]
+}

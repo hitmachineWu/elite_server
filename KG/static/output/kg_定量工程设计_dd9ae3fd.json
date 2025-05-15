@@ -1,0 +1,276 @@
+{
+    "nodes": [
+        {
+            "name": "成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "结构的稳定性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "桥梁设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机模拟技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "流体力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复杂工程问题",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术可行性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "气候数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "精确测量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "结构力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经济成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计的准确性和可靠性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机模拟软件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计过程中各种变量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物理参数",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程技术的不断进步和发展",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实际地形",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料的强度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "跨学科合作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会需求",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境影响",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "定量工程设计",
+            "target": "设计的准确性和可靠性",
+            "name": "旨在提高"
+        },
+        {
+            "source": "设计过程中各种变量",
+            "target": "时间",
+            "name": "包括"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "数据分析",
+            "name": "基于"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "精确测量",
+            "name": "基于"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "计算机模拟技术",
+            "name": "强调使用"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "数学模型",
+            "name": "强调使用"
+        },
+        {
+            "source": "跨学科合作",
+            "target": "材料科学",
+            "name": "包括"
+        },
+        {
+            "source": "物理参数",
+            "target": "材料的强度",
+            "name": "包括"
+        },
+        {
+            "source": "桥梁设计",
+            "target": "结构力学",
+            "name": "利用"
+        },
+        {
+            "source": "设计过程中各种变量",
+            "target": "环境影响",
+            "name": "包括"
+        },
+        {
+            "source": "设计过程中各种变量",
+            "target": "成本",
+            "name": "包括"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "物理参数",
+            "name": "涵盖"
+        },
+        {
+            "source": "桥梁设计",
+            "target": "气候数据",
+            "name": "结合"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "经济成本",
+            "name": "平衡"
+        },
+        {
+            "source": "桥梁设计",
+            "target": "流体力学",
+            "name": "利用"
+        },
+        {
+            "source": "桥梁设计",
+            "target": "计算机模拟软件",
+            "name": "通过"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "工程技术的不断进步和发展",
+            "name": "推动"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "设计过程中各种变量",
+            "name": "涉及"
+        },
+        {
+            "source": "跨学科合作",
+            "target": "环境科学",
+            "name": "包括"
+        },
+        {
+            "source": "跨学科合作",
+            "target": "复杂工程问题",
+            "name": "为解决"
+        },
+        {
+            "source": "跨学科合作",
+            "target": "信息技术",
+            "name": "包括"
+        },
+        {
+            "source": "物理参数",
+            "target": "结构的稳定性",
+            "name": "包括"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "社会需求",
+            "name": "平衡"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "技术可行性",
+            "name": "平衡"
+        },
+        {
+            "source": "桥梁设计",
+            "target": "实际地形",
+            "name": "结合"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "跨学科合作",
+            "name": "促进"
+        }
+    ]
+}

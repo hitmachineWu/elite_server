@@ -1,0 +1,101 @@
+{
+    "nodes": [
+        {
+            "name": "摆动",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "周期性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "摆钟的运动",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "市场动力学模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物种数量的变化趋势",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "动力系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "价格波动的机制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "稳定性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "种群动力学模型",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "系统随时间演变的规律",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "混沌现象",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "系统长期行为的特征",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "摆钟的运动",
+            "target": "摆动",
+            "name": "遵循"
+        },
+        {
+            "source": "种群动力学模型",
+            "target": "物种数量的变化趋势",
+            "name": "可以用来预测"
+        },
+        {
+            "source": "系统长期行为的特征",
+            "target": "混沌现象",
+            "name": "包括"
+        },
+        {
+            "source": "市场动力学模型",
+            "target": "价格波动的机制",
+            "name": "帮助理解"
+        },
+        {
+            "source": "系统长期行为的特征",
+            "target": "周期性",
+            "name": "包括"
+        },
+        {
+            "source": "系统长期行为的特征",
+            "target": "稳定性",
+            "name": "包括"
+        },
+        {
+            "source": "动力系统",
+            "target": "系统随时间演变的规律",
+            "name": "研究"
+        }
+    ]
+}

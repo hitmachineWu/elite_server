@@ -1,0 +1,286 @@
+{
+    "nodes": [
+        {
+            "name": "质量要求",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "水坝建造",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "关键路径法（CPM）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "铁路建设",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计划评审技术（PERT）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "敏捷项目管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "1950年代",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工具",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新型管理模式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "软件开发",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大型活动组织",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "虚拟团队协作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "20世纪初",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工作效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "21世纪",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "预定的时间",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "管理科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "大型工程项目",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目目标",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "1960年代",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理理论",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "新产品研发",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "信息技术",
+            "target": "新型管理模式",
+            "name": "带来了"
+        },
+        {
+            "source": "项目管理",
+            "target": "方法",
+            "name": "通过"
+        },
+        {
+            "source": "项目管理",
+            "target": "工作效率",
+            "name": "提高"
+        },
+        {
+            "source": "信息技术",
+            "target": "虚拟团队协作",
+            "name": "带来了"
+        },
+        {
+            "source": "20世纪初",
+            "target": "大型工程项目",
+            "name": "促进了"
+        },
+        {
+            "source": "大型活动组织",
+            "target": "项目管理",
+            "name": "需要"
+        },
+        {
+            "source": "项目管理",
+            "target": "工具",
+            "name": "通过"
+        },
+        {
+            "source": "项目管理",
+            "target": "质量要求",
+            "name": "确保"
+        },
+        {
+            "source": "项目管理",
+            "target": "管理科学",
+            "name": "是一门"
+        },
+        {
+            "source": "项目管理",
+            "target": "技术",
+            "name": "通过"
+        },
+        {
+            "source": "项目管理",
+            "target": "风险",
+            "name": "降低"
+        },
+        {
+            "source": "1960年代",
+            "target": "计划评审技术（PERT）",
+            "name": "发明了"
+        },
+        {
+            "source": "20世纪初",
+            "target": "水坝建造",
+            "name": "促进了"
+        },
+        {
+            "source": "项目管理",
+            "target": "项目目标",
+            "name": "实现"
+        },
+        {
+            "source": "项目管理",
+            "target": "预定的时间",
+            "name": "确保"
+        },
+        {
+            "source": "新产品研发",
+            "target": "项目管理",
+            "name": "需要"
+        },
+        {
+            "source": "新型管理模式",
+            "target": "敏捷项目管理",
+            "name": "包括"
+        },
+        {
+            "source": "关键路径法（CPM）",
+            "target": "项目管理理论",
+            "name": "丰富了"
+        },
+        {
+            "source": "软件开发",
+            "target": "项目管理",
+            "name": "需要"
+        },
+        {
+            "source": "项目管理",
+            "target": "成本",
+            "name": "确保"
+        },
+        {
+            "source": "1950年代",
+            "target": "关键路径法（CPM）",
+            "name": "发明了"
+        },
+        {
+            "source": "计划评审技术（PERT）",
+            "target": "项目管理理论",
+            "name": "丰富了"
+        },
+        {
+            "source": "关键路径法（CPM）",
+            "target": "计划评审技术（PERT）",
+            "name": "和"
+        },
+        {
+            "source": "1950年代",
+            "target": "1960年代",
+            "name": "和"
+        },
+        {
+            "source": "信息技术",
+            "target": "敏捷项目管理",
+            "name": "带来了"
+        },
+        {
+            "source": "20世纪初",
+            "target": "铁路建设",
+            "name": "促进了"
+        },
+        {
+            "source": "21世纪",
+            "target": "信息技术",
+            "name": "带来了"
+        },
+        {
+            "source": "新型管理模式",
+            "target": "虚拟团队协作",
+            "name": "包括"
+        }
+    ]
+}

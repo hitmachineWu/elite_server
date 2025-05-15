@@ -1,0 +1,161 @@
+{
+    "nodes": [
+        {
+            "name": "工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "x轴",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "负面积",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "区间[a, b]",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "正面积",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "黎曼和",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物体的位移",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学思维",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "解决问题的能力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "流体的压力分布",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "曲线下面积",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定积分",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经济学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "函数f(x)",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "数学分析",
+            "target": "曲线下面积",
+            "name": "涉及"
+        },
+        {
+            "source": "曲线下面积",
+            "target": "解决问题的能力",
+            "name": "培养"
+        },
+        {
+            "source": "定积分",
+            "target": "物体的位移",
+            "name": "计算"
+        },
+        {
+            "source": "定积分",
+            "target": "函数f(x)",
+            "name": "计算"
+        },
+        {
+            "source": "曲线下面积",
+            "target": "定积分",
+            "name": "是"
+        },
+        {
+            "source": "定积分",
+            "target": "工程",
+            "name": "应用"
+        },
+        {
+            "source": "定积分",
+            "target": "经济学",
+            "name": "应用"
+        },
+        {
+            "source": "曲线下面积",
+            "target": "黎曼和",
+            "name": "计算方法"
+        },
+        {
+            "source": "曲线下面积",
+            "target": "数学思维",
+            "name": "培养"
+        },
+        {
+            "source": "定积分",
+            "target": "区间[a, b]",
+            "name": "在"
+        },
+        {
+            "source": "x轴",
+            "target": "正面积",
+            "name": "上方"
+        },
+        {
+            "source": "x轴",
+            "target": "负面积",
+            "name": "下方"
+        },
+        {
+            "source": "黎曼和",
+            "target": "定积分",
+            "name": "逼近"
+        },
+        {
+            "source": "定积分",
+            "target": "流体的压力分布",
+            "name": "计算"
+        },
+        {
+            "source": "定积分",
+            "target": "物理",
+            "name": "应用"
+        }
+    ]
+}

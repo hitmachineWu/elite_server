@@ -1,0 +1,276 @@
+{
+    "nodes": [
+        {
+            "name": "Arm Cortex-M",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "低功耗模式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "消费电子",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "睡眠模式",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "高集成度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "低功耗",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "处理能力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "硬件性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "高性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定时器",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "中断",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "两跳节点技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "STM32",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "无线传感器网络",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "嵌入式系统",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物联网设备",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物联网",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "意法半导体",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "微控制器平台",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工业控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "网络覆盖范围",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "应用潜力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据传输",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "STMicroelectronics",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "外设接口",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "无线通信",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "电源管理选项",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "STM32",
+            "target": "微控制器平台",
+            "name": "是"
+        },
+        {
+            "source": "STM32",
+            "target": "中断",
+            "name": "支持"
+        },
+        {
+            "source": "STM32",
+            "target": "无线通信",
+            "name": "应用于"
+        },
+        {
+            "source": "STM32",
+            "target": "Arm Cortex-M",
+            "name": "基于"
+        },
+        {
+            "source": "STM32",
+            "target": "外设接口",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "处理能力",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "物联网设备",
+            "name": "应用于"
+        },
+        {
+            "source": "STM32",
+            "target": "消费电子",
+            "name": "应用于"
+        },
+        {
+            "source": "STM32",
+            "target": "应用潜力",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "高性能",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "硬件性能",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "意法半导体",
+            "name": "开发于"
+        },
+        {
+            "source": "STM32",
+            "target": "嵌入式系统",
+            "name": "应用于"
+        },
+        {
+            "source": "STM32",
+            "target": "低功耗模式",
+            "name": "提供"
+        },
+        {
+            "source": "STM32",
+            "target": "睡眠模式",
+            "name": "提供"
+        },
+        {
+            "source": "STM32",
+            "target": "定时器",
+            "name": "支持"
+        },
+        {
+            "source": "STM32",
+            "target": "数据传输",
+            "name": "确保"
+        },
+        {
+            "source": "STM32",
+            "target": "低功耗",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "电源管理选项",
+            "name": "提供"
+        },
+        {
+            "source": "STM32",
+            "target": "网络覆盖范围",
+            "name": "扩展"
+        },
+        {
+            "source": "STM32",
+            "target": "STMicroelectronics",
+            "name": "开发于"
+        },
+        {
+            "source": "STM32",
+            "target": "无线传感器网络",
+            "name": "应用于"
+        },
+        {
+            "source": "STM32",
+            "target": "高集成度",
+            "name": "具有"
+        },
+        {
+            "source": "STM32",
+            "target": "两跳节点技术",
+            "name": "支持"
+        },
+        {
+            "source": "STM32",
+            "target": "工业控制",
+            "name": "应用于"
+        },
+        {
+            "source": "STM32",
+            "target": "嵌入式系统",
+            "name": "用于开发"
+        },
+        {
+            "source": "STM32",
+            "target": "物联网",
+            "name": "应用于"
+        }
+    ]
+}

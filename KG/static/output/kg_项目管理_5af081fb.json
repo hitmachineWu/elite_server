@@ -1,0 +1,226 @@
+{
+    "nodes": [
+        {
+            "name": "计划",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "潜在风险",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "资源配置",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "控制",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目进度",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "应对策略",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风险管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "领导",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "目标",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目管理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "竞争力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "资源",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "误解",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "冲突",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目经理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "团队",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "质量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "相关方",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "沟通",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "组织",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技能",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "沟通",
+            "target": "冲突",
+            "name": "减少"
+        },
+        {
+            "source": "相关方",
+            "target": "项目",
+            "name": "理解"
+        },
+        {
+            "source": "项目管理",
+            "target": "计划",
+            "name": "涉及"
+        },
+        {
+            "source": "团队",
+            "target": "项目经理",
+            "name": "构建"
+        },
+        {
+            "source": "控制",
+            "target": "质量",
+            "name": "确保"
+        },
+        {
+            "source": "资源",
+            "target": "项目",
+            "name": "有限"
+        },
+        {
+            "source": "项目管理",
+            "target": "组织",
+            "name": "涉及"
+        },
+        {
+            "source": "风险管理",
+            "target": "应对策略",
+            "name": "制定"
+        },
+        {
+            "source": "项目管理",
+            "target": "控制",
+            "name": "涉及"
+        },
+        {
+            "source": "项目管理",
+            "target": "技能",
+            "name": "成为"
+        },
+        {
+            "source": "项目管理",
+            "target": "领导",
+            "name": "涉及"
+        },
+        {
+            "source": "控制",
+            "target": "项目进度",
+            "name": "确保"
+        },
+        {
+            "source": "目标",
+            "target": "组织",
+            "name": "实现"
+        },
+        {
+            "source": "项目管理",
+            "target": "风险管理",
+            "name": "强调"
+        },
+        {
+            "source": "项目管理",
+            "target": "组织",
+            "name": "帮助"
+        },
+        {
+            "source": "项目管理",
+            "target": "竞争力",
+            "name": "提高"
+        },
+        {
+            "source": "沟通",
+            "target": "误解",
+            "name": "减少"
+        },
+        {
+            "source": "组织",
+            "target": "资源配置",
+            "name": "涉及"
+        },
+        {
+            "source": "组织",
+            "target": "团队",
+            "name": "涉及"
+        },
+        {
+            "source": "风险管理",
+            "target": "潜在风险",
+            "name": "识别"
+        },
+        {
+            "source": "控制",
+            "target": "成本",
+            "name": "确保"
+        }
+    ]
+}

@@ -1,0 +1,271 @@
+{
+    "nodes": [
+        {
+            "name": "建筑领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经济效益",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实施",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量分析方法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "精确数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料用量",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程实践",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "变更",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "可行性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "现代工程领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学建模",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "施工时间",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "决策",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科学性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程行业现代化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "BIM（建筑信息模型）技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "返工",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经验",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "传统工程设计过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "项目规划",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科技进步",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定性判断",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术经济指标",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科学技术发展",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "定量工程设计",
+            "target": "现代工程领域",
+            "name": "是"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "设计效率",
+            "name": "提高"
+        },
+        {
+            "source": "计算机技术",
+            "target": "定量分析方法",
+            "name": "促进"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "经济效益",
+            "name": "提高"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "工程实践",
+            "name": "是"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "变更",
+            "name": "减少"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "项目规划",
+            "name": "贯穿于"
+        },
+        {
+            "source": "传统工程设计过程",
+            "target": "定性判断",
+            "name": "依赖"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "实施",
+            "name": "贯穿于"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "工程行业现代化",
+            "name": "推动"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "科学性",
+            "name": "确保"
+        },
+        {
+            "source": "BIM（建筑信息模型）技术",
+            "target": "施工时间",
+            "name": "预测"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "数学建模",
+            "name": "强调"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "成本",
+            "name": "控制"
+        },
+        {
+            "source": "科学技术发展",
+            "target": "定量分析方法",
+            "name": "促进"
+        },
+        {
+            "source": "传统工程设计过程",
+            "target": "经验",
+            "name": "依赖"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "精确数据分析",
+            "name": "强调"
+        },
+        {
+            "source": "BIM（建筑信息模型）技术",
+            "target": "成本",
+            "name": "预测"
+        },
+        {
+            "source": "BIM（建筑信息模型）技术",
+            "target": "材料用量",
+            "name": "预测"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "科技进步",
+            "name": "是"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "返工",
+            "name": "减少"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "可行性",
+            "name": "确保"
+        },
+        {
+            "source": "BIM（建筑信息模型）技术",
+            "target": "决策",
+            "name": "帮助"
+        },
+        {
+            "source": "BIM（建筑信息模型）技术",
+            "target": "建筑领域",
+            "name": "用于"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "技术经济指标",
+            "name": "评估"
+        }
+    ]
+}

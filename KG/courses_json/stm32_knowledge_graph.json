@@ -1,0 +1,206 @@
+{
+    "categories": [
+        {"name": "课程体系"},
+        {"name": "工具类"},
+        {"name": "知识类"}
+      ],
+    "nodes": [
+        {
+            "name": "LL库",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "ARM Cortex-M内核",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "动态电压调节",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "Cortex-M4内核",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "STM32H7",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "STM32F1",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定时器模块",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "Cortex-M3内核",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "音频DSP算法",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "STM32L系列",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "STM32",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "PWM波形生成",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "时间关键代码",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "双核Cortex-M7+M4架构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "stm32",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "寄存器层",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "音频DSP算法",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "Cortex-M4内核",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "LL库",
+            "target": "寄存器层",
+            "name": "直接访问"
+        },
+        {
+            "source": "STM32F1",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "LL库",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "STM32H7",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "定时器模块",
+            "target": "PWM波形生成",
+            "name": "支持"
+        },
+        {
+            "source": "STM32",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "寄存器层",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "STM32H7",
+            "target": "双核Cortex-M7+M4架构",
+            "name": "采用"
+        },
+        {
+            "source": "PWM波形生成",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "时间关键代码",
+            "target": "LL库",
+            "name": "建议使用"
+        },
+        {
+            "source": "Cortex-M3内核",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "STM32L系列",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "定时器模块",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "Cortex-M4内核",
+            "target": "音频DSP算法",
+            "name": "处理"
+        },
+        {
+            "source": "STM32L系列",
+            "target": "动态电压调节",
+            "name": "实现"
+        },
+        {
+            "source": "STM32F1",
+            "target": "Cortex-M3内核",
+            "name": "搭载"
+        },
+        {
+            "source": "ARM Cortex-M内核",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "双核Cortex-M7+M4架构",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "时间关键代码",
+            "target": "stm32",
+            "name": "关联"
+        },
+        {
+            "source": "STM32",
+            "target": "ARM Cortex-M内核",
+            "name": "基于"
+        },
+        {
+            "source": "动态电压调节",
+            "target": "stm32",
+            "name": "关联"
+        }
+    ]
+}

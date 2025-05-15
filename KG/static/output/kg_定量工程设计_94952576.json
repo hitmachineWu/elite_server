@@ -1,0 +1,246 @@
+{
+    "nodes": [
+        {
+            "name": "抗震性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "成本",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机辅助设计（CAD）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "社会的发展",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程师",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科技的进步",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "专业知识",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "车身结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "燃油效率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程项目的成功率",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "有限元分析（FEA）",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量分析工具",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "建筑物的安全与稳定",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "风阻",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "优化",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "模拟",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "性能",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "结构的承载能力",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "汽车工业",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "设计方案",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科学原理",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "最终产品",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "建筑领域",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "定量工程设计",
+            "target": "设计方案",
+            "name": "优化"
+        },
+        {
+            "source": "计算机辅助设计（CAD）",
+            "target": "定量分析工具",
+            "name": "是"
+        },
+        {
+            "source": "建筑领域",
+            "target": "结构的承载能力",
+            "name": "计算"
+        },
+        {
+            "source": "最终产品",
+            "target": "性能",
+            "name": "达到"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "工程技术",
+            "name": "结合"
+        },
+        {
+            "source": "有限元分析（FEA）",
+            "target": "定量分析工具",
+            "name": "是"
+        },
+        {
+            "source": "最终产品",
+            "target": "成本",
+            "name": "达到"
+        },
+        {
+            "source": "工程师",
+            "target": "模拟",
+            "name": "进行"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "科学原理",
+            "name": "结合"
+        },
+        {
+            "source": "建筑领域",
+            "target": "抗震性能",
+            "name": "计算"
+        },
+        {
+            "source": "工程师",
+            "target": "优化",
+            "name": "进行"
+        },
+        {
+            "source": "汽车工业",
+            "target": "车身结构",
+            "name": "优化"
+        },
+        {
+            "source": "汽车工业",
+            "target": "燃油效率",
+            "name": "提高"
+        },
+        {
+            "source": "最终产品",
+            "target": "安全性",
+            "name": "达到"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "科技的进步",
+            "name": "推动"
+        },
+        {
+            "source": "工程师",
+            "target": "定量分析工具",
+            "name": "掌握"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "工程项目的成功率",
+            "name": "提高"
+        },
+        {
+            "source": "汽车工业",
+            "target": "风阻",
+            "name": "减少"
+        },
+        {
+            "source": "建筑领域",
+            "target": "建筑物的安全与稳定",
+            "name": "确保"
+        },
+        {
+            "source": "汽车工业",
+            "target": "定量工程设计",
+            "name": "利用"
+        },
+        {
+            "source": "工程师",
+            "target": "专业知识",
+            "name": "需要具备"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "社会的发展",
+            "name": "推动"
+        }
+    ]
+}

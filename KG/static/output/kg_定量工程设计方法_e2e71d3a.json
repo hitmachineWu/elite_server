@@ -1,0 +1,26 @@
+{
+    "nodes": [
+        {
+            "name": "Error",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "assistant",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "Error",
+            "target": "Error",
+            "name": "has name"
+        },
+        {
+            "source": "assistant",
+            "target": "assistant",
+            "name": "has role"
+        }
+    ]
+}

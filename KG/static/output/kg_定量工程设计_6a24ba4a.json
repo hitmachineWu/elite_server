@@ -1,0 +1,291 @@
+{
+    "nodes": [
+        {
+            "name": "结构力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "性能要求",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "航空航天领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "安全可靠",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "稳定性和安全性",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "土壤力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "计算机模拟软件",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量工程设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实际的设计过程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "桥梁",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "环境科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "实地测量的数据",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "物理知识",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "定量分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "技术的发展",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "土木工程",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "流体力学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "跨学科的合作",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "精确的计算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数值计算",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "跨学科领域",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数据分析",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "生物医学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "飞机的设计",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "建筑物",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复杂的设计问题",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工程师",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科技创新",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "材料科学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学基础",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "跨学科的合作",
+            "target": "复杂的设计问题",
+            "name": "解决"
+        },
+        {
+            "source": "技术的发展",
+            "target": "定量工程设计",
+            "name": "推动"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "生物医学",
+            "name": "应用"
+        },
+        {
+            "source": "飞机的设计",
+            "target": "安全可靠",
+            "name": "保证"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "环境科学",
+            "name": "应用"
+        },
+        {
+            "source": "航空航天领域",
+            "target": "流体力学",
+            "name": "需要"
+        },
+        {
+            "source": "工程师",
+            "target": "数学基础",
+            "name": "具备"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "精确的计算",
+            "name": "核心在于"
+        },
+        {
+            "source": "跨学科的合作",
+            "target": "科技创新",
+            "name": "促进"
+        },
+        {
+            "source": "土木工程",
+            "target": "定量分析",
+            "name": "需要"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "工程师",
+            "name": "要求"
+        },
+        {
+            "source": "工程师",
+            "target": "实际的设计过程",
+            "name": "应用"
+        },
+        {
+            "source": "工程师",
+            "target": "物理知识",
+            "name": "具备"
+        },
+        {
+            "source": "航空航天领域",
+            "target": "计算机模拟软件",
+            "name": "使用"
+        },
+        {
+            "source": "建筑物",
+            "target": "稳定性和安全性",
+            "name": "评估"
+        },
+        {
+            "source": "土木工程",
+            "target": "结构力学",
+            "name": "需要"
+        },
+        {
+            "source": "航空航天领域",
+            "target": "数值计算",
+            "name": "进行"
+        },
+        {
+            "source": "土木工程",
+            "target": "桥梁",
+            "name": "评估"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "数据分析",
+            "name": "核心在于"
+        },
+        {
+            "source": "桥梁",
+            "target": "稳定性和安全性",
+            "name": "评估"
+        },
+        {
+            "source": "航空航天领域",
+            "target": "材料科学",
+            "name": "需要"
+        },
+        {
+            "source": "定量工程设计",
+            "target": "跨学科领域",
+            "name": "应用"
+        },
+        {
+            "source": "飞机的设计",
+            "target": "性能要求",
+            "name": "满足"
+        },
+        {
+            "source": "数值计算",
+            "target": "飞机的设计",
+            "name": "确保"
+        },
+        {
+            "source": "土木工程",
+            "target": "实地测量的数据",
+            "name": "结合"
+        },
+        {
+            "source": "土木工程",
+            "target": "土壤力学",
+            "name": "需要"
+        },
+        {
+            "source": "土木工程",
+            "target": "建筑物",
+            "name": "评估"
+        }
+    ]
+}

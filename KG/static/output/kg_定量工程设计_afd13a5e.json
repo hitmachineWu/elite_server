@@ -1,0 +1,91 @@
+{
+    "nodes": [
+        {
+            "name": "89772 in the messages",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "invalid_request_error",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "assistant",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "stop",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "91722 tokens",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "Error",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "content",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "400",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "1950 in the completion",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "assistant",
+            "target": "assistant",
+            "name": "has role"
+        },
+        {
+            "source": "assistant",
+            "target": "stop",
+            "name": "has finish_reason"
+        },
+        {
+            "source": "Error",
+            "target": "invalid_request_error",
+            "name": "has code"
+        },
+        {
+            "source": "1950 in the completion",
+            "target": "91722 tokens",
+            "name": "part of"
+        },
+        {
+            "source": "assistant",
+            "target": "content",
+            "name": "has content"
+        },
+        {
+            "source": "Error",
+            "target": "400",
+            "name": "has status"
+        },
+        {
+            "source": "Error",
+            "target": "Error",
+            "name": "has name"
+        },
+        {
+            "source": "89772 in the messages",
+            "target": "91722 tokens",
+            "name": "part of"
+        }
+    ]
+}

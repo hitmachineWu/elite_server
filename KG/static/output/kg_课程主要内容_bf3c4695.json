@@ -1,0 +1,271 @@
+{
+    "nodes": [
+        {
+            "name": "欧洲",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "天文学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "医疗",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "狩猎采集",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科技",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "农业社会",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "国家",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "城市",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科学技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "文艺复兴运动",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "文化交流",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "经济",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "信息技术",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "现代社会",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "自然界",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "革命性理论",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "工业革命",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "古希腊",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "哲学",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "复杂社会结构",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "古代文明",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "教育",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "哥白尼",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "思想家",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "科学革命",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "贸易",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "古希腊罗马的文化遗产",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "伽利略",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "古埃及",
+            "symbolSize": 50,
+            "category": 1
+        },
+        {
+            "name": "数学",
+            "symbolSize": 50,
+            "category": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "革命性理论",
+            "target": "自然界",
+            "name": "改变"
+        },
+        {
+            "source": "信息技术",
+            "target": "现代社会",
+            "name": "影响"
+        },
+        {
+            "source": "工业革命",
+            "target": "科技",
+            "name": "促进"
+        },
+        {
+            "source": "哥白尼",
+            "target": "革命性理论",
+            "name": "提出"
+        },
+        {
+            "source": "文化交流",
+            "target": "科学技术",
+            "name": "促进"
+        },
+        {
+            "source": "古希腊",
+            "target": "数学",
+            "name": "发展"
+        },
+        {
+            "source": "古希腊",
+            "target": "哲学",
+            "name": "发展"
+        },
+        {
+            "source": "欧洲",
+            "target": "古希腊罗马的文化遗产",
+            "name": "重新发现"
+        },
+        {
+            "source": "贸易",
+            "target": "科学技术",
+            "name": "促进"
+        },
+        {
+            "source": "古希腊罗马的文化遗产",
+            "target": "文艺复兴运动",
+            "name": "奠定基础"
+        },
+        {
+            "source": "科技",
+            "target": "信息技术",
+            "name": "发展"
+        },
+        {
+            "source": "文艺复兴运动",
+            "target": "科学革命",
+            "name": "推动"
+        },
+        {
+            "source": "狩猎采集",
+            "target": "农业社会",
+            "name": "过渡到"
+        },
+        {
+            "source": "伽利略",
+            "target": "革命性理论",
+            "name": "提出"
+        },
+        {
+            "source": "思想家",
+            "target": "古希腊罗马的文化遗产",
+            "name": "结合"
+        },
+        {
+            "source": "古埃及",
+            "target": "天文学",
+            "name": "发展"
+        },
+        {
+            "source": "信息技术",
+            "target": "教育",
+            "name": "影响"
+        },
+        {
+            "source": "古代文明",
+            "target": "狩猎采集",
+            "name": "起源"
+        },
+        {
+            "source": "农业社会",
+            "target": "城市",
+            "name": "催生"
+        },
+        {
+            "source": "信息技术",
+            "target": "经济",
+            "name": "影响"
+        },
+        {
+            "source": "农业社会",
+            "target": "复杂社会结构",
+            "name": "催生"
+        },
+        {
+            "source": "农业社会",
+            "target": "国家",
+            "name": "催生"
+        },
+        {
+            "source": "信息技术",
+            "target": "医疗",
+            "name": "影响"
+        }
+    ]
+}

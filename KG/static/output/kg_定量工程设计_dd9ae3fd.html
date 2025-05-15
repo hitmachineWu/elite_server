@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="../js/echarts.min.js"></script>
+
+    
+</head>
+<body >
+    <div id="9394435f30384b0f810077f15f522234" class="chart-container" style="width:1000px; height:800px; "></div>
+    <script>
+        var chart_9394435f30384b0f810077f15f522234 = echarts.init(
+            document.getElementById('9394435f30384b0f810077f15f522234'), 'light', {renderer: 'canvas'});
+        var option_9394435f30384b0f810077f15f522234 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 2500,
+                "edgeLength": 50
+            },
+            "label": {
+                "show": true,
+                "margin": 8,
+                "valueAnimation": false
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 2,
+                "opacity": 0.5,
+                "curveness": 0,
+                "type": "solid",
+                "color": "#4b565b"
+            },
+            "roam": true,
+            "draggable": true,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "\u4e2d\u5fc3\u8282\u70b9",
+                    "symbolSize": 70,
+                    "category": 0,
+                    "des": "\u8fd9\u662f\u4e2d\u5fc3\u8282\u70b9\u7684\u8be6\u7ec6\u63cf\u8ff0"
+                },
+                {
+                    "name": "\u5de5\u7a0b\u8282\u70b91",
+                    "symbolSize": 50,
+                    "category": 1,
+                    "des": "\u5de5\u7a0b\u6280\u672f\u8282\u70b91"
+                },
+                {
+                    "name": "\u5de5\u7a0b\u8282\u70b92",
+                    "symbolSize": 50,
+                    "category": 1,
+                    "des": "\u5de5\u7a0b\u6280\u672f\u8282\u70b92"
+                },
+                {
+                    "name": "\u827a\u672f\u8282\u70b9",
+                    "symbolSize": 50,
+                    "category": 2,
+                    "des": "\u827a\u672f\u8bbe\u8ba1\u8282\u70b9"
+                },
+                {
+                    "name": "\u6570\u7406\u8282\u70b9",
+                    "symbolSize": 50,
+                    "category": 3,
+                    "des": "\u6570\u7406\u903b\u8f91\u8282\u70b9"
+                },
+                {
+                    "name": "\u89c6\u91ce\u8282\u70b9",
+                    "symbolSize": 50,
+                    "category": 4,
+                    "des": "\u89c6\u91ce\u8282\u70b9"
+                },
+                {
+                    "name": "\u4eba\u6587\u8282\u70b9",
+                    "symbolSize": 50,
+                    "category": 5,
+                    "des": "\u4eba\u6587\u793e\u79d1\u8282\u70b9"
+                },
+                {
+                    "name": "\u6c9f\u901a\u8282\u70b9",
+                    "symbolSize": 50,
+                    "category": 6,
+                    "des": "\u6c9f\u901a\u8868\u8fbe\u8282\u70b9"
+                },
+                {
+                    "name": "FCL\u8282\u70b9",
+                    "symbolSize": 50,
+                    "category": 7,
+                    "des": "FCL\u8282\u70b9"
+                },
+                {
+                    "name": "\u975e\u7ebf\u6027\u62df\u5408",
+                    "symbolSize": 50,
+                    "category": 8,
+                    "des": "\u975e\u7ebf\u6027\u62df\u5408\u8282\u70b9"
+                }
+            ],
+            "categories": [
+                {
+                    "name": "Neural Center"
+                },
+                {
+                    "name": "\u5de5\u7a0b\u6280\u672f"
+                },
+                {
+                    "name": "\u827a\u672f\u8bbe\u8ba1"
+                },
+                {
+                    "name": "\u6570\u7406\u903b\u8f91"
+                },
+                {
+                    "name": "\u89c6\u91ce"
+                },
+                {
+                    "name": "\u4eba\u6587\u793e\u79d1"
+                },
+                {
+                    "name": "\u6c9f\u901a\u8868\u8fbe"
+                },
+                {
+                    "name": "FCL"
+                }
+            ],
+            "edgeLabel": {
+                "show": false,
+                "margin": 8,
+                "valueAnimation": false
+            },
+            "edgeSymbol": [
+                "circle",
+                "arrow"
+            ],
+            "edgeSymbolSize": [
+                2,
+                10
+            ],
+            "links": [
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u5de5\u7a0b\u8282\u70b91"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u5de5\u7a0b\u8282\u70b92"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u827a\u672f\u8282\u70b9"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u6570\u7406\u8282\u70b9"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u89c6\u91ce\u8282\u70b9"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u4eba\u6587\u8282\u70b9"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "\u6c9f\u901a\u8282\u70b9"
+                },
+                {
+                    "source": "\u4e2d\u5fc3\u8282\u70b9",
+                    "target": "FCL\u8282\u70b9"
+                },
+                {
+                    "source": "\u5de5\u7a0b\u8282\u70b91",
+                    "target": "\u5de5\u7a0b\u8282\u70b92"
+                },
+                {
+                    "source": "\u5de5\u7a0b\u8282\u70b91",
+                    "target": "\u6570\u7406\u8282\u70b9"
+                },
+                {
+                    "source": "\u5de5\u7a0b\u8282\u70b91",
+                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
+                },
+                {
+                    "source": "\u827a\u672f\u8282\u70b9",
+                    "target": "\u89c6\u91ce\u8282\u70b9"
+                },
+                {
+                    "source": "\u4eba\u6587\u8282\u70b9",
+                    "target": "\u6c9f\u901a\u8282\u70b9"
+                },
+                {
+                    "source": "\u5de5\u7a0b\u8282\u70b92",
+                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
+                },
+                {
+                    "source": "\u6570\u7406\u8282\u70b9",
+                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
+                },
+                {
+                    "source": "\u89c6\u91ce\u8282\u70b9",
+                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
+                },
+                {
+                    "source": "\u6c9f\u901a\u8282\u70b9",
+                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
+                },
+                {
+                    "source": "FCL\u8282\u70b9",
+                    "target": "\u975e\u7ebf\u6027\u62df\u5408"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Neural Center",
+                "\u5de5\u7a0b\u6280\u672f",
+                "\u827a\u672f\u8bbe\u8ba1",
+                "\u6570\u7406\u903b\u8f91",
+                "\u89c6\u91ce",
+                "\u4eba\u6587\u793e\u79d1",
+                "\u6c9f\u901a\u8868\u8fbe",
+                "FCL"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "formatter": "{b}",
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u5de5\u7a0b\u539f\u7406\u8bbe\u8ba1",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "toolbox": {
+        "show": false,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "mark": {
+                "show": true
+            },
+            "restore": {
+                "show": true
+            },
+            "saveAsImage": {
+                "show": true
+            }
+        }
+    }
+};
+        chart_9394435f30384b0f810077f15f522234.setOption(option_9394435f30384b0f810077f15f522234);
+    </script>
+</body>
+</html>
