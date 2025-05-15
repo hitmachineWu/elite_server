@@ -2,6 +2,7 @@ import pymysql
 from flask import Flask, render_template, redirect, url_for, flash, request, session, jsonify, send_from_directory
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
+import time
 from functools import wraps
 import uuid
 
@@ -16,7 +17,6 @@ users = {
         "favorites": []
     }
 }
-debug_flag = True
 
 # 默认的嵌入URL
 DEFAULT_EMBED_URL = "http://180.85.206.30:3000/chat/share?shareId=cc1greng47slrl6ivb6ik03p"
@@ -295,6 +295,114 @@ def view_agent(agent_id):
                            agent=agent,
                            username=session.get('username', '用户'))
 
+@app.route('/update_kg', methods=['POST'])
+def update_kg():
+    """接收请求并触发特定课程知识图谱的更新"""
+    try:
+        data = request.json
+        
+        # 解析必要参数
+        course_id = int(data.get('course_id'))
+        keyword = data.get('query', '')
+        display_mode = data.get("display_mode",'current_page')  # 强制使用current_page模式
+        print(f"course_id = {course_id}, keyword = {keyword}, display_mode = {display_mode}")
+        # 验证参数
+        if not course_id:
+            return jsonify({'error': '缺少course_id参数'}), 400
+        if not keyword:
+            return jsonify({'error': '关键词不能为空'}), 400
+        # 生成知识图谱数据
+        try:
+            from KG.kg_json import KnowledgeGraphGenerator
+            from KG.kg_json2graph import create_graph, load_json_data
+            
+            # 创建目录
+            KG_STATIC_DIR = os.path.join(KG_FOLDER, 'static')
+            KG_OUTPUT_DIR = os.path.join(KG_STATIC_DIR, 'output')
+            os.makedirs(KG_STATIC_DIR, exist_ok=True)
+            os.makedirs(KG_OUTPUT_DIR, exist_ok=True)
+            
+            # 创建唯一文件名
+            unique_id = str(uuid.uuid4())[:8]
+            json_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.json')
+            
+            # 生成知识图谱
+            kg_generator = KnowledgeGraphGenerator()
+            json_result = kg_generator.generate_knowledge_graph(keyword=keyword, output_file=json_file)
+            
+            if not json_result:
+                return jsonify({'error': '知识图谱生成失败'}), 500
+            
+            # 加载生成的JSON数据
+            temp, nodes, links = load_json_data(json_file)
+            
+            if not nodes or not links:
+                return jsonify({'error': '知识图谱数据为空'}), 500
+            
+            # 将更新数据存储在服务器上，供客户端轮询获取
+            # 我们使用一个简单的内存存储，实际生产环境可以使用Redis等
+            update_data = {
+                'course_id': course_id,
+                'keyword': keyword,
+                'nodes': nodes,
+                'links': links,
+                'timestamp': time.time()
+            }
+            
+            # 如果没有全局字典则创建
+            if not hasattr(app, 'kg_updates'):
+                app.kg_updates = {}
+            
+            # 存储更新数据
+            app.kg_updates[str(course_id)] = update_data
+            
+            return jsonify({
+                'success': True,
+                'message': f'课程{course_id}的知识图谱更新数据已准备好',
+                'update_id': unique_id
+            })
+            
+        except Exception as e:
+            import traceback
+            print(f"知识图谱生成失败: {str(e)}")
+            print(traceback.format_exc())
+            return jsonify({'error': f'知识图谱生成失败: {str(e)}'}), 500
+            
+    except Exception as e:
+        print(f"处理请求时出错: {str(e)}")
+        return jsonify({'error': f'处理请求时出错: {str(e)}'}), 500
+    
+@app.route('/check_kg_update/<int:course_id>', methods=['GET'])
+def check_kg_update(course_id):
+    """检查特定课程的知识图谱是否有更新"""
+    # 获取客户端最后检查时间
+    last_check = float(request.args.get('last_check', 0))
+    
+    # 如果没有全局字典则创建
+    if not hasattr(app, 'kg_updates'):
+        app.kg_updates = {}
+    
+    # 检查是否有更新
+    course_key = str(course_id)
+    if course_key in app.kg_updates:
+        update = app.kg_updates[course_key]
+        if update['timestamp'] > last_check:
+            # 返回更新数据
+            return jsonify({
+                'has_update': True,
+                'data': {
+                    'keyword': update['keyword'],
+                    'nodes': update['nodes'],
+                    'links': update['links']
+                },
+                'timestamp': update['timestamp']
+            })
+    
+    # 没有更新
+    return jsonify({
+        'has_update': False,
+        'timestamp': time.time()
+    })
 
 @app.route('/api/toggle-favorite/<int:agent_id>', methods=['POST'])
 @login_required
@@ -331,9 +439,133 @@ COURSE_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'KG/cou
 ## 课程广场知识图谱路由
 @app.route('/classkg/<int:course_id>')
 def kg_page(course_id):
-    """根据课程编号显示对应的知识图谱页面"""
+    """根据课程编号显示对应的知识图谱页面，并注入轮询更新代码"""
     filename = f'nn_output_enhanced{course_id}.html'
-    return send_from_directory(COURSE_FOLDER, filename)
+    file_path = os.path.join(COURSE_FOLDER, filename)
+    
+    try:
+        # 读取原始HTML文件
+        with open(file_path, 'r', encoding='utf-8') as file:
+            html_content = file.read()
+        
+        # 注入轮询脚本
+        polling_script = """
+        <script>
+        // 知识图谱轮询更新系统
+        (function() {
+            // 配置参数
+            const courseId = %d;
+            const pollInterval = 5000; // 每5秒检查一次更新
+            let lastCheckTime = 0;
+            let pollingActive = true;
+            
+            // 开始轮询
+            function startPolling() {
+                console.log(`开始轮询课程${courseId}的知识图谱更新`);
+                checkForUpdates();
+            }
+            
+            // 检查更新
+            function checkForUpdates() {
+                if (!pollingActive) return;
+                
+                fetch(`/check_kg_update/${courseId}?last_check=${lastCheckTime}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.has_update) {
+                            console.log(`检测到课程${courseId}的知识图谱更新:`, data.data.keyword);
+                            
+                            // 显示更新通知
+                            showUpdateNotification(data.data.keyword);
+                            
+                            // 更新图表
+                            if (typeof updateChartWithNewData === 'function') {
+                                updateChartWithNewData(data.data.nodes, data.data.links, data.data.keyword);
+                                console.log('图表已更新');
+                            } else {
+                                console.error('updateChartWithNewData函数未定义');
+                            }
+                            
+                            // 更新检查时间
+                            lastCheckTime = data.timestamp;
+                        }
+                        
+                        // 继续轮询
+                        setTimeout(checkForUpdates, pollInterval);
+                    })
+                    .catch(error => {
+                        console.error('检查更新出错:', error);
+                        // 失败后延长轮询间隔
+                        setTimeout(checkForUpdates, pollInterval * 2);
+                    });
+            }
+            
+            // 显示更新通知
+            function showUpdateNotification(keyword) {
+                // 创建通知元素
+                const notification = document.createElement('div');
+                notification.textContent = `知识图谱已更新: ${keyword}`;
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background-color: #4b8bf4;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                    z-index: 10000;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                `;
+                
+                // 添加到页面
+                document.body.appendChild(notification);
+                
+                // 显示通知
+                setTimeout(() => {
+                    notification.style.opacity = '1';
+                }, 10);
+                
+                // 3秒后隐藏并移除
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+            
+            // 页面可见性变化处理
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'visible') {
+                    // 页面变为可见时检查更新
+                    pollingActive = true;
+                    checkForUpdates();
+                } else {
+                    // 页面不可见时暂停轮询
+                    pollingActive = false;
+                }
+            });
+            
+            // 页面加载完成后启动轮询
+            window.addEventListener('load', startPolling);
+        })();
+        </script>
+        """ % course_id
+        
+        # 在</body>标签之前插入轮询脚本
+        html_content = html_content.replace('</body>', polling_script + '</body>')
+        
+        # 返回修改后的HTML内容
+        return html_content
+        
+    except Exception as e:
+        print(f"处理HTML文件出错: {str(e)}")
+        # 发生错误时回退到原始方法
+        return send_from_directory(COURSE_FOLDER, filename)
 
 # @app.route('/classkg1')
 # def kg_index():
@@ -353,167 +585,82 @@ def kg_js(filename):
 @app.route('/generate_kg', methods=['POST'])
 def proxy_generate_kg():
     """处理生成知识图谱的请求"""
-    if debug_flag == True:
+    try:
+        # 从请求中获取数据
         data = request.json
         
-        # 解析可选参数
-        agent_id = data.get('agent_id', '')
-        keyword = data.get('query', '')
-        answer = data.get('answer', '')
-        display_mode = data.get('display_mode', 'new_page')
-        print(f"- 关键词: {keyword}")
-        print(f"- 代理ID: {agent_id}")
-        print(f"- 显示模式: {display_mode}")
-        print(f"- 关键词: {len(keyword)} 字符")
-        print(f"- 回答长度: {len(answer)} 字符")
-        if int(agent_id) == 1:
-            print("get in agent 1 generation")
-            try:
-                # 直接导入KG服务中的相关模块
-                try:
-                    from KG.kg_json import KnowledgeGraphGenerator
-                    from KG.kg_json2graph import create_graph, load_json_data
-                    
-                    print(f"收到生成知识图谱请求：关键词 = {keyword}, 显示模式 = {display_mode}")
-                    
-                    if not keyword:
-                        print("错误：关键词为空")
-                        return jsonify({'error': '关键词不能为空'}), 400
-                    
-                    # 创建目录
-                    KG_STATIC_DIR = os.path.join(KG_FOLDER, 'static')
-                    KG_OUTPUT_DIR = os.path.join(KG_STATIC_DIR, 'output')
-                    os.makedirs(KG_STATIC_DIR, exist_ok=True)
-                    os.makedirs(KG_OUTPUT_DIR, exist_ok=True)
-                    
-                    # 创建唯一文件名
-                    unique_id = str(uuid.uuid4())[:8]
-                    json_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.json')
-                    html_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.html')
-                    
-                    print(f"将生成JSON文件：{json_file}")
-                    print(f"将生成HTML文件：{html_file}")
-                    
-                    # 生成知识图谱
-                    kg_generator = KnowledgeGraphGenerator()
-                    json_result = kg_generator.generate_knowledge_graph(keyword=keyword, output_file=json_file)
-                    
-                    if not json_result:
-                        print("知识图谱生成失败：无返回结果")
-                        return jsonify({'error': '知识图谱生成失败'}), 500
-                    
-                    # 加载生成的JSON数据
-                    temp , nodes, links = load_json_data(json_file)
-                    
-                    if not nodes or not links:
-                        print(f"知识图谱数据为空：nodes={nodes}, links={links}")
-                        return jsonify({'error': '知识图谱数据为空'}), 500
-                    
-                    # 创建图表
-                    c = create_graph(nodes, links)
-                    
-                    # 渲染HTML文件
-                    c.render(html_file)
-                    
-                    result = {
-                        'success': True,
-                        'keyword': keyword,
-                        'json_path': f'/KG/static/output/{os.path.basename(json_file)}',
-                        'html_path': f'/KG/static/output/{os.path.basename(html_file)}',
-                        'nodes': nodes,
-                        'links': links,
-                        'display_mode': display_mode
-                    }
-                    
-                    print(f"知识图谱生成成功：{result}")
-                    return jsonify(result)
-                    
-                except Exception as e:
-                    import traceback
-                    print(f"处理请求时出错: {str(e)}")
-                    print(traceback.format_exc())
-                    return jsonify({'error': f'处理请求时出错: {str(e)}'}), 500
-                    
-            except Exception as e:
-                print(f"处理请求时出错: {str(e)}")
-                return jsonify({'error': f'处理请求时出错: {str(e)}'}), 500
-    else:
+        # 直接导入KG服务中的相关模块
         try:
-            # 从请求中获取数据
-            data = request.json
+            from KG.kg_json import KnowledgeGraphGenerator
+            from KG.kg_json2graph import create_graph, load_json_data
             
-            # 直接导入KG服务中的相关模块
-            try:
-                from KG.kg_json import KnowledgeGraphGenerator
-                from KG.kg_json2graph import create_graph, load_json_data
-                
-                keyword = data.get('keyword')
-                display_mode = data.get('display_mode', 'new_page')
-                
-                print(f"收到生成知识图谱请求：关键词 = {keyword}, 显示模式 = {display_mode}")
-                
-                if not keyword:
-                    print("错误：关键词为空")
-                    return jsonify({'error': '关键词不能为空'}), 400
-                
-                # 创建目录
-                KG_STATIC_DIR = os.path.join(KG_FOLDER, 'static')
-                KG_OUTPUT_DIR = os.path.join(KG_STATIC_DIR, 'output')
-                os.makedirs(KG_STATIC_DIR, exist_ok=True)
-                os.makedirs(KG_OUTPUT_DIR, exist_ok=True)
-                
-                # 创建唯一文件名
-                unique_id = str(uuid.uuid4())[:8]
-                json_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.json')
-                html_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.html')
-                
-                print(f"将生成JSON文件：{json_file}")
-                print(f"将生成HTML文件：{html_file}")
-                
-                # 生成知识图谱
-                kg_generator = KnowledgeGraphGenerator()
-                json_result = kg_generator.generate_knowledge_graph(keyword=keyword, output_file=json_file)
-                
-                if not json_result:
-                    print("知识图谱生成失败：无返回结果")
-                    return jsonify({'error': '知识图谱生成失败'}), 500
-                
-                # 加载生成的JSON数据
-                
-                temp, nodes, links = load_json_data(json_file)
-                
-                if not nodes or not links:
-                    print(f"知识图谱数据为空：nodes={nodes}, links={links}")
-                    return jsonify({'error': '知识图谱数据为空'}), 500
-                
-                # 创建图表
-                c = create_graph(nodes, links)
-                
-                # 渲染HTML文件
-                c.render(html_file)
-                
-                result = {
-                    'success': True,
-                    'keyword': keyword,
-                    'json_path': f'/KG/static/output/{os.path.basename(json_file)}',
-                    'html_path': f'/KG/static/output/{os.path.basename(html_file)}',
-                    'nodes': nodes,
-                    'links': links,
-                    'display_mode': display_mode
-                }
-                
-                print(f"知识图谱生成成功：{result}")
-                return jsonify(result)
-                
-            except Exception as e:
-                import traceback
-                print(f"处理请求时出错: {str(e)}")
-                print(traceback.format_exc())
-                return jsonify({'error': f'处理请求时出错: {str(e)}'}), 500
-                
+            keyword = data.get('keyword')
+            display_mode = data.get('display_mode', 'new_page')
+            
+            print(f"收到生成知识图谱请求：关键词 = {keyword}, 显示模式 = {display_mode}")
+            
+            if not keyword:
+                print("错误：关键词为空")
+                return jsonify({'error': '关键词不能为空'}), 400
+            
+            # 创建目录
+            KG_STATIC_DIR = os.path.join(KG_FOLDER, 'static')
+            KG_OUTPUT_DIR = os.path.join(KG_STATIC_DIR, 'output')
+            os.makedirs(KG_STATIC_DIR, exist_ok=True)
+            os.makedirs(KG_OUTPUT_DIR, exist_ok=True)
+            
+            # 创建唯一文件名
+            unique_id = str(uuid.uuid4())[:8]
+            json_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.json')
+            html_file = os.path.join(KG_OUTPUT_DIR, f'kg_{keyword}_{unique_id}.html')
+            
+            print(f"将生成JSON文件：{json_file}")
+            print(f"将生成HTML文件：{html_file}")
+            
+            # 生成知识图谱
+            kg_generator = KnowledgeGraphGenerator()
+            json_result = kg_generator.generate_knowledge_graph(keyword=keyword, output_file=json_file)
+            
+            if not json_result:
+                print("知识图谱生成失败：无返回结果")
+                return jsonify({'error': '知识图谱生成失败'}), 500
+            
+            # 加载生成的JSON数据
+            
+            temp, nodes, links = load_json_data(json_file)
+            
+            if not nodes or not links:
+                print(f"知识图谱数据为空：nodes={nodes}, links={links}")
+                return jsonify({'error': '知识图谱数据为空'}), 500
+            
+            # 创建图表
+            c = create_graph(nodes, links)
+            
+            # 渲染HTML文件
+            c.render(html_file)
+            
+            result = {
+                'success': True,
+                'keyword': keyword,
+                'json_path': f'/KG/static/output/{os.path.basename(json_file)}',
+                'html_path': f'/KG/static/output/{os.path.basename(html_file)}',
+                'nodes': nodes,
+                'links': links,
+                'display_mode': display_mode
+            }
+            
+            print(f"知识图谱生成成功：{result}")
+            return jsonify(result)
+            
         except Exception as e:
+            import traceback
             print(f"处理请求时出错: {str(e)}")
+            print(traceback.format_exc())
             return jsonify({'error': f'处理请求时出错: {str(e)}'}), 500
+            
+    except Exception as e:
+        print(f"处理请求时出错: {str(e)}")
+        return jsonify({'error': f'处理请求时出错: {str(e)}'}), 500
 
 @app.route('/KG/static/output/<path:filename>')
 def kg_output_files(filename):

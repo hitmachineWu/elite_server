@@ -5,10 +5,11 @@ import json
 class KnowledgeGraphGenerator:
     """
     知识图谱生成器类，用于从API获取知识并生成知识图谱
-    """
+    """ 
+    DEFAULT_SHARE_ID = "ytln4c6g30jgcl99z2wjms1q"    # 这里可以是一个公共知识库
     
     def __init__(self, api_url="http://180.85.206.30:3000/api/v1/chat/completions", 
-                 share_id="ytln4c6g30jgcl99z2wjms1q",
+                 share_id="ytln4c6g30jgcl99z2wjms1q",          
                  kg_model="openai/Qwen/Qwen2.5-72B-Instruct",
                  kg_api_base="http://180.85.206.19:8123/v1",
                  kg_api_key="local"):
@@ -22,8 +23,9 @@ class KnowledgeGraphGenerator:
             kg_api_base: 知识图谱API基础URL
             kg_api_key: 知识图谱API密钥
         """
+        
+        self.share_id = share_id if share_id is not None else self.DEFAULT_SHARE_ID
         self.api_url = api_url
-        self.share_id = share_id
         self.kg_model = kg_model
         self.kg_api_base = kg_api_base
         self.kg_api_key = kg_api_key
@@ -32,7 +34,7 @@ class KnowledgeGraphGenerator:
         self.prompt1 = "请以自然语言的形式，围绕【第一性原理】展开详细介绍。你的回答需要包含以下要素：1.首先用通俗易懂的方式解释这个知识点的基础概念和关键特征。2.然后沿着时间维度或逻辑维度，梳理该知识点的发展脉络或内在逻辑关系。3.接着说明与之直接相关的一些重要关联知识点，对每个关联点简要说明其与核心知识点的关系。请注意：1.保持叙述的连贯性，不需要使用项目符号或结构化排版。2.适当使用过渡词和连接词展现知识点之间的关联性。3.涉及专业术语时请附带简单解释。4.重点呈现知识之间的网状联系而非孤立事实。5.禁止任何形式的实例或案例说明，禁止对知识点进行价值判断或主观评价。现在请就【第一性原理】进行详细阐述。"
         self.prompt2 = "请系统性地介绍 {keyword} 的核心定义、关键属性，以及与之直接或间接相关的其他知识点，并明确说明它们之间的逻辑关系或层级结构。回答需严格遵循以下要求：核心知识点的解析,准确定义 {keyword} 的本质内涵,阐明其基本特征或分类维度（如适用）.直接关联知识点,列出与 {keyword} 存在因果、依赖、互补或对立关系的其他概念.说明这些关联的具体性质（例如：理论基础到应用延伸、上层概念到子类分支、前提条件到推论结果等）.间接关联知识点,提及跨领域或跨层级的弱关联概念,标注关联类型（如：方法论支撑、历史渊源、并行理论等）。约束条件：禁止任何形式的实例或案例说明，禁止对知识点进行价值判断或主观评价。"
         
-    def get_knowledge(self, keyword="第一性原理"):
+    def get_knowledge(self, keyword="没有传入关键词"):
         """
         从API获取关于特定关键词的知识
         
@@ -46,31 +48,44 @@ class KnowledgeGraphGenerator:
             "Content-Type": "application/json"
         }
         
+        # data = {
+        #     "shareId": self.share_id,
+        #     "outLinkUid": "test_user_001",
+        #     "chatId": "",
+        #     "stream": False,
+        #     "detail": False,
+        #     "messages": [
+        #         {
+        #             "role": "user",
+        #             "content": f"""请系统性地介绍 {keyword} 的核心定义、关键属性，并构建一个两跳节点的知识图谱。
+        #                             1. 核心知识点的解析
+        #                             - 准确定义 {keyword} 的本质内涵，阐明其基本特征或分类维度（如适用）。
+
+        #                             2. 第一跳直接关联知识点
+        #                             - 列出与 {keyword} 存在紧密关系的第一层关联概念，例如特定的功能、特性或者组成部分。
+        #                             - 说明这些第一层关联概念与 {keyword} 之间的逻辑关系或层级结构（例如：理论基础到应用延伸、上层概念到子类分支、前提条件到推论结果等）。
+
+        #                             3. 第二跳间接关联知识点
+        #                             - 针对每一个第一跳关联概念，进一步探索与其相关的第二层知识点。
+        #                             - 提及这些第二层知识点与对应的第一层知识点之间的逻辑关系或层级结构（如方法支撑、扩展内容、依赖条件等）。
+        #                             - 注明每个第二跳知识点与原始{keyword}的关系类型（例如：方法论支撑、并行理论、应用场景等），但请注意，这里不进行实例说明或价值判断。
+
+        #                             约束条件：
+        #                             - 禁止任何形式的实例或案例说明。
+        #                             - 禁止对知识点进行价值判断或主观评价。"""
+        #         }
+        
         data = {
             "shareId": self.share_id,
             "outLinkUid": "test_user_001",
             "chatId": "",
             "stream": False,
             "detail": False,
+            "responseChatItemId": "my_responseChatItemId",
             "messages": [
                 {
                     "role": "user",
-                    "content": f"""请系统性地介绍 {keyword} 的核心定义、关键属性，并构建一个两跳节点的知识图谱。
-                                    1. 核心知识点的解析
-                                    - 准确定义 {keyword} 的本质内涵，阐明其基本特征或分类维度（如适用）。
-
-                                    2. 第一跳直接关联知识点
-                                    - 列出与 {keyword} 存在紧密关系的第一层关联概念，例如特定的功能、特性或者组成部分。
-                                    - 说明这些第一层关联概念与 {keyword} 之间的逻辑关系或层级结构（例如：理论基础到应用延伸、上层概念到子类分支、前提条件到推论结果等）。
-
-                                    3. 第二跳间接关联知识点
-                                    - 针对每一个第一跳关联概念，进一步探索与其相关的第二层知识点。
-                                    - 提及这些第二层知识点与对应的第一层知识点之间的逻辑关系或层级结构（如方法支撑、扩展内容、依赖条件等）。
-                                    - 注明每个第二跳知识点与原始{keyword}的关系类型（例如：方法论支撑、并行理论、应用场景等），但请注意，这里不进行实例说明或价值判断。
-
-                                    约束条件：
-                                    - 禁止任何形式的实例或案例说明。
-                                    - 禁止对知识点进行价值判断或主观评价。"""
+                    "content": f"{keyword}"
                 }
             ]
         }

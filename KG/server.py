@@ -6,6 +6,15 @@ import uuid
 from kg_json import KnowledgeGraphGenerator
 from kg_json2graph import create_graph, load_json_data
 
+
+### 课程与shareid的映射
+course2shareid = {
+    "nn_output_enhanced1.html": "jm42v93u3ase8go5ekzo5jks",
+    "nn_output_enhanced2.html": "ytln4c6g30jgcl99z2wjms1q",
+    "nn_output_enhanced3.html": "ytln4c6g30jgcl99z2wjms1q",
+    "nn_output_enhanced4.html": "ytln4c6g30jgcl99z2wjms1q",
+}
+
 app = Flask(__name__)
 # 添加CORS支持，允许从任何域进行请求
 CORS(app)
@@ -37,6 +46,8 @@ def generate_kg():
     print("正在生成知识图谱")
     keyword = data.get('keyword')
     display_mode = data.get('display_mode', 'new_page')  # 默认为新页面打开，实则当前页面打开
+    source_file = "nn_output_enhanced" + data.get('source_file', 'unknown') + ".html"
+    share_id = course2shareid[source_file]# 根据source_file获取share_id
     
     print(f"收到生成知识图谱请求：关键词 = {keyword}, 显示模式 = {display_mode}")
     
@@ -55,7 +66,7 @@ def generate_kg():
         
         # 在每次请求中重新创建KnowledgeGraphGenerator实例
         # 这样可以避免多线程问题
-        kg_generator = KnowledgeGraphGenerator()
+        kg_generator = KnowledgeGraphGenerator(share_id = share_id)
         json_result = kg_generator.generate_knowledge_graph(keyword=keyword, output_file=json_file)
         
         if not json_result:

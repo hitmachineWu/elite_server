@@ -1093,7 +1093,8 @@ if __name__ == "__main__":
             },
             body: JSON.stringify({ 
                 keyword: keyword,
-                display_mode: 'current_page'  // 设置显示模式为当前页面
+                display_mode: 'current_page',  // 设置显示模式为当前页面
+                source_file: window.location.pathname.split('/').pop() // 添加当前HTML文件名
             })
         })
         .then(response => {
